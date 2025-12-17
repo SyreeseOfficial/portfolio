@@ -21,7 +21,7 @@ const BOOKS = [
     summary: "If you want to win fast, you have to find the one most important job that gets you closer to your goal. Once you find it, forget everything else. Stop getting distracted and just focus on that one big thing.",
     gradient: "from-[#ffbd59]/20 to-yellow-200/20",
     colSpan: "md:col-span-1",
-    icon: <Target className="w-6 h-6 text-[#ff3131]" />,
+    icon: <Target className="w-6 h-6 text-[#ffbd59]" />,
     url: "https://www.goodreads.com/book/show/16256798-the-one-thing?from_search=true&from_srp=true&qid=NMSXZa4IIw&rank=1"
   },
   {
@@ -49,7 +49,7 @@ const BOOKS = [
 export const Bookshelf: React.FC = () => {
   return (
     <section className="mb-10">
-       <div className="mb-12">
+      <div className="mb-12">
         <h2 className="text-3xl font-bold text-white/90">Bookshelf</h2>
       </div>
 
@@ -68,37 +68,37 @@ export const Bookshelf: React.FC = () => {
             className={`h-full ${book.colSpan}`}
           >
             <a href={book.url} target="_blank" rel="noopener noreferrer" className="block h-full">
-              <GlassCard 
+              <GlassCard
                 className="h-full p-8 flex flex-col group relative overflow-hidden transition-all duration-300 !border-0 bg-white/[0.02]"
                 hoverEffect={false}
               >
-                <div className={`absolute -top-10 -right-10 w-48 h-48 bg-gradient-to-br ${book.gradient} blur-[60px] rounded-full group-hover:scale-150 transition-transform duration-700 opacity-40 group-hover:opacity-60`} />
-                
+                {/* Gradient removed */}
+
                 <div className="relative z-10 flex flex-col h-full">
-                    {/* Header: Author & Title with Icon at top right */}
-                    <div className="flex justify-between items-start mb-3 gap-4">
-                      <div className="flex flex-col">
-                        <span className="text-xs font-bold text-white/30 mb-0.5 tracking-widest uppercase">
-                          {book.author}
-                        </span>
-                        <h3 className="text-lg font-bold text-white group-hover:text-[#ffbd59] transition-colors leading-tight">
-                          {book.title}
-                        </h3>
-                      </div>
-                      
-                      {/* Icon */}
-                      <div className="p-2 bg-white/5 rounded-xl border border-white/5 group-hover:border-white/20 transition-all shrink-0">
-                        {book.icon}
-                      </div>
+                  {/* Header: Author & Title with Icon at top right */}
+                  <div className="flex justify-between items-start mb-3 gap-4">
+                    <div className="flex flex-col">
+                      <span className="text-xs font-bold text-white/30 mb-0.5 tracking-widest uppercase">
+                        {book.author}
+                      </span>
+                      <h3 className="text-lg font-bold text-white group-hover:text-[#ffbd59] transition-colors leading-tight">
+                        {book.title}
+                      </h3>
                     </div>
-                    
-                    {/* Separator Line - Reduced margin from mb-6 to mb-3 */}
-                    <div className="w-10 h-0.5 bg-white/10 mb-3 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-[#ff3131] group-hover:to-[#ffbd59] transition-all duration-700 rounded-full" />
-                    
-                    {/* Summary - Removed bottom margin to eliminate empty space at card bottom */}
-                    <p className="text-white/50 text-sm leading-relaxed font-sans line-clamp-4 md:line-clamp-none">
-                      {book.summary}
-                    </p>
+
+                    {/* Icon */}
+                    <div className="p-2 bg-white/5 rounded-xl border border-white/5 group-hover:border-white/20 transition-all shrink-0">
+                      {book.icon}
+                    </div>
+                  </div>
+
+                  {/* Separator Line - Reduced margin from mb-6 to mb-3 */}
+                  <div className="w-10 h-0.5 bg-white/10 mb-3 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-[#ff3131] group-hover:to-[#ffbd59] transition-all duration-700 rounded-full" />
+
+                  {/* Summary - Removed bottom margin to eliminate empty space at card bottom */}
+                  <p className="text-white/50 text-sm leading-relaxed font-sans line-clamp-4 md:line-clamp-none">
+                    {book.summary}
+                  </p>
                 </div>
               </GlassCard>
             </a>

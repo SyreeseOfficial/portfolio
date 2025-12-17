@@ -11,6 +11,7 @@ export const PhotosPreview: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.02 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
         className="group relative flex flex-col flex-1 bg-[#050505] rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500"

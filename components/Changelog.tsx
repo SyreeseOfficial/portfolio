@@ -4,41 +4,41 @@ import { GlassCard } from './ui/GlassCard';
 import { GitCommit, Terminal, Sparkles, Rocket } from 'lucide-react';
 
 const LOGS = [
-  { 
-    date: "12-12-25", 
-    text: "Had idea to update portfolio site", 
+  {
+    date: "12-12-25",
+    text: "Had idea to update portfolio site",
     type: "event",
-    isFuture: false 
+    isFuture: false
   },
-  { 
-    date: "12-17-25", 
-    text: "Finished v1 of new site", 
+  {
+    date: "12-17-25",
+    text: "Finished v1 of new site",
     type: "milestone",
-    isFuture: false 
+    isFuture: false
   },
-  { 
-    date: "12-18-25", 
-    text: "Deployed using GitHub and Vercel", 
+  {
+    date: "12-18-25",
+    text: "Deployed using GitHub and Vercel",
     type: "deployment",
-    isFuture: false 
+    isFuture: false
   },
-  { 
-    date: "Future", 
-    text: "Add a \"Killed Projects\" section", 
+  {
+    date: "Future",
+    text: "Add a \"Killed Projects\" section",
     type: "roadmap",
-    isFuture: true 
+    isFuture: true
   },
-  { 
-    date: "Future", 
-    text: "Add \"Bucket List\" section", 
+  {
+    date: "Future",
+    text: "Add \"Bucket List\" section",
     type: "roadmap",
-    isFuture: true 
+    isFuture: true
   },
-  { 
-    date: "Future", 
-    text: "Add live stats section that shares my health tracking stats live: steps, cal burned, sleep, etc", 
+  {
+    date: "Future",
+    text: "Add live stats section that shares my health tracking stats live: steps, cal burned, sleep, etc",
     type: "roadmap",
-    isFuture: true 
+    isFuture: true
   },
 ];
 
@@ -53,7 +53,7 @@ export const Changelog: React.FC = () => {
         </div>
       </div>
 
-      <GlassCard className="p-0 overflow-hidden" hoverEffect={false}>
+      <GlassCard className="p-0 overflow-hidden" hoverEffect={true}>
         {/* Header bar */}
         <div className="px-6 py-3 border-b border-white/5 bg-white/[0.02] flex items-center gap-2">
           <Terminal className="w-4 h-4 text-white/20" />
@@ -66,16 +66,17 @@ export const Changelog: React.FC = () => {
               key={i}
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
+              whileHover={{ x: 6, backgroundColor: "rgba(255,255,255,0.02)" }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex gap-6 group"
+              className="flex gap-6 group p-4 -mx-4 rounded-xl transition-all"
             >
               {/* Vertical line and dot logic */}
               <div className="flex flex-col items-center">
                 <div className={`
                   w-10 h-10 rounded-xl border flex items-center justify-center shrink-0 transition-all duration-300
-                  ${log.isFuture 
-                    ? 'bg-white/5 border-white/5 text-white/20' 
+                  ${log.isFuture
+                    ? 'bg-white/5 border-white/5 text-white/20'
                     : 'bg-gradient-to-br from-white/10 to-white/5 border-white/10 text-[#ffbd59] shadow-[0_0_15px_rgba(255,189,89,0.1)] group-hover:scale-110'}
                 `}>
                   {log.isFuture ? <Sparkles className="w-5 h-5" /> : (log.type === 'deployment' ? <Rocket className="w-5 h-5" /> : <GitCommit className="w-5 h-5" />)}
@@ -89,8 +90,8 @@ export const Changelog: React.FC = () => {
                 <div className="flex items-center gap-3">
                   <span className={`
                     font-mono text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded
-                    ${log.isFuture 
-                      ? 'text-white/20 border border-white/5' 
+                    ${log.isFuture
+                      ? 'text-white/20 border border-white/5'
                       : 'text-[#ff3131] bg-[#ff3131]/10'}
                   `}>
                     {log.date}
@@ -115,9 +116,9 @@ export const Changelog: React.FC = () => {
 
         {/* Footer decoration */}
         <div className="p-4 bg-white/[0.01] border-t border-white/5 flex justify-end">
-           <span className="font-mono text-[10px] text-white/10 italic">
-             -- end of log transmission --
-           </span>
+          <span className="font-mono text-[10px] text-white/10 italic">
+            -- end of log transmission --
+          </span>
         </div>
       </GlassCard>
     </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const DeskSetup: React.FC = () => {
   return (
@@ -7,10 +8,11 @@ export const DeskSetup: React.FC = () => {
       <div className="flex items-center gap-3 mb-6">
         <h2 className="text-3xl font-bold text-white/90">Desk Setup</h2>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
+        whileHover={{ scale: 1.02 }}
         viewport={{ once: true }}
         className="group relative flex flex-col flex-1 bg-[#050505] rounded-xl overflow-hidden border border-white/10 hover:border-white/20 transition-colors duration-500"
       >
@@ -48,28 +50,28 @@ export const DeskSetup: React.FC = () => {
             <span className="text-[#ffbd59] mr-2">{">"}</span>
             <span>chair.comfiness = <span className="text-[#ff3131]">super</span>;</span>
           </div>
-          
+
           <div className="h-4" /> {/* Spacer */}
-          
+
           <p className="font-sans text-white/50 text-base leading-relaxed pt-2">
             My workspace is where I create and bring ideas to life. Every tool has a purpose.
           </p>
-          
+
           <div className="pt-4">
-            <a href="#" className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59] font-semibold hover:opacity-80 transition-opacity">
+            <Link to="/setup" className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59] font-semibold hover:opacity-80 transition-opacity">
               [ Explore My Setup ]
-            </a>
+            </Link>
           </div>
         </div>
-        
+
         {/* Pulse Border Effect on Hover */}
         <div className="absolute inset-0 rounded-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 border border-transparent"
-             style={{
-               background: 'linear-gradient(90deg, #ff3131, #ffbd59) border-box',
-               WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)',
-               WebkitMaskComposite: 'xor',
-               maskComposite: 'exclude'
-             }}
+          style={{
+            background: 'linear-gradient(90deg, #ff3131, #ffbd59) border-box',
+            WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)',
+            WebkitMaskComposite: 'xor',
+            maskComposite: 'exclude'
+          }}
         />
       </motion.div>
     </div>

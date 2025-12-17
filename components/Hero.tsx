@@ -18,7 +18,7 @@ const PAUSE_DURATION = 2000;
 export const Hero: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { amount: 0.5 });
-  
+
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
@@ -65,13 +65,15 @@ export const Hero: React.FC = () => {
             building as I go.
           </span>
         </h1>
-        
+
         <div className="max-w-2xl text-xl md:text-2xl text-white/80 leading-relaxed mb-12 mx-auto">
           I am a creative problem solver who loves to learn. When I am not building new things, I enjoy staying active at the gym or on the basketball court.
         </div>
 
-        <a 
-          href="#footer" 
+        <a
+          href="https://x.com/hisyre"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block text-xl text-[#ff3131] h-8 font-mono tracking-wide"
         >
           {text}

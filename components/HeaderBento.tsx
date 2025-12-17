@@ -41,52 +41,59 @@ export const HeaderBento: React.FC = () => {
 
         {/* 1. LISTENING TO (1x1) */}
         <div className="md:col-span-1 min-h-[240px]">
-          <GlassCard className="h-full p-8 flex flex-col justify-between relative group overflow-hidden bg-black/40">
-            {/* Dynamic Background - Peach Blob */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#ffbd59]/10 blur-[60px] rounded-full group-hover:bg-[#ffbd59]/20 transition-colors duration-500" />
+          <a
+            href="https://music.apple.com/profile/syreeseofficial"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block h-full"
+          >
+            <GlassCard className="h-full p-8 flex flex-col justify-between relative group overflow-hidden bg-black/40">
+              {/* Dynamic Background - Peach Blob */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#ffbd59]/10 blur-[60px] rounded-full group-hover:bg-[#ffbd59]/20 transition-colors duration-500" />
 
-            {/* Header: Icon Top Left */}
-            <div className="relative z-10 flex justify-between items-start mb-6">
-              <div className="p-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md">
-                <Music className="w-5 h-5 text-[#ffbd59]" />
-              </div>
-            </div>
-
-            {/* Content: Artist Name & Visualizer */}
-            <div className="relative z-10 mt-auto pt-6">
-              <h3 className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase mb-4">
-                Currently Listening To
-              </h3>
-
-              <div className="relative overflow-hidden mb-5">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={currentArtist}
-                    initial={{ y: 10, opacity: 0, filter: 'blur(5px)' }}
-                    animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
-                    exit={{ y: -10, opacity: 0, filter: 'blur(5px)' }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                  >
-                    <span className="text-2xl font-bold text-white leading-tight block tracking-tight">
-                      {currentArtist}
-                    </span>
-                  </motion.div>
-                </AnimatePresence>
+              {/* Header: Icon Top Left */}
+              <div className="relative z-10 flex justify-between items-start mb-6">
+                <div className="p-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md">
+                  <Music className="w-5 h-5 text-[#ffbd59]" />
+                </div>
               </div>
 
-              {/* Visualizer - Bottom Left */}
-              <div className="flex gap-1 h-5 items-end">
-                {[1, 2, 3, 4].map(i => (
-                  <motion.div
-                    key={i}
-                    className="w-1.5 bg-gradient-to-t from-[#ff3131] to-[#ffbd59] rounded-full opacity-80"
-                    animate={{ height: [6, 20, 8, 16, 6] }}
-                    transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse", delay: i * 0.1 }}
-                  />
-                ))}
+              {/* Content: Artist Name & Visualizer */}
+              <div className="relative z-10 mt-auto pt-6">
+                <h3 className="text-[10px] font-bold tracking-[0.2em] text-white/40 uppercase mb-4">
+                  Currently Listening To
+                </h3>
+
+                <div className="relative overflow-hidden mb-5">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={currentArtist}
+                      initial={{ y: 10, opacity: 0, filter: 'blur(5px)' }}
+                      animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }}
+                      exit={{ y: -10, opacity: 0, filter: 'blur(5px)' }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                    >
+                      <span className="text-2xl font-bold text-white leading-tight block tracking-tight">
+                        {currentArtist}
+                      </span>
+                    </motion.div>
+                  </AnimatePresence>
+                </div>
+
+                {/* Visualizer - Bottom Left */}
+                <div className="flex gap-1 h-5 items-end">
+                  {[1, 2, 3, 4].map(i => (
+                    <motion.div
+                      key={i}
+                      className="w-1.5 bg-gradient-to-t from-[#ff3131] to-[#ffbd59] rounded-full opacity-80"
+                      animate={{ height: [6, 20, 8, 16, 6] }}
+                      transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse", delay: i * 0.1 }}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          </GlassCard>
+            </GlassCard>
+          </a>
         </div>
 
         {/* 2. CONTACT CARD (1x2) */}

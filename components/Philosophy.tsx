@@ -5,7 +5,7 @@ import { Crown, Hammer, Sparkles } from 'lucide-react';
 const RULES = [
   {
     title: "I'm In Charge",
-    description: "I decide how I think and feel. Every choice is my fault.",
+    description: "I choose my mindset & create my own reality.",
     icon: <Crown className="w-6 h-6" />,
     color: "text-white",
     video: "/videos/ship.webm"
@@ -40,6 +40,7 @@ export const Philosophy: React.FC = () => {
             key={i}
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -5 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
             className="flex flex-col p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors duration-300"
