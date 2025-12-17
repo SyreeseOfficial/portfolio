@@ -3,16 +3,16 @@ import { Twitter, Youtube, Instagram, Github } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const links = [
-    { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, href: '#' },
-    { name: 'YouTube', icon: <Youtube className="w-5 h-5" />, href: '#' },
-    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, href: '#' },
-    { name: 'GitHub', icon: <Github className="w-5 h-5" />, href: '#' },
+    { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, href: 'https://x.com/hisyre' },
+    { name: 'YouTube', icon: <Youtube className="w-5 h-5" />, href: 'https://www.youtube.com/@SyreeseDelosSantos' },
+    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/Syreesefit' },
+    { name: 'GitHub', icon: <Github className="w-5 h-5" />, href: 'https://github.com/SyreeseOfficial' },
   ];
 
   return (
     <footer id="footer" className="py-20 border-t border-white/5 mt-20">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-        
+
         <div className="flex gap-6">
           {links.map((link) => (
             <a
@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="text-white/40 text-sm font-light">
-          Syreese Delos Santos — 2025
+          Syreese Delos Santos © 2025
         </div>
       </div>
     </footer>

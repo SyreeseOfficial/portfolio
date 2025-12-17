@@ -50,7 +50,7 @@ export const PhotosPreview: React.FC = () => {
             </p>
 
             <div className="pt-4">
-              <a href="https://instagram.com/SyreeseFit" target="_blank" rel="noopener noreferrer" className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59] font-semibold hover:opacity-80 transition-opacity">
+              <a href="https://instagram.com/SyreesePic" target="_blank" rel="noopener noreferrer" className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59] font-semibold hover:opacity-80 transition-opacity">
                 [ Instagram ]
               </a>
             </div>

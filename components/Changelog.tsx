@@ -60,7 +60,7 @@ export const Changelog: React.FC = () => {
           <span className="font-mono text-xs text-white/20 uppercase tracking-tighter">system_logs/portfolio.v2</span>
         </div>
 
-        <div className="p-6 md:p-10 space-y-8">
+        <div className="p-6 space-y-4">
           {LOGS.map((log, i) => (
             <motion.div
               key={i}
@@ -86,7 +86,7 @@ export const Changelog: React.FC = () => {
                 )}
               </div>
 
-              <div className="pt-1.5 flex flex-col gap-1 pb-4">
+              <div className="pt-1.5 flex flex-col gap-1 pb-2">
                 <div className="flex items-center gap-3">
                   <span className={`
                     font-mono text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded
