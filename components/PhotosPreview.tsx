@@ -8,7 +8,7 @@ export const PhotosPreview: React.FC = () => {
         <h2 className="text-3xl font-bold text-white/90">Photos</h2>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -28,36 +28,41 @@ export const PhotosPreview: React.FC = () => {
 
         <div className="p-10 flex flex-col h-full relative z-10">
           <div className="grid grid-cols-2 gap-4 mb-10">
-            {[1, 2, 3, 4].map((i) => (
-              <div 
-                key={i} 
+            {['grid-1.jpg', 'grid-2.jpg', 'grid-3.jpg', 'grid-4.jpg'].map((img, i) => (
+              <div
+                key={i}
                 className="aspect-square bg-white/[0.02] rounded-lg overflow-hidden relative group/image cursor-pointer border border-white/5"
               >
+                <img
+                  src={`/${img}`}
+                  alt={`Gallery image ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover/image:scale-110"
+                />
                 <div className="absolute inset-0 bg-white opacity-0 group-hover/image:opacity-5 transition-opacity duration-200" />
               </div>
             ))}
           </div>
-          
+
           <div className="mt-auto font-mono text-sm space-y-2 text-white/70">
             <p className="font-sans text-white/50 text-base leading-relaxed pt-2">
               A collection of moments and stories captured by my lens.
             </p>
-            
+
             <div className="pt-4">
-                <a href="https://instagram.com/SyreeseFit" target="_blank" rel="noopener noreferrer" className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59] font-semibold hover:opacity-80 transition-opacity">
+              <a href="https://instagram.com/SyreeseFit" target="_blank" rel="noopener noreferrer" className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59] font-semibold hover:opacity-80 transition-opacity">
                 [ Instagram ]
-                </a>
+              </a>
             </div>
           </div>
         </div>
 
         <div className="absolute inset-0 rounded-xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500 border border-transparent"
-             style={{
-               background: 'linear-gradient(90deg, #ff3131, #ffbd59) border-box',
-               WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)',
-               WebkitMaskComposite: 'xor',
-               maskComposite: 'exclude'
-             }}
+          style={{
+            background: 'linear-gradient(90deg, #ff3131, #ffbd59) border-box',
+            WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)',
+            WebkitMaskComposite: 'xor',
+            maskComposite: 'exclude'
+          }}
         />
       </motion.div>
     </div>
