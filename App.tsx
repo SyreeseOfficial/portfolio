@@ -21,9 +21,9 @@ const LandingPage = () => {
     return (
         <div className="relative min-h-screen text-white selection:bg-red-500/30">
             <Background />
+            <Hero />
             <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 md:px-12 md:py-20 space-y-32 md:space-y-96">
                 <div className="space-y-32">
-                    <Hero />
                     <HeaderBento />
                     <BentoGrid />
                 </div>

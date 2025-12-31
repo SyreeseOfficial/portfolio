@@ -115,10 +115,10 @@ export const BENTO_ITEMS: BentoItem[] = [
     description: (
       <>
         Creating extensions to enhance the Skool platform experience, including{" "}
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer" className="text-[#ffbd59] hover:text-[#ff3131] transition-colors font-medium">Skool Templates</a>,{" "}
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer" className="text-[#ffbd59] hover:text-[#ff3131] transition-colors font-medium">Skool Utilities</a>,{" "}
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer" className="text-[#ffbd59] hover:text-[#ff3131] transition-colors font-medium">Skool Todo List</a>, and{" "}
-        <a href="https://google.com" target="_blank" rel="noopener noreferrer" className="text-[#ffbd59] hover:text-[#ff3131] transition-colors font-medium">Skooler AI</a>.
+        <a href="https://chromewebstore.google.com/detail/skool-templates/lbgcmkkendepgfajiljhegifclfhijde" target="_blank" rel="noopener noreferrer" className="text-[#ffbd59] hover:text-[#ff3131] transition-colors font-medium">Skool Templates</a>,{" "}
+        <a href="https://chromewebstore.google.com/detail/skool-utilities/pgoiddblmhofnagiignbokiehfepijco" target="_blank" rel="noopener noreferrer" className="text-[#ffbd59] hover:text-[#ff3131] transition-colors font-medium">Skool Utilities</a>,{" "}
+        <a href="https://chromewebstore.google.com/detail/skool-todo-list/neenmpbhpkehfehcbgnpcjpgclhennoj" target="_blank" rel="noopener noreferrer" className="text-[#ffbd59] hover:text-[#ff3131] transition-colors font-medium">Skool Todo List</a>, and{" "}
+        <span className="text-white/40 cursor-help" title="Coming Soon">Skooler AI</span>.
       </>
     ),
     size: '1x2',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Youtube, Instagram, Github } from 'lucide-react';
+import { Twitter, Youtube, Instagram, Github, Mail } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const links = [
@@ -7,6 +7,7 @@ export const Footer: React.FC = () => {
     { name: 'YouTube', icon: <Youtube className="w-5 h-5" />, href: 'https://www.youtube.com/@SyreeseDelosSantos' },
     { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, href: 'https://www.instagram.com/Syreesefit' },
     { name: 'GitHub', icon: <Github className="w-5 h-5" />, href: 'https://github.com/SyreeseOfficial' },
+    { name: 'Email', icon: <Mail className="w-5 h-5" />, href: 'mailto:syreeseofficial@gmail.com' },
   ];
 
   return (

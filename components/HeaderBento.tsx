@@ -144,7 +144,7 @@ export const HeaderBento: React.FC = () => {
                 </div>
 
                 <a
-                  href="mailto:contact@orthostar.org"
+                  href="mailto:syreeseofficial@gmail.com"
                   className="flex items-center justify-center gap-2 bg-white text-black px-4 py-3 rounded-lg text-sm font-bold hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:bg-white transition-all duration-300 mt-2 active:scale-95"
                 >
                   <Mail className="w-4 h-4" />
@@ -207,7 +207,7 @@ export const HeaderBento: React.FC = () => {
 
                 {/* Booking Element */}
                 <a
-                  href="https://calendly.com/syreeseofficial/short-chat"
+                  href="https://calendly.com/syreeseofficial/orthostar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 bg-white/5 hover:bg-white/10 border border-white/10 rounded-full backdrop-blur-md transition-all group/cal hover:scale-110 active:scale-95 shadow-lg"
