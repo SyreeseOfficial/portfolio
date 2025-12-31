@@ -59,14 +59,14 @@ export const Hero: React.FC = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex flex-col items-center"
       >
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
+        <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
           Carving my own path,<br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59]">
             building as I go.
           </span>
         </h1>
 
-        <div className="max-w-2xl text-xl md:text-2xl text-white/80 leading-relaxed mb-12 mx-auto">
+        <div className="max-w-2xl text-lg md:text-2xl text-white/80 leading-relaxed mb-12 mx-auto px-4 md:px-0">
           I am a creative problem solver who loves to learn. When I am not building new things, I enjoy staying active at the gym or on the basketball court.
         </div>
 

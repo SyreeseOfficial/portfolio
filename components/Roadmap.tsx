@@ -6,26 +6,26 @@ export const Roadmap: React.FC = () => {
   return (
     <section className="mb-10 relative pt-10">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4 text-white">Roadmap</h2>
-        <p className="text-white/40 max-w-lg mx-auto text-lg">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Roadmap</h2>
+        <p className="text-white/40 max-w-lg mx-auto text-base md:text-lg">
           This roadmap outlines my goals and where I want to take my journey as a builder and creator.
         </p>
       </div>
-      
+
       <div className="relative max-w-3xl mx-auto">
         {/* The Vertical Line Container */}
         <div className="absolute left-[3px] md:left-[3px] top-0 bottom-0 w-[2px] bg-white/[0.05] overflow-hidden rounded-full">
-           {/* Beam Animation */}
-           <motion.div 
-             className="w-full h-[100px] bg-gradient-to-b from-transparent via-[#ff3131] to-transparent box-shadow-[0_0_20px_rgba(255,49,49,0.5)]"
-             animate={{ top: ['-20%', '120%'] }}
-             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-           />
+          {/* Beam Animation */}
+          <motion.div
+            className="w-full h-[100px] bg-gradient-to-b from-transparent via-[#ff3131] to-transparent box-shadow-[0_0_20px_rgba(255,49,49,0.5)]"
+            animate={{ top: ['-20%', '120%'] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+          />
         </div>
 
         <div className="space-y-16 pl-12 relative">
           {ROADMAP.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={item.id}
               initial={{ opacity: 0, x: -10 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -51,13 +51,12 @@ export const Roadmap: React.FC = () => {
                     {item.description}
                   </p>
                 </div>
-                
+
                 <div className="flex-shrink-0 pt-1.5">
-                  <span className={`text-sm font-mono uppercase tracking-wider transition-colors duration-300 ${
-                    item.date === "Current" 
-                    ? "font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59]" 
-                    : "text-white/30 group-hover:text-white/60"
-                  }`}>
+                  <span className={`text-sm font-mono uppercase tracking-wider transition-colors duration-300 ${item.date === "Current"
+                      ? "font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff3131] to-[#ffbd59]"
+                      : "text-white/30 group-hover:text-white/60"
+                    }`}>
                     {item.date}
                   </span>
                 </div>

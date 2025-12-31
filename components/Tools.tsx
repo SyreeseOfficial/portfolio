@@ -12,7 +12,7 @@ export const Tools: React.FC = () => {
 
   return (
     <section className="mb-32">
-      <h2 className="text-3xl font-bold mb-10 text-white/90">Favorite Tools</h2>
+      <h2 className="text-2xl md:text-3xl font-bold mb-10 text-white/90">Favorite Tools</h2>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export const Tools: React.FC = () => {
 
         {/* Content Area */}
         <div className="flex-1 min-h-[300px]">
-          <GlassCard className="p-8 h-full" hoverEffect={false}>
+          <GlassCard className="p-5 md:p-8 h-full" hoverEffect={false}>
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}

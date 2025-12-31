@@ -46,7 +46,7 @@ export const Changelog: React.FC = () => {
   return (
     <section className="mb-10">
       <div className="mb-12 flex items-center justify-between">
-        <h2 className="text-3xl font-bold text-white/90">Changelog</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white/90">Changelog</h2>
         <div className="flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10">
           <div className="w-1.5 h-1.5 rounded-full bg-[#ff3131] animate-pulse" />
           <span className="text-[10px] font-mono uppercase tracking-widest text-white/40">Live Logs</span>
@@ -104,7 +104,7 @@ export const Changelog: React.FC = () => {
                   )}
                 </div>
                 <p className={`
-                  text-lg font-medium leading-relaxed transition-colors duration-300
+                  text-base md:text-lg font-medium leading-relaxed transition-colors duration-300
                   ${log.isFuture ? 'text-white/30' : 'text-white/80 group-hover:text-white'}
                 `}>
                   {log.text}

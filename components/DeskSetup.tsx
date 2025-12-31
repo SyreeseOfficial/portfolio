@@ -6,7 +6,7 @@ export const DeskSetup: React.FC = () => {
   return (
     <div className="flex flex-col h-full">
       <div className="flex items-center gap-3 mb-6">
-        <h2 className="text-3xl font-bold text-white/90">Desk Setup</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white/90">Desk Setup</h2>
       </div>
 
       <motion.div

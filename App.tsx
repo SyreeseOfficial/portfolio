@@ -15,15 +15,17 @@ import { ContentDiet } from './components/ContentDiet';
 import { FavoritePurchases } from './components/FavoritePurchases';
 import { PhotosPreview } from './components/PhotosPreview';
 import { Changelog } from './components/Changelog';
+import { BentoGrid } from './components/BentoGrid';
 
 const LandingPage = () => {
     return (
         <div className="relative min-h-screen text-white selection:bg-red-500/30">
             <Background />
-            <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 md:px-12 md:py-20 space-y-96">
+            <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 md:px-12 md:py-20 space-y-32 md:space-y-96">
                 <div className="space-y-32">
                     <Hero />
                     <HeaderBento />
+                    <BentoGrid />
                 </div>
                 <Philosophy />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

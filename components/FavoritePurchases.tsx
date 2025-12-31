@@ -49,7 +49,7 @@ export const FavoritePurchases: React.FC = () => {
       <div className="flex flex-col lg:flex-row gap-6">
         <div className="flex-1">
           <GlassCard className="p-0 overflow-hidden flex flex-col" hoverEffect={false}>
-            <div className="grid grid-cols-[2fr_1fr_1fr] gap-4 px-6 py-4 border-b border-white/5 bg-white/[0.02]">
+            <div className="hidden md:grid grid-cols-[2fr_1fr_1fr] gap-4 px-6 py-4 border-b border-white/5 bg-white/[0.02]">
               <div className="text-[10px] font-bold text-white/30 uppercase tracking-widest">Item</div>
               <div className="text-[10px] font-bold text-white/30 uppercase tracking-widest">Type</div>
               <div className="text-[10px] font-bold text-white/30 uppercase tracking-widest text-right">Acquired</div>
@@ -68,7 +68,7 @@ export const FavoritePurchases: React.FC = () => {
                   rel="noopener noreferrer"
                   onMouseEnter={() => setHoveredId(item.id)}
                   onMouseLeave={() => setHoveredId(null)}
-                  className="group relative grid grid-cols-[2fr_1fr_1fr] gap-4 px-6 py-8 border-b border-white/5 last:border-0 cursor-pointer transition-all duration-300 no-underline"
+                  className="group relative flex flex-col md:grid md:grid-cols-[2fr_1fr_1fr] gap-4 px-6 py-8 border-b border-white/5 last:border-0 cursor-pointer transition-all duration-300 no-underline"
                 >
                   <div className={`absolute inset-0 bg-white/[0.04] transition-opacity duration-300 ${hoveredId === item.id ? 'opacity-100' : 'opacity-0'}`} />
                   <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${item.gradient} transition-opacity duration-300 ${hoveredId === item.id ? 'opacity-100' : 'opacity-0'}`} />

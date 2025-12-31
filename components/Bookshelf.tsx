@@ -54,10 +54,9 @@ export const Bookshelf: React.FC = () => {
       </div>
 
       {/* 
-        Reduced auto-rows from 280px to 210px to eliminate the "green area" (excess white space) 
-        while ensuring all rows remain consistent in height on medium screens and up.
+        Adjusted auto-rows to 225px to minimize bottom whitespace while fitting content.
       */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:auto-rows-[210px] auto-rows-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:auto-rows-[225px] auto-rows-auto">
         {BOOKS.map((book, i) => (
           <motion.div
             key={book.id}
@@ -76,9 +75,9 @@ export const Bookshelf: React.FC = () => {
 
                 <div className="relative z-10 flex flex-col h-full">
                   {/* Header: Author & Title with Icon at top right */}
-                  <div className="flex justify-between items-start mb-3 gap-4">
+                  <div className="flex justify-between items-start mb-4 gap-4">
                     <div className="flex flex-col">
-                      <span className="text-xs font-bold text-white/30 mb-0.5 tracking-widest uppercase">
+                      <span className="text-xs font-bold text-white/30 mb-2 tracking-widest uppercase">
                         {book.author}
                       </span>
                       <h3 className="text-lg font-bold text-white group-hover:text-[#ffbd59] transition-colors leading-tight">
@@ -92,8 +91,8 @@ export const Bookshelf: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Separator Line - Reduced margin from mb-6 to mb-3 */}
-                  <div className="w-10 h-0.5 bg-white/10 mb-3 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-[#ff3131] group-hover:to-[#ffbd59] transition-all duration-700 rounded-full" />
+                  {/* Separator Line - Increased margin from mb-3 to mb-4 */}
+                  <div className="w-10 h-0.5 bg-white/10 mb-4 group-hover:w-full group-hover:bg-gradient-to-r group-hover:from-[#ff3131] group-hover:to-[#ffbd59] transition-all duration-700 rounded-full" />
 
                   {/* Summary - Removed bottom margin to eliminate empty space at card bottom */}
                   <p className="text-white/50 text-sm leading-relaxed font-sans line-clamp-4 md:line-clamp-none">

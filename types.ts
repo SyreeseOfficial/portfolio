@@ -35,6 +35,6 @@ export interface BentoItem {
   subtitle: string;
   description: string | React.ReactNode;
   size: '1x1' | '1x2' | '2x1' | '3x1';
-  type: 'community' | 'extension' | 'boxing' | 'fitness' | 'review';
+  type: 'community' | 'extension' | 'boxing' | 'fitness' | 'review' | 'voice';
   subItems?: BentoSubItem[];
 }
