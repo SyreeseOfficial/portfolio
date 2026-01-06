@@ -11,7 +11,7 @@ export const PROJECTS: Project[] = [
       problem: 'Practices lose future customers when their practice has bad reviews.',
       solution: 'I created a tool that blocks bad reviews, gets the practice more 5-star reviews and turns happy patients into usable video ads.',
       result: 'Average Ortho practice sees a 32% increase in 5-star reviews which lead to an average of 7 new patients per month. A new Ortho patient can be worth anywhere from $1k - $15k to a practice. You do the math.',
-      liveLink: 'https://example.com',
+      liveLink: 'https://orthostar.org/',
       images: [
         '/projects/orthostar/case-study-1.jpg',
         '/projects/orthostar/case-study-2.jpg'
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
       problem: 'Most Linux speech-to-text tools are full of bloat. I created a minimalist one that\'s fast, efficient and easy to use. Runs via an easy keybind. Installs with one command: yay -S vibestt',
       solution: 'I built a lightweight tool that integrates directly with the system. It uses minimal resources and activates instantly with a simple shortcut.',
       result: 'Users can easily speak their ideas, removing the handicap of slow typing, leading to faster work flow, more efficient time while on your PC, etc.',
-      liveLink: 'https://example.com',
+      liveLink: 'https://github.com/SyreeseOfficial/VibeSTT',
       images: [
         '/projects/vibestt/case-study-1.jpg',
         '/projects/vibestt/case-study-2.jpg'

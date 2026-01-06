@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       {/* Text Details Side */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-left order-2 md:order-1">
-        <div className="font-mono text-electricBlue text-xs mb-3">{project.year}</div>
+
         <h3 className="font-serif text-3xl md:text-4xl text-white mb-4 leading-tight">{project.title}</h3>
 
 
@@ -27,14 +27,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           to={`/project/${project.id}`}
           className="group inline-flex items-center gap-2 font-mono text-xs text-white hover:text-electricBlue transition-colors duration-200"
         >
-          View Case Study
+          View
           <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
 
       {/* Media / Video Side (Smaller now) */}
       <div className="w-full md:w-5/12 order-1 md:order-2">
-        <div className="relative aspect-video bg-white/5 rounded-sm overflow-hidden group">
+        <Link to={`/project/${project.id}`} className="block relative aspect-video bg-white/5 rounded-sm overflow-hidden group">
           {/* Simulated Laptop Frame/Container */}
           <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
             {/* Using Image placeholder as per constraints, in real app this would be a <video> tag with autoplay */}
@@ -44,7 +44,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               className="w-full h-full object-cover transition-transform duration-700 ease-out will-change-transform group-hover:scale-105"
             />
           </div>
-        </div>
+        </Link>
       </div>
 
     </div>
