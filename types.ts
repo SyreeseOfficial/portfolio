@@ -62,5 +62,13 @@ export interface BetItem {
 export interface ChangelogItem {
   date: string;
   title?: string;
-  change: string;
+
+export interface DeskSetupItem {
+  label: string;
+  value: string;
+}
+
+export interface DeskSetupCategory {
+  category: string;
+  items: DeskSetupItem[];
 }

@@ -1,4 +1,4 @@
-import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem, TechStackCategory } from './types';
+import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem, TechStackCategory, DeskSetupCategory } from './types';
 
 export const PROJECTS: Project[] = [
   {
@@ -281,4 +281,50 @@ export const CHANGELOG: ChangelogItem[] = [
   { date: "Future", change: 'Add a "Killed Projects" section' },
   { date: "Future", change: 'Add "Bucket List" section' },
   { date: "Future", change: "Add live stats section that shares my health tracking stats live: steps, cal burned, sleep, etc" }
+];
+export const DESK_SETUP: DeskSetupCategory[] = [
+  {
+    category: "The Core Desktop",
+    items: [
+      { label: "Surface", value: "80\" Ikea Oak Solid Wood Countertop" },
+      { label: "Support", value: "2x White Ikea Alex Drawers" },
+      { label: "Organization", value: "Amazon Alex Drawer Organizers" },
+      { label: "Primary Display", value: "Samsung 49\" Odyssey G9 (Super Ultrawide)" },
+      { label: "Mounting", value: "Heavy Duty Monitor Arm" },
+      { label: "Desk Mat", value: "Fnatic Super Ultra-Wide (Black)" }
+    ]
+  },
+  {
+    category: "Peripherals & Input",
+    items: [
+      { label: "Keyboard", value: "NuPhy Air75 V3 (Black)" },
+      { label: "Mouse", value: "Anker Vertical Ergonomic Mouse" },
+      { label: "Webcam", value: "eMeet 4K Webcam" },
+      { label: "Lighting", value: "Quntis Light Bar (Monitor) & Logitech Litra Glow (Key light)" }
+    ]
+  },
+  {
+    category: "Audio Stack",
+    items: [
+      { label: "DAC/Amp", value: "FiiO K7" },
+      { label: "Speakers", value: "Kanto YU2 Desktop Speakers" },
+      { label: "Microphone", value: "Fifine K688 (Dynamic XLR/USB)" },
+      { label: "Headphones", value: "Hifiman Sundara (Open-back Planar), Sennheiser HD380 Pro (Studio Monitoring), Bose QuietComfort Ultra Gen 2 (ANC/Travel), Skullcandy Crusher Evo (Bass-heavy/Casual)" }
+    ]
+  },
+  {
+    category: "Tools & Tech Workbench",
+    items: [
+      { label: "Electronics", value: "Soldering kit, Strebito 150-piece precision screwdriver set, & Precision knife kit." },
+      { label: "Power", value: "Reusable batteries + Charger." },
+      { label: "Misc Tech", value: "Label maker, Multi-tool, iPod Nano 3rd Gen (8GB Blue), & Panasonic Lumix DMC-TZ4." }
+    ]
+  },
+  {
+    category: "Hardware & Maintenance",
+    items: [
+      { label: "Firearms", value: "Glock 43X (9mm) with laser/light/Trijicon sights & Ruger LCP II (.22LR)." },
+      { label: "Maintenance", value: "Comprehensive Gun Cleaning Kit." }
+    ]
+  }
 ];

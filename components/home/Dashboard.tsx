@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Plus, Minus, ArrowUpRight, Instagram, Youtube } from 'lucide-react';
-import { PHILOSOPHY, BOOKSHELF, GEAR, TECH_STACK, ROADMAP, INSPIRATIONS, BETS, CHANGELOG } from '../../data';
+import { PHILOSOPHY, BOOKSHELF, GEAR, TECH_STACK, ROADMAP, INSPIRATIONS, BETS, CHANGELOG, DESK_SETUP } from '../../data';
 
 interface DashboardModuleProps {
   title: string;
@@ -187,10 +187,20 @@ const Dashboard: React.FC = () => {
           isOpen={openModule === "Desk Setup"}
           onToggle={() => toggleModule("Desk Setup")}
         >
-          <div className="pl-4 md:pl-0">
-            <p className="font-sans text-sm text-grey">
-              My workspace configuration, standing desk, and peripherals. Full breakdown coming soon.
-            </p>
+          <div className="space-y-8 pl-4 md:pl-0">
+            {DESK_SETUP.map((category, i) => (
+              <div key={i}>
+                <h4 className="font-mono text-xs text-white/50 mb-3 uppercase tracking-wider">{category.category}</h4>
+                <ul className="space-y-3">
+                  {category.items.map((item, j) => (
+                    <li key={j} className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-4 group transform transition-transform duration-300 hover:translate-x-2">
+                      <span className="font-mono text-sm text-electricBlue whitespace-nowrap min-w-[100px]">{item.label}</span>
+                      <span className="font-sans text-sm text-grey group-hover:text-white transition-colors leading-relaxed">{item.value}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </DashboardModule>
 
