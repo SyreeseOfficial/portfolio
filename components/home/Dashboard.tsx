@@ -14,7 +14,7 @@ const DashboardModule: React.FC<DashboardModuleProps> = ({ title, children, isOp
     <div className="border-b border-white/10 last:border-none">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between py-6 group focus:outline-none"
+        className="w-full flex items-center justify-between py-6 group focus:outline-none hover:bg-white/5 hover:pl-4 transition-all duration-300 ease-out rounded-sm px-0"
       >
         <h3 className="font-mono text-base text-white group-hover:text-electricBlue transition-colors">
           {title}
@@ -77,8 +77,8 @@ const Dashboard: React.FC = () => {
                 <h4 className="font-mono text-xs text-white/50 mb-2 uppercase">{category.category}</h4>
                 <ul className="space-y-2">
                   {category.items.map((item, j) => (
-                    <li key={j} className="font-mono text-sm text-white">
-                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-electricBlue transition-colors">
+                    <li key={j} className="font-mono text-sm text-white transform transition-transform duration-300 hover:translate-x-2">
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-electricBlue transition-colors block">
                         {item.name}
                       </a>
                     </li>
@@ -97,7 +97,7 @@ const Dashboard: React.FC = () => {
         >
           <ul className="space-y-6 pl-4 md:pl-0">
             {PHILOSOPHY.map((item) => (
-              <li key={item.id} className="group">
+              <li key={item.id} className="group transform transition-transform duration-300 hover:translate-x-2 p-2 rounded-sm hover:bg-white/5">
                 <span className="font-mono text-electricBlue text-xs block mb-1">{item.number}</span>
                 <div className="font-sans font-medium text-white mb-1">{item.title}</div>
                 <div className="font-sans text-sm text-grey group-hover:text-white transition-colors">
@@ -120,8 +120,8 @@ const Dashboard: React.FC = () => {
                 <h4 className="font-mono text-xs text-white/50 mb-2 uppercase">{category.category}</h4>
                 <ul className="space-y-2">
                   {category.items.map((item, j) => (
-                    <li key={j} className="font-mono text-sm text-electricBlue">
-                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    <li key={j} className="font-mono text-sm text-electricBlue transform transition-transform duration-300 hover:translate-x-2">
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors block">
                         {item.name}
                       </a>
                     </li>
@@ -140,7 +140,7 @@ const Dashboard: React.FC = () => {
         >
           <ul className="space-y-6 pl-4 md:pl-0">
             {INSPIRATIONS.map((person, i) => (
-              <li key={i} className="group">
+              <li key={i} className="group transform transition-transform duration-300 hover:translate-x-2 p-2 rounded-sm hover:bg-white/5">
                 <a
                   href={person.url}
                   target="_blank"
@@ -166,7 +166,7 @@ const Dashboard: React.FC = () => {
         >
           <ul className="space-y-6 pl-4 md:pl-0">
             {BOOKSHELF.map((book, i) => (
-              <li key={i} className="group">
+              <li key={i} className="group transform transition-transform duration-300 hover:translate-x-2 p-2 rounded-sm hover:bg-white/5">
                 <div className="font-medium text-white mb-1">
                   <a href={book.url} target="_blank" rel="noopener noreferrer" className="italic hover:text-electricBlue transition-colors md:inline-flex md:items-center md:gap-2">
                     {book.title}
@@ -227,7 +227,7 @@ const Dashboard: React.FC = () => {
         >
           <ul className="space-y-6 pl-4 md:pl-0">
             {BETS.map((bet, i) => (
-              <li key={i} className="group">
+              <li key={i} className="group transform transition-transform duration-300 hover:translate-x-2 p-2 rounded-sm hover:bg-white/5">
                 <div className="font-mono text-xs text-electricBlue mb-1 uppercase tracking-wider">{bet.title}</div>
                 <div className="font-sans text-sm text-grey group-hover:text-white transition-colors leading-relaxed">
                   {bet.description}
