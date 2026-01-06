@@ -71,7 +71,9 @@ const Dashboard: React.FC = () => {
                 <ul className="space-y-2">
                   {category.items.map((item, j) => (
                     <li key={j} className="font-mono text-sm text-white">
-                      {item}
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-electricBlue transition-colors">
+                        {item.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -112,7 +114,9 @@ const Dashboard: React.FC = () => {
                 <ul className="space-y-2">
                   {category.items.map((item, j) => (
                     <li key={j} className="font-mono text-sm text-electricBlue">
-                      {item}
+                      <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                        {item.name}
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -190,7 +194,7 @@ const Dashboard: React.FC = () => {
                 </div>
               ))}
             </div>
-            <a href="#" className="inline-flex items-center gap-2 font-mono text-xs text-electricBlue hover:text-white transition-colors">
+            <a href="https://www.instagram.com/syreesepic" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-mono text-xs text-electricBlue hover:text-white transition-colors">
               <Instagram size={14} />
               View Instagram
             </a>
@@ -268,7 +272,7 @@ const Dashboard: React.FC = () => {
           <div className="pl-0">
             <p className="font-serif italic text-xl text-white mb-4">Ready to build?</p>
             <a
-              href="mailto:user@example.com"
+              href="mailto:syreeseofficial@gmail.com"
               className="inline-flex items-center gap-2 font-mono text-sm text-electricBlue hover:text-white transition-colors"
             >
               Email Me <ArrowUpRight size={14} />

@@ -22,7 +22,17 @@ export interface PhilosophyItem {
 
 export interface GearItem {
   category: string;
-  items: string[];
+  items: TechStackItem[];
+}
+
+export interface TechStackItem {
+  name: string;
+  url: string;
+}
+
+export interface TechStackCategory {
+  category: string;
+  items: TechStackItem[];
 }
 
 export interface Book {

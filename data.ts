@@ -1,4 +1,4 @@
-import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem } from './types';
+import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem, TechStackCategory } from './types';
 
 export const PROJECTS: Project[] = [
   {
@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
     title: 'OrthoStar',
     year: '2025',
     summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
-    videoUrl: '/projects/orthostar/cover.jpg', // Placeholder
+    videoUrl: '/projects/orthostar/cover.jpg',
     caseStudy: {
       problem: 'Practices lose future customers when their practice has bad reviews.',
       solution: 'I created a tool that blocks bad reviews, gets the practice more 5-star reviews and turns happy patients into usable video ads.',
@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
     title: 'Chrome Extensions',
     year: '2024',
     summary: 'A collection of useful Chrome extensions I built for the Skool platform.',
-    videoUrl: '/projects/chrome-extensions/cover.jpg', // Placeholder
+    videoUrl: '/projects/chrome-extensions/cover.jpg',
     caseStudy: {
       problem: 'Skool is still a new tool. They lack features that can make their users more money.',
       solution: 'I created different Chrome extensions that add useful features for users. Some of those extensions are: Skool Todo-List, Skool Templates, Skool Utilities, Skooler AI.',
@@ -40,7 +40,7 @@ export const PROJECTS: Project[] = [
     title: 'VibeSTT',
     year: '2023',
     summary: 'A minimalist, high-performance speech-to-text utility for the Omarchy Linux distribution.',
-    videoUrl: '/projects/vibestt/cover.jpg', // Placeholder
+    videoUrl: '/projects/vibestt/cover.jpg',
     caseStudy: {
       problem: 'Most Linux speech-to-text tools are full of bloat. I created a minimalist one that\'s fast, efficient and easy to use. Runs via an easy keybind. Installs with one command: yay -S vibestt',
       solution: 'I built a lightweight tool that integrates directly with the system. It uses minimal resources and activates instantly with a simple shortcut.',
@@ -101,38 +101,85 @@ export const BOOKSHELF: Book[] = [
 export const GEAR: GearItem[] = [
   {
     category: "Fun",
-    items: ["Kindle Oasis", "MonkeyType", "Chess.com", "Lichess", "SteamDeck", "Vibe Coding", "Letterboxd"]
+    items: [
+      { name: "Kindle Oasis", url: "https://www.amazon.com/kindle-oasis" },
+      { name: "MonkeyType", url: "https://monkeytype.com/" },
+      { name: "Chess.com", url: "https://www.chess.com/" },
+      { name: "Lichess", url: "https://lichess.org/" },
+      { name: "SteamDeck", url: "https://store.steampowered.com/steamdeck" },
+      { name: "Vibe Coding", url: "#" }, // Placeholder, user to provide
+      { name: "Letterboxd", url: "https://letterboxd.com/" }
+    ]
   },
   {
     category: "Focus",
-    items: ["Hyprsunset", "Todoist", "ASoftMurmur", "Bose QC Ultras", "Pomodoro"]
+    items: [
+      { name: "Hyprsunset", url: "https://github.com/hyprwm/hyprsunset" },
+      { name: "Todoist", url: "https://todoist.com/" },
+      { name: "ASoftMurmur", url: "https://asoftmurmur.com/" },
+      { name: "Bose QC Ultras", url: "https://www.bose.com/" },
+      { name: "Pomodoro", url: "https://pomofocus.io/" }
+    ]
   },
   {
     category: "Writing",
-    items: ["Field Notes", "LAMY Fountain Pens", "Leuchtturm Notebooks", "Obsidian.md"]
+    items: [
+      { name: "Field Notes", url: "https://fieldnotesbrand.com/" },
+      { name: "LAMY Fountain Pens", url: "https://www.lamy.com/" },
+      { name: "Leuchtturm Notebooks", url: "https://www.leuchtturm1917.us/" },
+      { name: "Obsidian.md", url: "https://obsidian.md/" }
+    ]
   },
   {
     category: "Tech Picks",
-    items: ["Zen Browser", "Ghostty", "Bitwarden", "Omarchy", "Hyprland", "KDE", "LocalSend"]
+    items: [
+      { name: "Zen Browser", url: "https://zen-browser.app/" },
+      { name: "Ghostty", url: "https://ghostty.org/" },
+      { name: "Bitwarden", url: "https://bitwarden.com/" },
+      { name: "Omarchy", url: "https://omarchy.org/" },
+      { name: "Hyprland", url: "https://hyprland.org/" },
+      { name: "KDE", url: "https://kde.org/" },
+      { name: "LocalSend", url: "https://localsend.org/" }
+    ]
   }
 ];
 
-export const TECH_STACK: GearItem[] = [
+export const TECH_STACK: TechStackCategory[] = [
   {
     category: "AI & Development",
-    items: ["Gemini", "Antigravity", "Linux Terminal", "Arch Linux", "AUR", "GitHub"]
+    items: [
+      { name: "Gemini", url: "https://gemini.google.com/" },
+      { name: "Antigravity", url: "https://antigravity.google/" },
+      { name: "Linux Terminal", url: "https://linuxcommand.org/" },
+      { name: "Arch Linux", url: "https://archlinux.org/" },
+      { name: "AUR", url: "https://aur.archlinux.org/" },
+      { name: "GitHub", url: "https://github.com/" }
+    ]
   },
   {
     category: "Deployment & No-Code",
-    items: ["Netlify", "Vercel", "Tally.so"]
+    items: [
+      { name: "Netlify", url: "https://www.netlify.com/" },
+      { name: "Vercel", url: "https://vercel.com/" },
+      { name: "Tally.so", url: "https://tally.so/" }
+    ]
   },
   {
     category: "Creative & Media",
-    items: ["DaVinci Resolve", "GIMP", "Canva", "OBS Studio"]
+    items: [
+      { name: "DaVinci Resolve", url: "https://www.blackmagicdesign.com/products/davinciresolve" },
+      { name: "GIMP", url: "https://www.gimp.org/" },
+      { name: "Canva", url: "https://www.canva.com/" },
+      { name: "OBS Studio", url: "https://obsproject.com/" }
+    ]
   },
   {
     category: "Marketing & Ops",
-    items: ["Mailchimp", "Kit", "Hyros"]
+    items: [
+      { name: "Mailchimp", url: "https://mailchimp.com/" },
+      { name: "Kit", url: "https://kit.com/" },
+      { name: "Hyros", url: "https://hyros.com/" }
+    ]
   }
 ];
 
