@@ -285,7 +285,7 @@ const Dashboard: React.FC = () => {
             {CHANGELOG.map((log, i) => (
               <li key={i} className="relative">
                 <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 bg-black border border-white/20 rounded-full"></div>
-                <div className="font-mono text-xs text-grey mb-1">{log.date}</div>
+                <div className={`font-mono text-xs mb-1 ${log.date === "Future" ? "text-grey" : "text-electricBlue"}`}>{log.date}</div>
                 {log.title && (
                   <div className="font-mono text-xs text-electricBlue font-bold mb-1 tracking-wide">{log.title}</div>
                 )}

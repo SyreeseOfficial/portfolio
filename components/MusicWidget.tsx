@@ -8,7 +8,7 @@ const MusicWidget: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSongIndex((prev) => (prev + 1) % MUSIC_PLAYLIST.length);
-    }, 4000); // Rotate every 4 seconds
+    }, 2000); // Rotate every 2 seconds
 
     return () => clearInterval(interval);
   }, []);

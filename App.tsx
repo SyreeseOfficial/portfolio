@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route, ScrollRestoration } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import CaseStudy from './pages/CaseStudy';
 import NotFound from './pages/NotFound';
@@ -8,7 +8,7 @@ import Footer from './components/layout/Footer';
 
 // Helper component to scroll to top on route change
 const ScrollToTop = () => {
-  const { pathname } = window.location;
+  const { pathname } = useLocation();
 
   React.useEffect(() => {
     window.scrollTo(0, 0);

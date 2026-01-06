@@ -277,7 +277,7 @@ export const BETS: BetItem[] = [
 export const CHANGELOG: ChangelogItem[] = [
   { date: "12-12-25", change: "Had idea to update portfolio site" },
   { date: "12-17-25", change: "Finished v1 of new site" },
-  { date: "12-18-25", title: "DEPLOYED", change: "Deployed using GitHub and Vercel" },
+  { date: "12-18-25", change: "Deployed using GitHub and Vercel" },
   { date: "Future", change: 'Add a "Killed Projects" section' },
   { date: "Future", change: 'Add "Bucket List" section' },
   { date: "Future", change: "Add live stats section that shares my health tracking stats live: steps, cal burned, sleep, etc" }
