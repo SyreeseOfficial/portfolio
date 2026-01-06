@@ -7,7 +7,7 @@ const CaseStudy: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const projectIndex = PROJECTS.findIndex((p) => p.id === id);
   const project = PROJECTS[projectIndex];
-  
+
   // Find next project for footer nav
   const nextProject = PROJECTS[(projectIndex + 1) % PROJECTS.length];
 
@@ -18,8 +18,8 @@ const CaseStudy: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-12 animate-fade-in">
       {/* Back Nav */}
-      <Link 
-        to="/" 
+      <Link
+        to="/"
         className="inline-flex items-center gap-2 font-mono text-xs text-grey hover:text-electricBlue mb-12 transition-colors"
       >
         <ArrowLeft size={14} />
@@ -34,32 +34,24 @@ const CaseStudy: React.FC = () => {
         <p className="font-sans text-xl text-grey mb-8">
           {project.summary}
         </p>
-        
+
         <div className="flex flex-wrap gap-4 items-center">
-          <a 
+          <a
             href={project.caseStudy.liveLink}
-            target="_blank" 
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-black font-sans font-medium px-6 py-2 rounded-sm hover:bg-electricBlue hover:text-white transition-colors"
           >
             Visit Live Site <ExternalLink size={16} />
           </a>
-          
-          <div className="h-6 w-px bg-white/20 hidden md:block"></div>
-          
-          <div className="flex gap-2">
-            {project.tags.map(tag => (
-              <span key={tag} className="font-mono text-xs text-grey border border-white/10 px-2 py-1 rounded">
-                {tag}
-              </span>
-            ))}
-          </div>
+
+
         </div>
       </header>
 
       {/* Narrative */}
       <div className="space-y-24">
-        
+
         {/* Section 1: Problem */}
         <section className="grid md:grid-cols-12 gap-8">
           <div className="md:col-span-4">
@@ -74,7 +66,7 @@ const CaseStudy: React.FC = () => {
 
         {/* Media 1 */}
         <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
-           <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" className="w-full h-auto opacity-90" />
+          <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" className="w-full h-auto opacity-90" />
         </div>
 
         {/* Section 2: Solution */}
@@ -91,7 +83,7 @@ const CaseStudy: React.FC = () => {
 
         {/* Media 2 */}
         <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
-           <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" className="w-full h-auto opacity-90" />
+          <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" className="w-full h-auto opacity-90" />
         </div>
 
         {/* Section 3: Result */}
@@ -110,16 +102,16 @@ const CaseStudy: React.FC = () => {
 
       {/* Footer Nav */}
       <div className="mt-32 pt-12 border-t border-white/10 flex justify-end">
-        <Link 
+        <Link
           to={`/project/${nextProject.id}`}
           className="group text-right"
         >
           <span className="font-mono text-xs text-grey block mb-2 group-hover:text-electricBlue transition-colors">Next Project</span>
           <div className="flex items-center gap-3">
-             <span className="font-serif italic text-3xl text-white group-hover:underline">
-               {nextProject.title}
-             </span>
-             <ArrowRight className="text-white group-hover:translate-x-2 transition-transform" />
+            <span className="font-serif italic text-3xl text-white group-hover:underline">
+              {nextProject.title}
+            </span>
+            <ArrowRight className="text-white group-hover:translate-x-2 transition-transform" />
           </div>
         </Link>
       </div>

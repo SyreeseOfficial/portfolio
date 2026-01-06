@@ -79,23 +79,23 @@ export const PHILOSOPHY: PhilosophyItem[] = [
 ];
 
 export const BOOKSHELF: Book[] = [
-  { 
-    title: "10 Pillars of Wealth", 
+  {
+    title: "10 Pillars of Wealth",
     author: "Alex Becker",
     description: "This book showed me that I own my life. Everything that happens is my fault, and that’s a good thing! I’m the boss of my own future. If I work hard enough for long enough, I can do anything—even if I’m starting with no skills."
   },
-  { 
-    title: "The One Thing", 
+  {
+    title: "The One Thing",
     author: "Gary Keller",
     description: "If you want to win fast, you have to find the one most important job that gets you closer to your goal. Once you find it, forget everything else. Stop getting distracted and just focus on that one big thing."
   },
-  { 
-    title: "How to Be Well", 
+  {
+    title: "How to Be Well",
     author: "Frank Lipman",
     description: "I bought this on a whim 10 years ago, and it’s still one of my favorites. It’s full of sticky notes because the lessons are so good. It changed how I think about my health and how I live every day. I still follow its rules to feel my best."
   },
-  { 
-    title: "The Millionaire Booklet", 
+  {
+    title: "The Millionaire Booklet",
     author: "Grant Cardone",
     description: "It’s only 44 pages, making it the shortest but most helpful book I’ve ever read. It explains how to build wealth in the simplest way possible. This book has helped so many people become millionaires, and I’m using its secrets to build my own future."
   }
@@ -116,88 +116,110 @@ export const GEAR: GearItem[] = [
   },
   {
     category: "Tech Picks",
-    items: ["Gemini", "Antigravity", "Arch Linux", "Zen Browser", "Ghostty", "Bitwarden", "Omarchy", "Hyprland", "KDE", "LocalSend"]
+    items: ["Zen Browser", "Ghostty", "Bitwarden", "Omarchy", "Hyprland", "KDE", "LocalSend"]
   }
 ];
 
 export const TECH_STACK: GearItem[] = [
   {
-    category: "Vibe Coding / AI",
-    items: ["Google AI Studio", "Nano Banana", "Antigravity", "Gemini CLI"]
+    category: "AI & Development",
+    items: ["Gemini", "Antigravity", "Linux Terminal", "Arch Linux", "AUR", "GitHub"]
   },
   {
-    category: "Deployment & Git",
-    items: ["Netlify", "Vercel", "GitHub"]
+    category: "Deployment & No-Code",
+    items: ["Netlify", "Vercel", "Tally.so"]
   },
   {
-    category: "Creative Tools",
-    items: ["GIMP", "Lightroom", "Canva", "OBS Studio"]
+    category: "Creative & Media",
+    items: ["DaVinci Resolve", "GIMP", "Canva", "OBS Studio"]
+  },
+  {
+    category: "Marketing & Ops",
+    items: ["Mailchimp", "Kit", "Hyros"]
   }
 ];
 
 export const ROADMAP: RoadmapItem[] = [
-  { 
-    title: "Build Something To $10k MRR", 
+  {
+    title: "Build Something To $10k MRR",
     description: "Make something useful that people need.",
     timeline: "Current"
   },
-  { 
-    title: "Replace My 9-5", 
+  {
+    title: "Replace My 9-5",
     description: "Transition to full-time independent building.",
     timeline: "2026 Goal"
   },
-  { 
-    title: "Move My Family Somewhere Warmer", 
+  {
+    title: "Move My Family Somewhere Warmer",
     description: "Get out of this sad Seattle rain.",
     timeline: "Future"
   },
-  { 
-    title: "Build A Mid Price SaaS To $100k MRR", 
+  {
+    title: "Build A Mid Price SaaS To $100k MRR",
     description: "Scale a B2B solution to significant revenue.",
     timeline: "Long Term"
   },
-  { 
-    title: "Buy A Farm", 
+  {
+    title: "Buy A Farm",
     description: "Live out our days tending sheep.",
     timeline: "The Dream"
   }
 ];
 
 export const MUSIC_PLAYLIST = [
-  "Daft Punk - Veridis Quo",
-  "Tycho - Awake",
-  "Bonobo - Kerala",
-  "Fred again.. - Kyle (I found you)",
-  "Aphex Twin - #3"
+  "Icewear Vezzo",
+  "Bryson Tiller",
+  "King Hendrick$",
+  "Babyface Ray",
+  "Neton Vega",
+  "Tito Double P",
+  "Big Sad 1900",
+  "Larry June",
+  "Kodak Black",
+  "Leon Thomas",
+  "Shoreline Mafia",
+  "Big Sean",
+  "Nipsey Hussle",
+  "Victor Mendivil",
+  "BigXthePlug",
+  "Grupo Frontera",
+  "Kanye West",
+  "Grupo Firme",
+  "Miguel",
+  "PARTYNEXTDOOR",
+  "Wale",
+  "Odeal",
+  "1700Bubba"
 ];
 
 export const INSPIRATIONS: InspirationItem[] = [
-  { 
-    name: "Alex Becker", 
-    description: "Minimalist software entrepreneur who breaks down building successful software companies to simple steps." 
+  {
+    name: "Alex Becker",
+    description: "Minimalist software entrepreneur who breaks down building successful software companies to simple steps."
   },
-  { 
-    name: "Charlie Morgan", 
-    description: "Young entrepreneur who uses shadow work to kill the parts of him he doesn't like in order to become a more skilled and better person." 
+  {
+    name: "Charlie Morgan",
+    description: "Young entrepreneur who uses shadow work to kill the parts of him he doesn't like in order to become a more skilled and better person."
   },
-  { 
-    name: "Sam Ovens", 
-    description: "Completely optimizes every single aspect of his life, no matter how minute, in order to make his company, skool, better." 
+  {
+    name: "Sam Ovens",
+    description: "Completely optimizes every single aspect of his life, no matter how minute, in order to make his company, skool, better."
   }
 ];
 
 export const BETS: BetItem[] = [
-  { 
-    title: "Crypto Boom", 
-    description: "I think crypto is about to go crazy again, just like in 2020. People will move money from meme coins into useful stuff like AI and Real World projects first. After that, gaming coins will blow up." 
+  {
+    title: "Crypto Boom",
+    description: "I think crypto is about to go crazy again, just like in 2020. People will move money from meme coins into useful stuff like AI and Real World projects first. After that, gaming coins will blow up."
   },
-  { 
-    title: "Instant Video Games", 
-    description: "Soon, you'll be able to make a whole video game just by typing one sentence. Want to play as a robot dinosaur with machine guns? Just ask AI, and it will build it for you instantly." 
+  {
+    title: "Instant Video Games",
+    description: "Soon, you'll be able to make a whole video game just by typing one sentence. Want to play as a robot dinosaur with machine guns? Just ask AI, and it will build it for you instantly."
   },
-  { 
-    title: "Living to 120", 
-    description: "Thanks to people like Bryan Johnson, I bet living to 120 will be normal soon. Medicine is changing from 'fixing sick people' to 'stopping aging' within the next 20 to 30 years." 
+  {
+    title: "Living to 120",
+    description: "Thanks to people like Bryan Johnson, I bet living to 120 will be normal soon. Medicine is changing from 'fixing sick people' to 'stopping aging' within the next 20 to 30 years."
   }
 ];
 
