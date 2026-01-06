@@ -2,7 +2,6 @@ export interface Project {
   id: string;
   title: string;
   year: string;
-  tags: string[];
   summary: string;
   videoUrl?: string; // Placeholder for video
   caseStudy: {
