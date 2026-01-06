@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Header: React.FC = () => {
   return (
     <header className="absolute top-0 left-0 right-0 z-10 w-full py-8 px-6 md:px-12 flex justify-center">
-      <Link to="/" className="flex flex-wrap justify-center items-baseline gap-x-3 gap-y-1 group text-center">
+      <Link to="/" className="flex flex-wrap justify-center items-baseline gap-x-3 gap-y-1 group text-center animate-fade-in-up opacity-0" style={{ animationDelay: "0ms" }}>
         <span className="font-mono text-sm md:text-base text-white font-medium group-hover:text-electricBlue transition-colors duration-200 whitespace-nowrap">
           Syreese Delos Santos
         </span>
