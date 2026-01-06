@@ -14,7 +14,7 @@ const DashboardModule: React.FC<DashboardModuleProps> = ({ title, children, isOp
     <div className="border-b border-white/10 last:border-none">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between py-6 group focus:outline-none hover:bg-white/5 hover:pl-4 transition-all duration-300 ease-out rounded-sm px-0"
+        className="w-full flex items-center justify-between py-6 group focus:outline-none hover:pl-4 transition-all duration-300 ease-out rounded-sm px-0"
       >
         <h3 className="font-mono text-base text-white group-hover:text-electricBlue transition-colors">
           {title}

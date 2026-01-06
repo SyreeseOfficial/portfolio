@@ -53,6 +53,18 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #007BFF;
       }
+
+      /* Animation for "builder" text */
+      @keyframes builder-rise {
+        0% {
+          opacity: 0;
+          transform: translateY(10px) rotateX(20deg);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) rotateX(0);
+        }
+      }
     </style>
   <body class="bg-black text-offWhite antialiased selection:bg-electricBlue selection:text-white">
     <div id="root"></div>
