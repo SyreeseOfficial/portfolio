@@ -64,7 +64,7 @@ export const PHILOSOPHY: PhilosophyItem[] = [
   {
     id: '1',
     number: '01',
-    title: "I'm in charge",
+    title: "I'm In Charge",
     description: "I choose my mindset & create my own reality."
   },
   {

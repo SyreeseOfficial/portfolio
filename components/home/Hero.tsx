@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
             style={{ animationDelay: "1500ms" }}
           >
             <a
-              href="/resume.pdf"
+              href="/Syreese_Resume.pdf"
               className="inline-flex items-center gap-2 bg-electricBlue text-white font-sans font-medium px-8 py-3 rounded-md hover:bg-blue-600 transition-colors duration-200"
             >
               <Download size={18} />
