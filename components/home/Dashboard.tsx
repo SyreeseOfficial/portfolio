@@ -49,6 +49,13 @@ const Dashboard: React.FC = () => {
           onToggle={() => toggleModule("About Me")}
         >
           <div className="pl-4 md:pl-0 font-sans text-sm text-grey leading-relaxed space-y-4">
+            <div className="mb-4">
+              <img
+                src="/profile.jpg"
+                alt="Syreese Delos Santos"
+                className="w-24 h-24 rounded-full object-cover border-2 border-white/10"
+              />
+            </div>
             <p>
               I love building things and helping people win. I am a "Swiss Army Knife" who uses smart tools and AI to do the work of a whole team. I have built my own software, grown online communities from scratch, and even run my own businesses.
             </p>
