@@ -1,57 +1,39 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Background } from './components/Layout/Background';
-import { Hero } from './components/Hero';
-import { HeaderBento } from './components/HeaderBento';
-import { Philosophy } from './components/Philosophy';
-import { DeskSetup } from './components/DeskSetup';
-import { Tools } from './components/Tools';
-import { Bookshelf } from './components/Bookshelf';
-import { MyBets } from './components/MyBets';
-import { Roadmap } from './components/Roadmap';
-import { Footer } from './components/Footer';
-import { SetupPage } from './components/SetupPage';
-import { ContentDiet } from './components/ContentDiet';
-import { FavoritePurchases } from './components/FavoritePurchases';
-import { PhotosPreview } from './components/PhotosPreview';
-import { Changelog } from './components/Changelog';
-import { BentoGrid } from './components/BentoGrid';
+import { HashRouter as Router, Routes, Route, ScrollRestoration } from 'react-router-dom';
+import Home from './pages/Home';
+import CaseStudy from './pages/CaseStudy';
+import NotFound from './pages/NotFound';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
 
-const LandingPage = () => {
-    return (
-        <div className="relative min-h-screen text-white selection:bg-red-500/30">
-            <Background />
-            <Hero />
-            <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 md:px-12 md:py-20 space-y-32 md:space-y-96">
-                <div className="space-y-32">
-                    <HeaderBento />
-                    <BentoGrid />
-                </div>
-                <Philosophy />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <DeskSetup />
-                    <PhotosPreview />
-                </div>
-                <Tools />
-                <ContentDiet />
-                <FavoritePurchases />
-                <Bookshelf />
-                <MyBets />
-                <Roadmap />
-                <Changelog />
-                <Footer />
-            </div>
-        </div>
-    );
+// Helper component to scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = window.location;
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 };
 
-export default function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/setup" element={<SetupPage />} />
-            </Routes>
-        </Router>
-    );
-}
+const App: React.FC = () => {
+  return (
+    <Router>
+      <ScrollToTop />
+      <div className="flex flex-col min-h-screen bg-black text-offWhite font-sans selection:bg-electricBlue selection:text-white overflow-x-hidden">
+        <Header />
+        <main className="flex-grow pt-20">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project/:id" element={<CaseStudy />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  );
+};
+
+export default App;

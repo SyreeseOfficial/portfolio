@@ -1,40 +1,55 @@
-import React from 'react';
-
-export enum ToolCategory {
-  PhotoEditing = "Photo Editing",
-  ScreenRecording = "Screen Recording",
-  Fun = "Fun",
-  Focus = "Focus",
-  Writing = "Writing",
-  TechPicks = "Tech Picks",
+export interface Project {
+  id: string;
+  title: string;
+  year: string;
+  tags: string[];
+  summary: string;
+  videoUrl?: string; // Placeholder for video
+  caseStudy: {
+    problem: string;
+    solution: string;
+    result: string;
+    liveLink: string;
+    images: string[];
+  };
 }
 
-export interface ToolItem {
-  name: string;
-  category: ToolCategory;
-  url: string;
+export interface PhilosophyItem {
+  id: string;
+  number: string;
+  title: string;
+  description: string;
+}
+
+export interface GearItem {
+  category: string;
+  items: string[];
+}
+
+export interface Book {
+  title: string;
+  author: string;
+  description: string;
 }
 
 export interface RoadmapItem {
-  id: string;
   title: string;
-  description?: string;
-  date?: string;
-  icon?: 'mrr' | 'job' | 'family' | 'farm';
-  completed?: boolean;
+  description: string;
+  timeline: string;
 }
 
-export interface BentoSubItem {
-  label: string;
-  url: string;
+export interface InspirationItem {
+  name: string;
+  description: string;
 }
 
-export interface BentoItem {
-  id: string;
+export interface BetItem {
   title: string;
-  subtitle: string;
-  description: string | React.ReactNode;
-  size: '1x1' | '1x2' | '2x1' | '3x1';
-  type: 'community' | 'extension' | 'boxing' | 'fitness' | 'review' | 'voice';
-  subItems?: BentoSubItem[];
+  description: string;
+}
+
+export interface ChangelogItem {
+  date: string;
+  title?: string;
+  change: string;
 }

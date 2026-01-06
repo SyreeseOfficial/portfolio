@@ -1,60 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth bg-black">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Syreese Delos Santos</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>The Creative Builder</title>
+    <meta name="description" content="Hard work, translated to the web." />
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
     <script>
       tailwind.config = {
         theme: {
           extend: {
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              mono: ["JetBrains Mono", "monospace"],
-            },
             colors: {
-              brand: {
-                red: "#ff3131",
-                peach: "#ffbd59",
-              },
+              black: '#000000',
+              offWhite: '#F0F0F0',
+              grey: '#888888',
+              electricBlue: '#007BFF',
             },
-            animation: {
-              "spin-slow": "spin 8s linear infinite",
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+              sans: ['Inter', 'sans-serif'],
             },
-          },
-        },
-      };
-    </script>
-    <style>
-      body {
-        background-color: #000000;
-        color: #f6f6f6;
-        overflow-x: hidden;
+            borderRadius: {
+              sm: '4px',
+              md: '6px',
+            }
+          }
+        }
       }
-      /* Custom scrollbar for a sleeker look */
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Custom scrollbar for raw/hacker aesthetic */
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #0a0a0a;
+        background: #000;
       }
       ::-webkit-scrollbar-thumb {
         background: #333;
         border-radius: 4px;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #555;
+        background: #007BFF;
       }
     </style>
-</head>
-  <body>
+  <body class="bg-black text-offWhite antialiased selection:bg-electricBlue selection:text-white">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
