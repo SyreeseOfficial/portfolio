@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <img
               src={project.videoUrl}
               alt={`${project.title} Preview`}
-              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

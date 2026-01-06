@@ -6,15 +6,15 @@ export const PROJECTS: Project[] = [
     title: 'OrthoStar',
     year: '2025',
     summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
-    videoUrl: 'https://picsum.photos/800/450?grayscale', // Placeholder
+    videoUrl: '/projects/orthostar/cover.jpg', // Placeholder
     caseStudy: {
       problem: 'Practices lose future customers when their practice has bad reviews.',
       solution: 'I created a tool that blocks bad reviews, gets the practice more 5-star reviews and turns happy patients into usable video ads.',
       result: 'Average Ortho practice sees a 32% increase in 5-star reviews which lead to an average of 7 new patients per month. A new Ortho patient can be worth anywhere from $1k - $15k to a practice. You do the math.',
       liveLink: 'https://example.com',
       images: [
-        'https://picsum.photos/800/500?1',
-        'https://picsum.photos/800/500?2'
+        '/projects/orthostar/case-study-1.jpg',
+        '/projects/orthostar/case-study-2.jpg'
       ]
     }
   },
@@ -23,15 +23,15 @@ export const PROJECTS: Project[] = [
     title: 'Chrome Extensions',
     year: '2024',
     summary: 'A collection of useful Chrome extensions I built for the Skool platform.',
-    videoUrl: 'https://picsum.photos/800/450?blur', // Placeholder
+    videoUrl: '/projects/chrome-extensions/cover.jpg', // Placeholder
     caseStudy: {
       problem: 'Skool is still a new tool. They lack features that can make their users more money.',
       solution: 'I created different Chrome extensions that add useful features for users. Some of those extensions are: Skool Todo-List, Skool Templates, Skool Utilities, Skooler AI.',
       result: 'Skool users use these tools. They see an increase in their revenue across all their Skool communities.',
       liveLink: 'https://example.com',
       images: [
-        'https://picsum.photos/800/500?3',
-        'https://picsum.photos/800/500?4'
+        '/projects/chrome-extensions/case-study-1.jpg',
+        '/projects/chrome-extensions/case-study-2.jpg'
       ]
     }
   },
@@ -40,15 +40,15 @@ export const PROJECTS: Project[] = [
     title: 'VibeSTT',
     year: '2023',
     summary: 'A minimalist, high-performance speech-to-text utility for the Omarchy Linux distribution.',
-    videoUrl: 'https://picsum.photos/800/450', // Placeholder
+    videoUrl: '/projects/vibestt/cover.jpg', // Placeholder
     caseStudy: {
       problem: 'Most Linux speech-to-text tools are full of bloat. I created a minimalist one that\'s fast, efficient and easy to use. Runs via an easy keybind. Installs with one command: yay -S vibestt',
       solution: 'I built a lightweight tool that integrates directly with the system. It uses minimal resources and activates instantly with a simple shortcut.',
       result: 'Users can easily speak their ideas, removing the handicap of slow typing, leading to faster work flow, more efficient time while on your PC, etc.',
       liveLink: 'https://example.com',
       images: [
-        'https://picsum.photos/800/500?5',
-        'https://picsum.photos/800/500?6'
+        '/projects/vibestt/case-study-1.jpg',
+        '/projects/vibestt/case-study-2.jpg'
       ]
     }
   }

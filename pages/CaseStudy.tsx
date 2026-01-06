@@ -66,7 +66,7 @@ const CaseStudy: React.FC = () => {
 
         {/* Media 1 */}
         <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
-          <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" className="w-full h-auto opacity-90" />
+          <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" className="w-full h-auto" />
         </div>
 
         {/* Section 2: Solution */}
@@ -83,7 +83,7 @@ const CaseStudy: React.FC = () => {
 
         {/* Media 2 */}
         <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
-          <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" className="w-full h-auto opacity-90" />
+          <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" className="w-full h-auto" />
         </div>
 
         {/* Section 3: Result */}
