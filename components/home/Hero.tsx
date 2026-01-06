@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
 
           <h1
             className="font-serif italic text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 animate-fade-in-up opacity-0"
-            style={{ animationDelay: "1000ms" }}
+            style={{ animationDelay: "500ms" }}
           >
             Hard work, <br className="hidden md:block" />
             translated to the web.
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
           <p
             className="font-sans text-grey text-lg md:text-xl max-w-2xl mx-auto mb-8 animate-fade-in-up opacity-0"
-            style={{ animationDelay: "2000ms" }}
+            style={{ animationDelay: "1000ms" }}
           >
             A digital{" "}
             <span className="inline-block">
@@ -28,8 +28,8 @@ const Hero: React.FC = () => {
                   key={index}
                   className="inline-block opacity-0"
                   style={{
-                    animation: `builder-rise 0.5s ease-out forwards`,
-                    animationDelay: `${index * 0.05 + 3}s`, // Stagger effect starting after text fade in (2000ms + 1s duration)
+                    animation: `builder-rise 0.4s ease-out forwards`,
+                    animationDelay: `${index * 0.05 + 1.5}s`, // Stagger effect starting after text fade in (1000ms + 0.5s duration)
                   }}
                 >
                   {char}
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
 
           <div
             className="pt-4 animate-fade-in-up opacity-0"
-            style={{ animationDelay: "3000ms" }}
+            style={{ animationDelay: "1500ms" }}
           >
             <a
               href="/resume.pdf"
@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
 
       <div
         className="absolute bottom-8 animate-fade-in-up opacity-0"
-        style={{ animationDelay: "4000ms" }}
+        style={{ animationDelay: "2000ms" }}
       >
         <div className="animate-bounce text-grey">
           <ChevronDown size={24} />
