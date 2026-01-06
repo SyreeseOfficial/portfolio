@@ -79,22 +79,26 @@ export const BOOKSHELF: Book[] = [
   {
     title: "10 Pillars of Wealth",
     author: "Alex Becker",
-    description: "This book showed me that I own my life. Everything that happens is my fault, and that’s a good thing! I’m the boss of my own future. If I work hard enough for long enough, I can do anything—even if I’m starting with no skills."
+    description: "This book showed me that I own my life. Everything that happens is my fault, and that’s a good thing! I’m the boss of my own future. If I work hard enough for long enough, I can do anything—even if I’m starting with no skills.",
+    url: "https://www.goodreads.com/book/show/30247915-the-10-pillars-of-wealth"
   },
   {
     title: "The One Thing",
     author: "Gary Keller",
-    description: "If you want to win fast, you have to find the one most important job that gets you closer to your goal. Once you find it, forget everything else. Stop getting distracted and just focus on that one big thing."
+    description: "If you want to win fast, you have to find the one most important job that gets you closer to your goal. Once you find it, forget everything else. Stop getting distracted and just focus on that one big thing.",
+    url: "https://www.goodreads.com/book/show/16256798-the-one-thing"
   },
   {
     title: "How to Be Well",
     author: "Frank Lipman",
-    description: "I bought this on a whim 10 years ago, and it’s still one of my favorites. It’s full of sticky notes because the lessons are so good. It changed how I think about my health and how I live every day. I still follow its rules to feel my best."
+    description: "I bought this on a whim 10 years ago, and it’s still one of my favorites. It’s full of sticky notes because the lessons are so good. It changed how I think about my health and how I live every day. I still follow its rules to feel my best.",
+    url: "https://www.goodreads.com/book/show/35721118-how-to-be-well"
   },
   {
     title: "The Millionaire Booklet",
     author: "Grant Cardone",
-    description: "It’s only 44 pages, making it the shortest but most helpful book I’ve ever read. It explains how to build wealth in the simplest way possible. This book has helped so many people become millionaires, and I’m using its secrets to build my own future."
+    description: "It’s only 44 pages, making it the shortest but most helpful book I’ve ever read. It explains how to build wealth in the simplest way possible. This book has helped so many people become millionaires, and I’m using its secrets to build my own future.",
+    url: "https://www.goodreads.com/book/show/31284204-the-millionaire-booklet"
   }
 ];
 
@@ -240,15 +244,18 @@ export const MUSIC_PLAYLIST = [
 export const INSPIRATIONS: InspirationItem[] = [
   {
     name: "Alex Becker",
-    description: "Minimalist software entrepreneur who breaks down building successful software companies to simple steps."
+    description: "Minimalist software entrepreneur who breaks down building successful software companies to simple steps.",
+    url: "https://www.youtube.com/channel/UCKQvGU-qtjEthINeViNbn6A"
   },
   {
     name: "Charlie Morgan",
-    description: "Young entrepreneur who uses shadow work to kill the parts of him he doesn't like in order to become a more skilled and better person."
+    description: "Young entrepreneur who uses shadow work to kill the parts of him he doesn't like in order to become a more skilled and better person.",
+    url: "https://www.youtube.com/@charliemofficial"
   },
   {
     name: "Sam Ovens",
-    description: "Completely optimizes every single aspect of his life, no matter how minute, in order to make his company, skool, better."
+    description: "Completely optimizes every single aspect of his life, no matter how minute, in order to make his company, skool, better.",
+    url: "https://www.youtube.com/@samovenstv"
   }
 ];
 

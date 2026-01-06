@@ -39,6 +39,7 @@ export interface Book {
   title: string;
   author: string;
   description: string;
+  url: string;
 }
 
 export interface RoadmapItem {
@@ -50,6 +51,7 @@ export interface RoadmapItem {
 export interface InspirationItem {
   name: string;
   description: string;
+  url: string;
 }
 
 export interface BetItem {

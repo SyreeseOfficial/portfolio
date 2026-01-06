@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Minus, ArrowUpRight, Instagram } from 'lucide-react';
+import { Plus, Minus, ArrowUpRight, Instagram, Youtube } from 'lucide-react';
 import { PHILOSOPHY, BOOKSHELF, GEAR, TECH_STACK, ROADMAP, INSPIRATIONS, BETS, CHANGELOG } from '../../data';
 
 interface DashboardModuleProps {
@@ -134,7 +134,15 @@ const Dashboard: React.FC = () => {
           <ul className="space-y-6 pl-4 md:pl-0">
             {INSPIRATIONS.map((person, i) => (
               <li key={i} className="group">
-                <div className="font-medium text-white mb-1">{person.name}</div>
+                <a
+                  href={person.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-white mb-1 inline-flex items-center gap-2 hover:text-electricBlue transition-colors"
+                >
+                  {person.name}
+                  <Youtube size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-electricBlue" />
+                </a>
                 <div className="font-sans text-sm text-grey group-hover:text-white transition-colors leading-relaxed">
                   {person.description}
                 </div>
@@ -153,7 +161,10 @@ const Dashboard: React.FC = () => {
             {BOOKSHELF.map((book, i) => (
               <li key={i} className="group">
                 <div className="font-medium text-white mb-1">
-                  <span className="italic">{book.title}</span> <span className="text-white/20">—</span> {book.author}
+                  <a href={book.url} target="_blank" rel="noopener noreferrer" className="italic hover:text-electricBlue transition-colors md:inline-flex md:items-center md:gap-2">
+                    {book.title}
+                    <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-electricBlue hidden md:block" />
+                  </a> <span className="text-white/20">—</span> {book.author}
                 </div>
                 <div className="font-sans text-sm text-grey group-hover:text-white transition-colors leading-relaxed">
                   {book.description}
