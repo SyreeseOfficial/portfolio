@@ -45,6 +45,8 @@ const Hero: React.FC = () => {
           >
             <a
               href="/Syreese_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-electricBlue text-white font-sans font-medium px-8 py-3 rounded-md hover:bg-blue-600 transition-colors duration-200"
             >
               <Download size={18} />
