@@ -9,6 +9,8 @@ export interface Project {
     solution: string;
     result: string;
     liveLink: string;
+    links?: { label: string; url: string }[];
+    ctaLabel?: string;
     images: string[];
   };
 }
@@ -61,7 +63,8 @@ export interface BetItem {
 
 export interface ChangelogItem {
   date: string;
-  title?: string;
+  change: string;
+}
 
 export interface DeskSetupItem {
   label: string;

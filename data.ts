@@ -8,9 +8,9 @@ export const PROJECTS: Project[] = [
     summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
     videoUrl: '/projects/orthostar/cover.jpg',
     caseStudy: {
-      problem: 'Practices lose future customers when their practice has bad reviews.',
-      solution: 'I created a tool that blocks bad reviews, gets the practice more 5-star reviews and turns happy patients into usable video ads.',
-      result: 'Average Ortho practice sees a 32% increase in 5-star reviews which lead to an average of 7 new patients per month. A new Ortho patient can be worth anywhere from $1k - $15k to a practice. You do the math.',
+      problem: 'When a orthodontist office has bad reviews online, new patients are afraid to go there. This causes the business to lose a lot of money.',
+      solution: 'I built a tool that helps offices manage their reputation. It stops bad reviews from going public. It asks happy patients to leave 5-star reviews. It turns video clips of happy patients into ads.',
+      result: 'The average orthodontist gets 32% more 5-star reviews. This brings in about 7 new patients every month. Since one patient can be worth up to $15,000, the office makes much more money.',
       liveLink: 'https://orthostar.org/',
       images: [
         '/projects/orthostar/case-study-1.jpg',
@@ -25,10 +25,15 @@ export const PROJECTS: Project[] = [
     summary: 'A collection of useful Chrome extensions I built for the Skool platform.',
     videoUrl: '/projects/chrome-extensions/cover.jpg',
     caseStudy: {
-      problem: 'Skool is still a new tool. They lack features that can make their users more money.',
-      solution: 'I created different Chrome extensions that add useful features for users. Some of those extensions are: Skool Todo-List, Skool Templates, Skool Utilities, Skooler AI.',
-      result: 'Skool users use these tools. They see an increase in their revenue across all their Skool communities.',
-      liveLink: 'https://example.com',
+      problem: 'Skool is a new platform. It is missing some helpful tools that could help its users earn more money.',
+      solution: 'I built four Chrome extensions to add these missing features: Skool Utilities, Skool Todo List, Skool Templates, and Skooler AI.',
+      result: 'People who use these tools are making more money in their Skool groups because they are more organized and faster.',
+      liveLink: 'https://chromewebstore.google.com/detail/skool-utilities/pgoiddblmhofnagiignbokiehfepijco?hl=en',
+      links: [
+        { label: 'Skool Utilities', url: 'https://chromewebstore.google.com/detail/skool-utilities/pgoiddblmhofnagiignbokiehfepijco?hl=en' },
+        { label: 'Skool Todo List', url: 'https://chromewebstore.google.com/detail/skool-todo-list/neenmpbhpkehfehcbgnpcjpgclhennoj' },
+        { label: 'Skool Templates', url: 'https://chromewebstore.google.com/detail/skool-templates/lbgcmkkendepgfajiljhegifclfhijde' }
+      ],
       images: [
         '/projects/chrome-extensions/case-study-1.jpg',
         '/projects/chrome-extensions/case-study-2.jpg'
@@ -42,10 +47,11 @@ export const PROJECTS: Project[] = [
     summary: 'A minimalist, high-performance speech-to-text utility for the Omarchy Linux distribution.',
     videoUrl: '/projects/vibestt/cover.jpg',
     caseStudy: {
-      problem: 'Most Linux speech-to-text tools are full of bloat. I created a minimalist one that\'s fast, efficient and easy to use. Runs via an easy keybind. Installs with one command: yay -S vibestt',
-      solution: 'I built a lightweight tool that integrates directly with the system. It uses minimal resources and activates instantly with a simple shortcut.',
-      result: 'Users can easily speak their ideas, removing the handicap of slow typing, leading to faster work flow, more efficient time while on your PC, etc.',
+      problem: 'Most speech-to-text tools for Linux are too slow and use too much computer power. They are hard to use and full of things you don\'t need',
+      solution: 'I made a simple tool called VibeSTT. It is very small and fast. It stays out of the way until you need it.',
+      result: 'You can talk instead of typing. This helps you get your work done much faster and saves you time.',
       liveLink: 'https://github.com/SyreeseOfficial/VibeSTT',
+      ctaLabel: 'View On Github',
       images: [
         '/projects/vibestt/case-study-1.jpg',
         '/projects/vibestt/case-study-2.jpg'

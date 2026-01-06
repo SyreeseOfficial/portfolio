@@ -36,14 +36,28 @@ const CaseStudy: React.FC = () => {
         </p>
 
         <div className="flex flex-wrap gap-4 items-center">
-          <a
-            href={project.caseStudy.liveLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-white text-black font-sans font-medium px-6 py-2 rounded-sm hover:bg-electricBlue hover:text-white transition-colors"
-          >
-            Visit Live Site <ExternalLink size={16} />
-          </a>
+          {project.caseStudy.links ? (
+            project.caseStudy.links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-black font-sans font-medium px-6 py-2 rounded-sm hover:bg-electricBlue hover:text-white transition-colors"
+              >
+                {link.label} <ExternalLink size={16} />
+              </a>
+            ))
+          ) : (
+            <a
+              href={project.caseStudy.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-black font-sans font-medium px-6 py-2 rounded-sm hover:bg-electricBlue hover:text-white transition-colors"
+            >
+              {project.caseStudy.ctaLabel || 'Visit Live Site'} <ExternalLink size={16} />
+            </a>
+          )}
 
 
         </div>
