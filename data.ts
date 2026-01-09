@@ -21,7 +21,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'chrome-extensions',
     title: 'Chrome Extensions',
-    year: '2024',
+    year: '2025',
     summary: 'A collection of useful Chrome extensions I built for the Skool platform.',
     videoUrl: '/projects/chrome-extensions/cover.jpg',
     caseStudy: {
@@ -43,7 +43,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'vibestt',
     title: 'VibeSTT',
-    year: '2023',
+    year: '2026',
     summary: 'A minimalist, high-performance speech-to-text utility for the Omarchy Linux distribution.',
     videoUrl: '/projects/vibestt/cover.jpg',
     caseStudy: {

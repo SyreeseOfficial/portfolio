@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
 import CaseStudy from './pages/CaseStudy';
 import NotFound from './pages/NotFound';
 import Header from './components/layout/Header';
@@ -26,6 +27,7 @@ const App: React.FC = () => {
         <main className="flex-grow pt-20">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/project/:id" element={<CaseStudy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

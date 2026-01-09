@@ -55,9 +55,19 @@ const ProjectSection: React.FC = () => {
   return (
     <section id="work" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="flex flex-col">
-        {PROJECTS.map((project) => (
+        {PROJECTS.slice(0, 3).map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
+      </div>
+
+      <div className="mt-20 pt-8 flex justify-center">
+        <Link
+          to="/projects"
+          className="group flex items-center gap-2 text-offWhite font-mono text-sm hover:text-electricBlue transition-colors duration-200"
+        >
+          View All Projects
+          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
+        </Link>
       </div>
     </section>
   );
