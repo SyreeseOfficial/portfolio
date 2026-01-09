@@ -2,6 +2,24 @@ import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, 
 
 export const PROJECTS: Project[] = [
   {
+    id: 'focusnoisecli',
+    title: 'FocusNoiseCLI',
+    year: '2026',
+    summary: 'A CLI tool that plays calming background noise to help you focus while you work.',
+    videoUrl: '/projects/focusnoisecli/demo.png',
+    caseStudy: {
+      problem: 'It is hard to stay focused when you have to switch windows to find music or white noise. Opening a web browser often leads to getting distracted by social media.',
+      solution: 'I built a Python app that plays high-quality sounds, like rain or a coffee shop, directly in your terminal. It uses smart coding to mix in random sound effects and includes a timer to track your work.',
+      result: 'You can now stay "in the zone" without leaving your code. It helps you work longer, tracks your progress, and runs smoothly on Windows, Mac, and Linux.',
+      liveLink: 'https://github.com/SyreeseOfficial/FocusNoiseCLI',
+      ctaLabel: 'View On Github',
+      images: [
+        '/projects/focusnoisecli/menu.png',
+        '/projects/focusnoisecli/settings.png'
+      ]
+    }
+  },
+  {
     id: 'hypertyper',
     title: 'HyperTyper',
     year: '2026',
