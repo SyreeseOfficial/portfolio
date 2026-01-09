@@ -24,25 +24,38 @@ const Projects: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="border-t border-darkGrey">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
                     {PROJECTS.map((project, index) => (
                         <Link
                             key={project.id}
                             to={`/project/${project.id}`}
                             state={{ from: 'archive' }}
-                            className="group block border-b border-darkGrey py-8 transition-colors duration-300 px-4 -mx-4 rounded-lg"
+                            className="group block"
                         >
-                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                                <div className="flex-1">
-                                    <h3 className="text-2xl font-serif text-white group-hover:text-electricBlue transition-colors duration-300 flex items-center gap-2">
+                            {/* Image Container */}
+                            <div className="relative aspect-video overflow-hidden rounded-lg mb-6 bg-white/5 border border-white/5">
+                                <img
+                                    src={project.videoUrl}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
+                            </div>
+
+                            {/* Content */}
+                            <div>
+                                <div className="flex items-start justify-between gap-4 mb-3">
+                                    <h3 className="text-3xl md:text-4xl font-serif italic text-white group-hover:text-electricBlue transition-colors duration-300">
                                         {project.title}
-                                        <ArrowUpRight size={18} className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 text-electricBlue" />
                                     </h3>
-                                    <p className="text-grey mt-1">{project.summary}</p>
+                                    <div className="flex items-center gap-3">
+                                        <span className="font-mono text-sm text-grey pt-2">{project.year}</span>
+                                        <ArrowUpRight size={24} className="text-grey group-hover:text-electricBlue group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                                    </div>
                                 </div>
-                                <div className="text-grey font-mono text-sm md:text-base whitespace-nowrap">
-                                    {project.year}
-                                </div>
+                                <p className="text-grey text-lg leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity duration-300">
+                                    {project.summary}
+                                </p>
                             </div>
                         </Link>
                     ))}
