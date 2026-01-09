@@ -331,7 +331,7 @@ export const DESK_SETUP: DeskSetupCategory[] = [
       { label: "Surface", value: "80\" Ikea Oak Solid Wood Countertop" },
       { label: "Support", value: "2x White Ikea Alex Drawers" },
       { label: "Organization", value: "Amazon Alex Drawer Organizers" },
-      { label: "Primary Display", value: "Samsung 49\" Odyssey G9 (Super Ultrawide)" },
+      { label: "Display", value: "Samsung 49\" Odyssey G9 (Super Ultrawide)" },
       { label: "Mounting", value: "Heavy Duty Monitor Arm" },
       { label: "Desk Mat", value: "Fnatic Super Ultra-Wide (Black)" }
     ]
@@ -348,9 +348,9 @@ export const DESK_SETUP: DeskSetupCategory[] = [
   {
     category: "Audio Stack",
     items: [
-      { label: "DAC/Amp", value: "FiiO K7" },
+      { label: "Amp", value: "FiiO K7" },
       { label: "Speakers", value: "Kanto YU2 Desktop Speakers" },
-      { label: "Microphone", value: "Fifine K688 (Dynamic XLR/USB)" },
+      { label: "Mic", value: "Fifine K688 (Dynamic XLR/USB)" },
       { label: "Headphones", value: "Hifiman Sundara (Open-back Planar), Sennheiser HD380 Pro (Studio Monitoring), Bose QuietComfort Ultra Gen 2 (ANC/Travel), Skullcandy Crusher Evo (Bass-heavy/Casual)" }
     ]
   },
@@ -365,7 +365,7 @@ export const DESK_SETUP: DeskSetupCategory[] = [
   {
     category: "Hardware & Maintenance",
     items: [
-      { label: "Firearms", value: "Glock 43X (9mm) with laser/light/Trijicon sights & Ruger LCP II (.22LR)." },
+      { label: "Hole Punchers", value: "Glock 43X (9mm) with laser/light/Trijicon sights & Ruger LCP II (.22LR)." },
       { label: "Maintenance", value: "Comprehensive Gun Cleaning Kit." }
     ]
   }
