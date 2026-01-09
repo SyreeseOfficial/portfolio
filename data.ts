@@ -2,20 +2,37 @@ import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, 
 
 export const PROJECTS: Project[] = [
   {
-    id: 'focusnoisecli',
-    title: 'FocusNoiseCLI',
-    year: '2026',
-    summary: 'A CLI tool that plays calming background noise to help you focus while you work.',
-    videoUrl: '/projects/focusnoisecli/demo.png',
+    id: 'orthostar',
+    title: 'OrthoStar',
+    year: '2025',
+    summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
+    videoUrl: '/projects/orthostar/cover.jpg',
     caseStudy: {
-      problem: 'It is hard to stay focused when you have to switch windows to find music or white noise. Opening a web browser often leads to getting distracted by social media.',
-      solution: 'I built a Python app that plays high-quality sounds, like rain or a coffee shop, directly in your terminal. It uses smart coding to mix in random sound effects and includes a timer to track your work.',
-      result: 'You can now stay "in the zone" without leaving your code. It helps you work longer, tracks your progress, and runs smoothly on Windows, Mac, and Linux.',
-      liveLink: 'https://github.com/SyreeseOfficial/FocusNoiseCLI',
+      problem: 'When a orthodontist office has bad reviews online, new patients are afraid to go there. This causes the business to lose a lot of money.',
+      solution: 'I built a tool that helps offices manage their reputation. It stops bad reviews from going public. It asks happy patients to leave 5-star reviews. It turns video clips of happy patients into ads.',
+      result: 'The average orthodontist gets 32% more 5-star reviews. This brings in about 7 new patients every month. Since one patient can be worth up to $15,000, the office makes much more money.',
+      liveLink: 'https://orthostar.org/',
+      images: [
+        '/projects/orthostar/case-study-1.jpg',
+        '/projects/orthostar/case-study-2.jpg'
+      ]
+    }
+  },
+  {
+    id: 'vibestt',
+    title: 'VibeSTT',
+    year: '2026',
+    summary: 'A minimalist, high-performance speech-to-text utility for the Omarchy Linux distribution.',
+    videoUrl: '/projects/vibestt/cover.jpg',
+    caseStudy: {
+      problem: 'Most speech-to-text tools for Linux are too slow and use too much computer power. They are hard to use and full of things you don\'t need',
+      solution: 'I made a simple tool called VibeSTT. It is very small and fast. It stays out of the way until you need it.',
+      result: 'You can talk instead of typing. This helps you get your work done much faster and saves you time.',
+      liveLink: 'https://github.com/SyreeseOfficial/VibeSTT',
       ctaLabel: 'View On Github',
       images: [
-        '/projects/focusnoisecli/menu.png',
-        '/projects/focusnoisecli/settings.png'
+        '/projects/vibestt/case-study-1.jpg',
+        '/projects/vibestt/case-study-2.jpg'
       ]
     }
   },
@@ -38,19 +55,20 @@ export const PROJECTS: Project[] = [
     }
   },
   {
-    id: 'orthostar',
-    title: 'OrthoStar',
-    year: '2025',
-    summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
-    videoUrl: '/projects/orthostar/cover.jpg',
+    id: 'focusnoisecli',
+    title: 'FocusNoiseCLI',
+    year: '2026',
+    summary: 'A CLI tool that plays calming background noise to help you focus while you work.',
+    videoUrl: '/projects/focusnoisecli/demo.png',
     caseStudy: {
-      problem: 'When a orthodontist office has bad reviews online, new patients are afraid to go there. This causes the business to lose a lot of money.',
-      solution: 'I built a tool that helps offices manage their reputation. It stops bad reviews from going public. It asks happy patients to leave 5-star reviews. It turns video clips of happy patients into ads.',
-      result: 'The average orthodontist gets 32% more 5-star reviews. This brings in about 7 new patients every month. Since one patient can be worth up to $15,000, the office makes much more money.',
-      liveLink: 'https://orthostar.org/',
+      problem: 'It is hard to stay focused when you have to switch windows to find music or white noise. Opening a web browser often leads to getting distracted by social media.',
+      solution: 'I built a Python app that plays high-quality sounds, like rain or a coffee shop, directly in your terminal. It uses smart coding to mix in random sound effects and includes a timer to track your work.',
+      result: 'You can now stay "in the zone" without leaving your code. It helps you work longer, tracks your progress, and runs smoothly on Windows, Mac, and Linux.',
+      liveLink: 'https://github.com/SyreeseOfficial/FocusNoiseCLI',
+      ctaLabel: 'View On Github',
       images: [
-        '/projects/orthostar/case-study-1.jpg',
-        '/projects/orthostar/case-study-2.jpg'
+        '/projects/focusnoisecli/menu.png',
+        '/projects/focusnoisecli/settings.png'
       ]
     }
   },
@@ -73,24 +91,6 @@ export const PROJECTS: Project[] = [
       images: [
         '/projects/chrome-extensions/case-study-1.jpg',
         '/projects/chrome-extensions/case-study-2.jpg'
-      ]
-    }
-  },
-  {
-    id: 'vibestt',
-    title: 'VibeSTT',
-    year: '2026',
-    summary: 'A minimalist, high-performance speech-to-text utility for the Omarchy Linux distribution.',
-    videoUrl: '/projects/vibestt/cover.jpg',
-    caseStudy: {
-      problem: 'Most speech-to-text tools for Linux are too slow and use too much computer power. They are hard to use and full of things you don\'t need',
-      solution: 'I made a simple tool called VibeSTT. It is very small and fast. It stays out of the way until you need it.',
-      result: 'You can talk instead of typing. This helps you get your work done much faster and saves you time.',
-      liveLink: 'https://github.com/SyreeseOfficial/VibeSTT',
-      ctaLabel: 'View On Github',
-      images: [
-        '/projects/vibestt/case-study-1.jpg',
-        '/projects/vibestt/case-study-2.jpg'
       ]
     }
   }
