@@ -296,8 +296,8 @@ const Dashboard: React.FC = () => {
         </DashboardModule>
 
         {/* Module: Contact */}
-        <div className="pt-12 mt-8">
-          <div className="pl-0">
+        <div className="pt-12 mt-8 border-t border-white/5">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <p className="font-serif italic text-xl text-white mb-4">Ready to build?</p>
             <a
               href="mailto:syreeseofficial@gmail.com"
