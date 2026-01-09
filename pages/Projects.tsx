@@ -29,6 +29,7 @@ const Projects: React.FC = () => {
                         <Link
                             key={project.id}
                             to={`/project/${project.id}`}
+                            state={{ from: 'archive' }}
                             className="group block border-b border-darkGrey py-8 transition-colors duration-300 px-4 -mx-4 rounded-lg"
                         >
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">

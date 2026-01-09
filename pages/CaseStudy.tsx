@@ -1,10 +1,12 @@
 import React from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link, Navigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 import { PROJECTS } from '../data';
 
 const CaseStudy: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+  const location = useLocation();
+  const isFromArchive = location.state?.from === 'archive';
   const projectIndex = PROJECTS.findIndex((p) => p.id === id);
   const project = PROJECTS[projectIndex];
 
@@ -19,11 +21,11 @@ const CaseStudy: React.FC = () => {
     <div className="max-w-4xl mx-auto px-6 md:px-12 py-12 animate-fade-in">
       {/* Back Nav */}
       <Link
-        to="/"
+        to={isFromArchive ? "/projects" : "/"}
         className="inline-flex items-center gap-2 font-mono text-xs text-grey hover:text-electricBlue mb-12 transition-colors"
       >
         <ArrowLeft size={14} />
-        BACK TO WORK
+        {isFromArchive ? "BACK TO ARCHIVE" : "BACK TO WORK"}
       </Link>
 
       {/* Header */}
@@ -118,6 +120,7 @@ const CaseStudy: React.FC = () => {
       <div className="mt-32 pt-12 border-t border-white/10 flex justify-end">
         <Link
           to={`/project/${nextProject.id}`}
+          state={location.state}
           className="group text-right"
         >
           <span className="font-mono text-xs text-grey block mb-2 group-hover:text-electricBlue transition-colors">Next Project</span>
