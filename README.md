@@ -1,10 +1,14 @@
 # The Creative Builder
 
+<div align="center">
+  <a href="https://syreese.com/">
+    <img src="https://img.shields.io/badge/LIVE_SITE-syreese.com-007BFF?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Site" />
+  </a>
+</div>
+
 > "Hard work, translated to the web."
 
 A premium, highly responsive personal portfolio website designed to showcase projects, case studies, and personal insights with a raw, "hacker-aesthetic" visual style. Built with modern web technologies for performance and seamless user experience.
-
-![Project Banner](https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6)
 
 ## 🚀 Features
 
