@@ -4,6 +4,9 @@
   <a href="https://syreese.com/">
     <img src="https://img.shields.io/badge/LIVE_SITE-syreese.com-007BFF?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Site" />
   </a>
+  <br />
+  <br />
+  <img src="assets/readme.gif" alt="Portfolio Preview" width="100%" />
 </div>
 
 > "Hard work, translated to the web."
