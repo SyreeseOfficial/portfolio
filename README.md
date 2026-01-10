@@ -1,6 +1,11 @@
 # The Creative Builder
 
 <div align="center">
+  <img src="public/readme.gif" alt="Portfolio Preview" width="100%" />
+</div>
+
+
+<div align="center">
   <a href="https://syreese.com/">
     <img src="https://img.shields.io/badge/LIVE_SITE-syreese.com-007BFF?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Live Site" />
   </a>
