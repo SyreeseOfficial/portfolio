@@ -1,4 +1,5 @@
 import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem, TechStackCategory, DeskSetupCategory } from './types';
+import { TrendingUp, Gamepad2, Heart } from 'lucide-react';
 
 export const PROJECTS: Project[] = [
   {
@@ -304,15 +305,18 @@ export const INSPIRATIONS: InspirationItem[] = [
 export const BETS: BetItem[] = [
   {
     title: "Crypto Boom",
-    description: "I think crypto is about to go crazy again, just like in 2020. People will move money from meme coins into useful stuff like AI and Real World projects first. After that, gaming coins will blow up."
+    description: "I think crypto is about to go crazy again, just like in 2020. People will move money from meme coins into useful stuff like AI and Real World projects first. After that, gaming coins will blow up.",
+    icon: TrendingUp
   },
   {
     title: "Instant Video Games",
-    description: "Soon, you'll be able to make a whole video game just by typing one sentence. Want to play as a robot dinosaur with machine guns? Just ask AI, and it will build it for you instantly."
+    description: "Soon, you'll be able to make a whole video game just by typing one sentence. Want to play as a robot dinosaur with machine guns? Just ask AI, and it will build it for you instantly.",
+    icon: Gamepad2
   },
   {
     title: "Living to 120",
-    description: "Thanks to people like Bryan Johnson, I bet living to 120 will be normal soon. Medicine is changing from 'fixing sick people' to 'stopping aging' within the next 20 to 30 years."
+    description: "Thanks to people like Bryan Johnson, I bet living to 120 will be normal soon. Medicine is changing from 'fixing sick people' to 'stopping aging' within the next 20 to 30 years.",
+    icon: Heart
   }
 ];
 

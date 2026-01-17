@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Minus, ArrowUpRight, Instagram, Youtube } from 'lucide-react';
+import { Plus, Minus, ArrowUpRight, Instagram, Youtube, TrendingUp, Gamepad, Heart } from 'lucide-react';
 import { PHILOSOPHY, BOOKSHELF, GEAR, TECH_STACK, ROADMAP, INSPIRATIONS, BETS, CHANGELOG, DESK_SETUP } from '../../data';
 
 interface DashboardModuleProps {
@@ -117,10 +117,10 @@ const Dashboard: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pl-4 md:pl-0">
             {GEAR.map((category, i) => (
               <div key={i}>
-                <h4 className="font-mono text-xs text-white/50 mb-2 uppercase">{category.category}</h4>
+                <h4 className="font-mono text-xs text-electricBlue mb-2 uppercase">{category.category}</h4>
                 <ul className="space-y-2">
                   {category.items.map((item, j) => (
-                    <li key={j} className="font-mono text-sm text-electricBlue transform transition-transform duration-300 hover:translate-x-2">
+                    <li key={j} className="font-mono text-sm text-grey transform transition-transform duration-300 hover:translate-x-2">
                       <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors block">
                         {item.name}
                       </a>
@@ -190,11 +190,11 @@ const Dashboard: React.FC = () => {
           <div className="space-y-8 pl-4 md:pl-0">
             {DESK_SETUP.map((category, i) => (
               <div key={i}>
-                <h4 className="font-mono text-xs text-white/50 mb-3 uppercase tracking-wider">{category.category}</h4>
+                <h4 className="font-mono text-xs text-electricBlue mb-3 uppercase tracking-wider">{category.category}</h4>
                 <ul className="space-y-3">
                   {category.items.map((item, j) => (
                     <li key={j} className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-4 group transform transition-transform duration-300 hover:translate-x-2">
-                      <span className="font-mono text-sm text-electricBlue whitespace-nowrap min-w-[100px]">{item.label}</span>
+                      <span className="font-mono text-sm text-white whitespace-nowrap min-w-[100px]">{item.label}</span>
                       <span className="font-sans text-sm text-grey group-hover:text-white transition-colors leading-relaxed">{item.value}</span>
                     </li>
                   ))}
@@ -238,7 +238,10 @@ const Dashboard: React.FC = () => {
           <ul className="space-y-6 pl-4 md:pl-0">
             {BETS.map((bet, i) => (
               <li key={i} className="group transform transition-transform duration-300 hover:translate-x-2 p-2 rounded-sm hover:bg-white/5">
-                <div className="font-mono text-xs text-electricBlue mb-1 uppercase tracking-wider">{bet.title}</div>
+                <div className="flex items-center gap-2 mb-1">
+                  {bet.icon && <bet.icon size={16} className="text-electricBlue" />}
+                  <div className="font-mono text-xs text-white uppercase tracking-wider">{bet.title}</div>
+                </div>
                 <div className="font-sans text-sm text-grey group-hover:text-white transition-colors leading-relaxed">
                   {bet.description}
                 </div>

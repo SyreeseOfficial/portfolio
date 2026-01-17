@@ -59,6 +59,7 @@ export interface InspirationItem {
 export interface BetItem {
   title: string;
   description: string;
+  icon?: React.ElementType;
 }
 
 export interface ChangelogItem {
