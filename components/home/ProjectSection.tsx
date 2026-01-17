@@ -55,6 +55,7 @@ const ProjectSection: React.FC = () => {
   return (
     <section id="work" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="flex flex-col">
+        <h2 className="font-mono text-electricBlue text-sm uppercase tracking-wider mb-12">Projects</h2>
         {PROJECTS.slice(0, 3).map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

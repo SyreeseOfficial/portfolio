@@ -39,9 +39,9 @@ export interface TechStackCategory {
 
 export interface Book {
   title: string;
-  author: string;
   description: string;
   url: string;
+  icon?: React.ElementType;
 }
 
 export interface RoadmapItem {

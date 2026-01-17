@@ -1,5 +1,5 @@
 import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem, TechStackCategory, DeskSetupCategory } from './types';
-import { TrendingUp, Gamepad2, Heart } from 'lucide-react';
+import { TrendingUp, Gamepad2, Heart, Landmark, Target, Activity, BookOpen } from 'lucide-react';
 
 export const PROJECTS: Project[] = [
   {
@@ -121,27 +121,27 @@ export const PHILOSOPHY: PhilosophyItem[] = [
 export const BOOKSHELF: Book[] = [
   {
     title: "10 Pillars of Wealth",
-    author: "Alex Becker",
-    description: "This book showed me that I own my life. Everything that happens is my fault, and that’s a good thing! I’m the boss of my own future. If I work hard enough for long enough, I can do anything—even if I’m starting with no skills.",
-    url: "https://www.goodreads.com/book/show/30247915-the-10-pillars-of-wealth"
+    description: "This book taught me I own my future. Success is my responsibility. Hard work beats talent.",
+    url: "https://www.goodreads.com/book/show/30247915-the-10-pillars-of-wealth",
+    icon: Landmark
   },
   {
     title: "The One Thing",
-    author: "Gary Keller",
-    description: "If you want to win fast, you have to find the one most important job that gets you closer to your goal. Once you find it, forget everything else. Stop getting distracted and just focus on that one big thing.",
-    url: "https://www.goodreads.com/book/show/16256798-the-one-thing"
+    description: "To win fast, focus on the single most important task. Ignore distractions. Do one thing well.",
+    url: "https://www.goodreads.com/book/show/16256798-the-one-thing",
+    icon: Target
   },
   {
     title: "How to Be Well",
-    author: "Frank Lipman",
-    description: "I bought this on a whim 10 years ago, and it’s still one of my favorites. It’s full of sticky notes because the lessons are so good. It changed how I think about my health and how I live every day. I still follow its rules to feel my best.",
-    url: "https://www.goodreads.com/book/show/35721118-how-to-be-well"
+    description: "My health bible. Simple habits for a better life. I follow its rules daily to feel my best.",
+    url: "https://www.goodreads.com/book/show/35721118-how-to-be-well",
+    icon: Activity
   },
   {
     title: "The Millionaire Booklet",
-    author: "Grant Cardone",
-    description: "It’s only 44 pages, making it the shortest but most helpful book I’ve ever read. It explains how to build wealth in the simplest way possible. This book has helped so many people become millionaires, and I’m using its secrets to build my own future.",
-    url: "https://www.goodreads.com/book/show/31284204-the-millionaire-booklet"
+    description: "Simple steps to wealth. 44 pages of pure value. I use its secrets to build my future.",
+    url: "https://www.goodreads.com/book/show/31284204-the-millionaire-booklet",
+    icon: BookOpen
   }
 ];
 
@@ -237,8 +237,8 @@ export const ROADMAP: RoadmapItem[] = [
     timeline: "Current"
   },
   {
-    title: "Replace My 9-5",
-    description: "Transition to full-time independent building.",
+    title: "Become A Full-Stack Architect",
+    description: "Build scalable systems that power real businesses.",
     timeline: "2026 Goal"
   },
   {
@@ -287,17 +287,17 @@ export const MUSIC_PLAYLIST = [
 export const INSPIRATIONS: InspirationItem[] = [
   {
     name: "Alex Becker",
-    description: "Minimalist software entrepreneur who breaks down building successful software companies to simple steps.",
+    description: "Minimalist builder. Simplifies business to its core.",
     url: "https://www.youtube.com/channel/UCKQvGU-qtjEthINeViNbn6A"
   },
   {
     name: "Charlie Morgan",
-    description: "Young entrepreneur who uses shadow work to kill the parts of him he doesn't like in order to become a more skilled and better person.",
+    description: "Uses shadow work to level up his character.",
     url: "https://www.youtube.com/@charliemofficial"
   },
   {
     name: "Sam Ovens",
-    description: "Completely optimizes every single aspect of his life, no matter how minute, in order to make his company, skool, better.",
+    description: "Optimizes every detail of life for business performance.",
     url: "https://www.youtube.com/@samovenstv"
   }
 ];
@@ -305,17 +305,17 @@ export const INSPIRATIONS: InspirationItem[] = [
 export const BETS: BetItem[] = [
   {
     title: "Crypto Boom",
-    description: "I think crypto is about to go crazy again, just like in 2020. People will move money from meme coins into useful stuff like AI and Real World projects first. After that, gaming coins will blow up.",
+    description: "Crypto will boom again. Money will flow to utility projects like AI first, then gaming.",
     icon: TrendingUp
   },
   {
     title: "Instant Video Games",
-    description: "Soon, you'll be able to make a whole video game just by typing one sentence. Want to play as a robot dinosaur with machine guns? Just ask AI, and it will build it for you instantly.",
+    description: "AI will build games from text. Imagine, type, play. Instant entertainment creation.",
     icon: Gamepad2
   },
   {
     title: "Living to 120",
-    description: "Thanks to people like Bryan Johnson, I bet living to 120 will be normal soon. Medicine is changing from 'fixing sick people' to 'stopping aging' within the next 20 to 30 years.",
+    description: "Aging will become a solvable problem. Medicine shifts from fixing sick people to extending life.",
     icon: Heart
   }
 ];

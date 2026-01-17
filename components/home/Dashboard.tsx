@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Minus, ArrowUpRight, Instagram, Youtube, TrendingUp, Gamepad, Heart } from 'lucide-react';
+import { Plus, Minus, ArrowUpRight, Instagram, Youtube, TrendingUp, Gamepad, Heart, Hammer, Zap } from 'lucide-react';
 import { PHILOSOPHY, BOOKSHELF, GEAR, TECH_STACK, ROADMAP, INSPIRATIONS, BETS, CHANGELOG, DESK_SETUP } from '../../data';
 
 interface DashboardModuleProps {
@@ -49,20 +49,36 @@ const Dashboard: React.FC = () => {
             isOpen={openModule === "About Me"}
             onToggle={() => toggleModule("About Me")}
           >
-            <div className="pl-4 md:pl-0 font-sans text-sm text-grey leading-relaxed space-y-4">
-              <div className="mb-4">
+            <div className="pl-4 md:pl-0 font-sans text-sm text-grey leading-relaxed space-y-6">
+              <div className="mb-6">
                 <img
                   src="/profile.jpg"
                   alt="Syreese Delos Santos"
                   className="w-24 h-24 rounded-full object-cover border-2 border-white/10"
                 />
               </div>
-              <p>
-                I love building things and helping people win. I am a "Swiss Army Knife" who uses smart tools and AI to do the work of a whole team. I have built my own software, grown online communities from scratch, and even run my own businesses.
-              </p>
-              <p>
-                I am obsessed with being fast and efficient so I can get more done in less time. Whether I am solving a tough problem or cheering on a client, I don’t stop until the job is finished.
-              </p>
+
+              <div className="space-y-4">
+                <div className="group hover:translate-x-2 transition-transform duration-300">
+                  <div className="flex items-center gap-2 mb-2 text-white font-medium">
+                    <Hammer size={16} className="text-electricBlue" />
+                    <span>The Builder</span>
+                  </div>
+                  <p className="pl-6 border-l border-white/10 ml-2">
+                    I build software that helps people win. I use AI to do the work of a whole team. From code to community, I create value from scratch.
+                  </p>
+                </div>
+
+                <div className="group hover:translate-x-2 transition-transform duration-300">
+                  <div className="flex items-center gap-2 mb-2 text-white font-medium">
+                    <Zap size={16} className="text-electricBlue" />
+                    <span>The Optimizer</span>
+                  </div>
+                  <p className="pl-6 border-l border-white/10 ml-2">
+                    I obsess over speed. Efficiency is my superpower. Whether solving problems or serving clients, I don't stop until the job is done.
+                  </p>
+                </div>
+              </div>
             </div>
           </DashboardModule>
 
@@ -99,8 +115,10 @@ const Dashboard: React.FC = () => {
             <ul className="space-y-6 pl-4 md:pl-0">
               {PHILOSOPHY.map((item) => (
                 <li key={item.id} className="group transform transition-transform duration-300 hover:translate-x-2">
-                  <span className="font-mono text-electricBlue text-xs block mb-1">{item.number}</span>
-                  <div className="font-sans font-medium text-white mb-1">{item.title}</div>
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="font-mono text-electricBlue text-xs">{item.number}</span>
+                    <div className="font-sans font-medium text-white">{item.title}</div>
+                  </div>
                   <div className="font-sans text-sm text-grey group-hover:text-white transition-colors">
                     {item.description}
                   </div>
@@ -168,11 +186,11 @@ const Dashboard: React.FC = () => {
             <ul className="space-y-6 pl-4 md:pl-0">
               {BOOKSHELF.map((book, i) => (
                 <li key={i} className="group transform transition-transform duration-300 hover:translate-x-2">
-                  <div className="font-medium text-white mb-1">
-                    <a href={book.url} target="_blank" rel="noopener noreferrer" className="italic hover:text-electricBlue transition-colors md:inline-flex md:items-center md:gap-2">
+                  <div className="flex items-center gap-2 mb-1">
+                    {book.icon && <book.icon size={16} className="text-electricBlue" />}
+                    <a href={book.url} target="_blank" rel="noopener noreferrer" className="font-medium text-white hover:text-electricBlue transition-colors md:inline-flex md:items-center md:gap-2">
                       {book.title}
-                      <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-electricBlue hidden md:block" />
-                    </a> <span className="text-white/20">—</span> {book.author}
+                    </a>
                   </div>
                   <div className="font-sans text-sm text-grey group-hover:text-white transition-colors leading-relaxed">
                     {book.description}
