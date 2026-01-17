@@ -1,5 +1,5 @@
 import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem, TechStackCategory, DeskSetupCategory } from './types';
-import { TrendingUp, Gamepad2, Heart, Landmark, Target, Activity, BookOpen } from 'lucide-react';
+import { TrendingUp, Gamepad2, Heart, Landmark, Target, Activity, BookOpen, Box, Flame, Settings } from 'lucide-react';
 
 export const PROJECTS: Project[] = [
   {
@@ -288,17 +288,20 @@ export const INSPIRATIONS: InspirationItem[] = [
   {
     name: "Alex Becker",
     description: "Minimalist builder. Simplifies business to its core.",
-    url: "https://www.youtube.com/channel/UCKQvGU-qtjEthINeViNbn6A"
+    url: "https://www.youtube.com/channel/UCKQvGU-qtjEthINeViNbn6A",
+    icon: Box
   },
   {
     name: "Charlie Morgan",
     description: "Uses shadow work to level up his character.",
-    url: "https://www.youtube.com/@charliemofficial"
+    url: "https://www.youtube.com/@charliemofficial",
+    icon: Flame
   },
   {
     name: "Sam Ovens",
     description: "Optimizes every detail of life for business performance.",
-    url: "https://www.youtube.com/@samovenstv"
+    url: "https://www.youtube.com/@samovenstv",
+    icon: Settings
   }
 ];
 

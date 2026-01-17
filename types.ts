@@ -54,6 +54,7 @@ export interface InspirationItem {
   name: string;
   description: string;
   url: string;
+  icon?: React.ElementType;
 }
 
 export interface BetItem {

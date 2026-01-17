@@ -160,15 +160,17 @@ const Dashboard: React.FC = () => {
             <ul className="space-y-6 pl-4 md:pl-0">
               {INSPIRATIONS.map((person, i) => (
                 <li key={i} className="group transform transition-transform duration-300 hover:translate-x-2">
-                  <a
-                    href={person.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium text-white mb-1 inline-flex items-center gap-2 hover:text-electricBlue transition-colors"
-                  >
-                    {person.name}
-                    <Youtube size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-electricBlue" />
-                  </a>
+                  <div className="flex items-center gap-2 mb-1">
+                    {person.icon && <person.icon size={16} className="text-electricBlue" />}
+                    <a
+                      href={person.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-white hover:text-electricBlue transition-colors"
+                    >
+                      {person.name}
+                    </a>
+                  </div>
                   <div className="font-sans text-sm text-grey group-hover:text-white transition-colors leading-relaxed">
                     {person.description}
                   </div>
@@ -279,18 +281,22 @@ const Dashboard: React.FC = () => {
               <p className="font-sans text-sm text-grey mb-8">
                 This roadmap outlines my goals and where I want to take my journey as a builder and creator.
               </p>
-              <ul className="space-y-8">
+              <ul className="space-y-8 border-l border-white/10 ml-2 pl-6 relative">
                 {ROADMAP.map((item, i) => (
-                  <li key={i} className="flex flex-col gap-1 group transform transition-transform duration-300 hover:translate-x-2">
-                    <div className="flex justify-between items-baseline mb-1">
-                      <h4 className="font-medium text-white text-base">{item.title}</h4>
-                      <span className="font-mono text-[10px] text-electricBlue uppercase tracking-wide whitespace-nowrap ml-4">
-                        {item.timeline}
-                      </span>
+                  <li key={i} className="relative group transform transition-transform duration-300 hover:translate-x-2">
+                    <div className="absolute -left-[29px] top-1.5 w-2.5 h-2.5 bg-black border border-white/20 rounded-full group-hover:border-electricBlue transition-colors"></div>
+
+                    <div className="flex flex-col gap-1">
+                      <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-4 mb-1">
+                        <h4 className="font-medium text-white text-base group-hover:text-electricBlue transition-colors">{item.title}</h4>
+                        <span className="inline-block self-start md:self-auto font-mono text-[10px] px-2 py-0.5 rounded-sm bg-white/5 text-electricBlue border border-white/10 uppercase tracking-wide whitespace-nowrap">
+                          {item.timeline}
+                        </span>
+                      </div>
+                      <p className="font-sans text-sm text-grey group-hover:text-white transition-colors">
+                        {item.description}
+                      </p>
                     </div>
-                    <p className="font-sans text-sm text-grey">
-                      {item.description}
-                    </p>
                   </li>
                 ))}
               </ul>
