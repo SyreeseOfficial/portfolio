@@ -3,6 +3,23 @@ import { TrendingUp, Gamepad2, Heart, Landmark, Target, Activity, BookOpen, Box,
 
 export const PROJECTS: Project[] = [
   {
+    id: 'muscle-method',
+    title: 'Muscle Method',
+    year: '2026',
+    summary: 'A private Skool community tailored for natural muscle building.',
+    videoUrl: '/projects/muscle-method/cover.png',
+    caseStudy: {
+      problem: 'Many "hardgainers" struggle to build muscle without drugs or excessive time in the gym. Traditional advice often fails skinny guys under 30 who only have time for 2 workouts a week.',
+      solution: 'I built a specialized Skool community with a comprehensive 4-hour video course, 100+ PDF guides, and an extensive AI prompt library (270+ prompts) to accelerate results. Members also get 1:1 coaching and weekly live training.',
+      result: 'Scaled to 130+ active members rapidly. The community is highly engaged, with members supporting each other, sharing wins, and achieving measurable physical transformation.',
+      liveLink: '#',
+      images: [
+        '/projects/muscle-method/case-study-1.png',
+        '/projects/muscle-method/case-study-2.png'
+      ]
+    }
+  },
+  {
     id: 'orthostar',
     title: 'OrthoStar',
     year: '2025',
