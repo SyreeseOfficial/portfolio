@@ -3,6 +3,24 @@ import { TrendingUp, Gamepad2, Heart, Landmark, Target, Activity, BookOpen, Box,
 
 export const PROJECTS: Project[] = [
   {
+    id: 'dailydash',
+    title: 'DailyDash',
+    year: '2026',
+    summary: 'A simple tool for your computer that helps you get work done and stay healthy.',
+    videoUrl: '/projects/dailydash/cover.png',
+    caseStudy: {
+      problem: 'People who work on computers often forget to drink water or take breaks. They also get distracted by the internet whenever they have to check the time or the weather.',
+      solution: 'I built a text-based dashboard that stays on your screen while you work. It tracks your water, shows your top tasks, and has a timer to help you stay focused.',
+      result: 'Users can now finish their work faster and stay healthy without needing to open extra apps or websites that might distract them.',
+      liveLink: 'https://github.com/SyreeseOfficial/DailyDash',
+      ctaLabel: 'View On Github',
+      images: [
+        '/projects/dailydash/case-study-1.png',
+        '/projects/dailydash/case-study-2.png'
+      ]
+    }
+  },
+  {
     id: 'orthostar',
     title: 'OrthoStar',
     year: '2025',
@@ -65,7 +83,7 @@ export const PROJECTS: Project[] = [
       problem: 'Many "hardgainers" struggle to build muscle without drugs or excessive time in the gym. Traditional advice often fails skinny guys under 30 who only have time for 2 workouts a week.',
       solution: 'I built a specialized Skool community with a comprehensive 4-hour video course, 100+ PDF guides, and an extensive AI prompt library (270+ prompts) to accelerate results. Members also get 1:1 coaching and weekly live training.',
       result: 'Scaled to 130+ active members rapidly. The community is highly engaged, with members supporting each other, sharing wins, and achieving measurable physical transformation.',
-      liveLink: '#',
+      liveLink: 'https://www.skool.com/muscle-method-5291',
       images: [
         '/projects/muscle-method/case-study-1.png',
         '/projects/muscle-method/case-study-2.png'
