@@ -28,6 +28,15 @@
           borderRadius: {
             sm: '4px',
             md: '6px',
+          },
+          keyframes: {
+            wiggle: {
+              '0%, 100%': { transform: 'translateX(0)' },
+              '50%': { transform: 'translateX(3px)' },
+            }
+          },
+          animation: {
+            wiggle: 'wiggle 1s ease-in-out infinite',
           }
         }
       }

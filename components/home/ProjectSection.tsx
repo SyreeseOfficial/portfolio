@@ -67,7 +67,7 @@ const ProjectSection: React.FC = () => {
           className="group flex items-center gap-2 text-offWhite font-mono text-sm hover:text-electricBlue transition-colors duration-200"
         >
           View All Projects
-          <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-200" />
+          <ArrowRight size={16} className="group-hover:translate-x-1 animate-wiggle transition-transform duration-200" />
         </Link>
       </div>
     </section>

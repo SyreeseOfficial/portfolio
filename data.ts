@@ -3,6 +3,23 @@ import { TrendingUp, Gamepad2, Heart, Landmark, Target, Activity, BookOpen, Box,
 
 export const PROJECTS: Project[] = [
   {
+    id: 'orthostar',
+    title: 'OrthoStar',
+    year: '2025',
+    summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
+    videoUrl: '/projects/orthostar/cover.jpg',
+    caseStudy: {
+      problem: 'When a orthodontist office has bad reviews online, new patients are afraid to go there. This causes the business to lose a lot of money.',
+      solution: 'I built a tool that helps offices manage their reputation. It stops bad reviews from going public. It asks happy patients to leave 5-star reviews. It turns video clips of happy patients into ads.',
+      result: 'The average orthodontist gets 32% more 5-star reviews. This brings in about 7 new patients every month. Since one patient can be worth up to $15,000, the office makes much more money.',
+      liveLink: 'https://orthostar.org/',
+      images: [
+        '/projects/orthostar/case-study-1.jpg',
+        '/projects/orthostar/case-study-2.jpg'
+      ]
+    }
+  },
+  {
     id: 'dailydash',
     title: 'DailyDash',
     year: '2026',
@@ -21,19 +38,20 @@ export const PROJECTS: Project[] = [
     }
   },
   {
-    id: 'orthostar',
-    title: 'OrthoStar',
-    year: '2025',
-    summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
-    videoUrl: '/projects/orthostar/cover.jpg',
+    id: 'vibestylist',
+    title: 'VibeStylist',
+    year: '2026',
+    summary: 'An AI stylist that helps you plan outfits, track your wardrobe, and make fashion fun.',
+    videoUrl: '/projects/vibestylist/cover.png',
     caseStudy: {
-      problem: 'When a orthodontist office has bad reviews online, new patients are afraid to go there. This causes the business to lose a lot of money.',
-      solution: 'I built a tool that helps offices manage their reputation. It stops bad reviews from going public. It asks happy patients to leave 5-star reviews. It turns video clips of happy patients into ads.',
-      result: 'The average orthodontist gets 32% more 5-star reviews. This brings in about 7 new patients every month. Since one patient can be worth up to $15,000, the office makes much more money.',
-      liveLink: 'https://orthostar.org/',
+      problem: 'Picking out clothes can be hard. Many people buy clothes they never wear, waste money, and still feel like they have nothing to wear. Fashion can be stressful and confusing.',
+      solution: 'VibeStylist is your personal AI fashion helper. It learns what you like and helps you build a wardrobe you\'ll love. You can plan outfits for the week, track what you wear, and even get your outfits rated. It turns fashion into a fun game with stats and levels.',
+      result: 'No more stress about what to wear. You\'ll save money by only buying clothes you\'ll actually use. VibeStylist makes getting dressed easy and fun every single day.',
+      liveLink: 'https://vibestylist.netlify.app/',
+      ctaLabel: 'View Live App',
       images: [
-        '/projects/orthostar/case-study-1.jpg',
-        '/projects/orthostar/case-study-2.jpg'
+        '/projects/vibestylist/case-study-1.png',
+        '/projects/vibestylist/case-study-2.png'
       ]
     }
   },
