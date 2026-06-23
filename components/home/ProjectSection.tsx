@@ -37,12 +37,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <Link to={`/project/${project.id}`} className="block relative aspect-video bg-white/5 rounded-sm overflow-hidden group">
           {/* Simulated Laptop Frame/Container */}
           <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-            {/* Using Image placeholder as per constraints, in real app this would be a <video> tag with autoplay */}
-            <img
-              src={project.videoUrl}
-              alt={`${project.title} Preview`}
-              className="w-full h-full object-cover transition-transform duration-700 ease-out will-change-transform group-hover:scale-105"
-            />
+            {project.videoUrl ? (
+              <img
+                src={project.videoUrl}
+                alt={`${project.title} Preview`}
+                className="w-full h-full object-cover transition-transform duration-700 ease-out will-change-transform group-hover:scale-105"
+              />
+            ) : (
+              <span className="font-mono text-white/20 text-sm uppercase tracking-widest">Coming Soon</span>
+            )}
           </div>
         </Link>
       </div>

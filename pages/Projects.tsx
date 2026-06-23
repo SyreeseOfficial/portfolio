@@ -34,11 +34,17 @@ const Projects: React.FC = () => {
                         >
                             {/* Image Container */}
                             <div className="relative aspect-video overflow-hidden rounded-lg mb-6 bg-white/5 border border-white/5">
-                                <img
-                                    src={project.videoUrl}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                />
+                                {project.videoUrl ? (
+                                    <img
+                                        src={project.videoUrl}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                    />
+                                ) : (
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <span className="font-mono text-white/20 text-xs uppercase tracking-widest">Coming Soon</span>
+                                    </div>
+                                )}
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
                             </div>
 

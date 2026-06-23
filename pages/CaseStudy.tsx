@@ -50,7 +50,7 @@ const CaseStudy: React.FC = () => {
                 {link.label} <ExternalLink size={16} />
               </a>
             ))
-          ) : (
+          ) : project.caseStudy.liveLink ? (
             <a
               href={project.caseStudy.liveLink}
               target="_blank"
@@ -59,7 +59,7 @@ const CaseStudy: React.FC = () => {
             >
               {project.caseStudy.ctaLabel || 'Visit Live Site'} <ExternalLink size={16} />
             </a>
-          )}
+          ) : null}
 
 
         </div>
@@ -81,9 +81,11 @@ const CaseStudy: React.FC = () => {
         </section>
 
         {/* Media 1 */}
-        <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
-          <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" className="w-full h-auto" />
-        </div>
+        {project.caseStudy.images?.[0] && (
+          <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
+            <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" className="w-full h-auto" />
+          </div>
+        )}
 
         {/* Section 2: Solution */}
         <section className="grid md:grid-cols-12 gap-8">
@@ -98,9 +100,11 @@ const CaseStudy: React.FC = () => {
         </section>
 
         {/* Media 2 */}
-        <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
-          <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" className="w-full h-auto" />
-        </div>
+        {project.caseStudy.images?.[1] && (
+          <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
+            <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" className="w-full h-auto" />
+          </div>
+        )}
 
         {/* Section 3: Result */}
         <section className="grid md:grid-cols-12 gap-8">

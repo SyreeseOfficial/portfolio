@@ -8,10 +8,10 @@ export interface Project {
     problem: string;
     solution: string;
     result: string;
-    liveLink: string;
+    liveLink?: string;
     links?: { label: string; url: string }[];
     ctaLabel?: string;
-    images: string[];
+    images?: string[];
   };
 }
 

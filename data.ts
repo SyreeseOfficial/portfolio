@@ -127,6 +127,41 @@ export const PROJECTS: Project[] = [
     }
   },
   {
+    id: 'konafit',
+    title: 'KonaFit',
+    year: '2026',
+    summary: 'A custom Android workout app built around how I actually train, with all the features I wanted from the top apps and none of the paywalls.',
+    caseStudy: {
+      problem: 'The best workout apps hide their best features behind a paywall. If you want everything you actually need, you\'re stuck paying for multiple subscriptions just to have a decent gym experience.',
+      solution: 'I built a custom Android app tailored to exactly how I train. It pulls the best features from every app I loved and puts them all in one place. Free, forever.',
+      result: 'A workout app I actually use every time I hit the gym. It has everything I need, nothing I don\'t, and it costs me zero dollars a month.',
+    }
+  },
+  {
+    id: 'momentum',
+    title: 'Momentum',
+    year: '2026',
+    summary: 'A minimal Android habit tracker that cuts the noise and just helps you stay on track.',
+    caseStudy: {
+      problem: 'Most habit apps are packed with stuff nobody asked for. Fancy dashboards, streaks, badges, levels... it starts to feel like a chore just to open the thing.',
+      solution: 'I built a lightweight Android habit tracker that strips it all back to the basics. Fast, clean, and focused on doing exactly one thing well.',
+      result: 'A habit tracker that works exactly how I want it to. No fluff, no friction, just a simple system that keeps me honest every single day.',
+    }
+  },
+  {
+    id: 'routecommand',
+    title: 'RouteCommand',
+    year: '2026',
+    summary: 'A tool dashboard I built for my job to speed up daily tasks and help the business make more money.',
+    caseStudy: {
+      problem: 'There were a ton of small slowdowns at work that added up fast. Tracking expenses, chasing refunds, and logging donations were all done manually with no real system behind any of it.',
+      solution: 'I built a web dashboard with a few focused tools: a receipt and expense tracker to save money on taxes, a credit request tool to get account refunds processed faster, and a donation tracker to make sure every write-off gets captured.',
+      result: 'The boss saves more money, the business runs smoother, and tasks that used to eat up time now take seconds.',
+      liveLink: 'https://routecommand.netlify.app',
+      ctaLabel: 'View Live App',
+    }
+  },
+  {
     id: 'chrome-extensions',
     title: 'Chrome Extensions',
     year: '2025',
