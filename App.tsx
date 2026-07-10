@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import CaseStudy from './pages/CaseStudy';
 import NotFound from './pages/NotFound';
+import PushRisePrivacyPolicy from './pages/PushRisePrivacyPolicy';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 
@@ -29,6 +30,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/project/:id" element={<CaseStudy />} />
+            <Route path="/pushrise/privacy-policy" element={<PushRisePrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
