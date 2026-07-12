@@ -142,10 +142,15 @@ export const PROJECTS: Project[] = [
     title: 'Momentum',
     year: '2026',
     summary: 'A minimal Android habit tracker that cuts the noise and just helps you stay on track.',
+    videoUrl: '/projects/momentum/cover.jpg',
     caseStudy: {
       problem: 'Most habit apps are packed with stuff nobody asked for. Fancy dashboards, streaks, badges, levels... it starts to feel like a chore just to open the thing.',
       solution: 'I built a lightweight Android habit tracker that strips it all back to the basics. Fast, clean, and focused on doing exactly one thing well.',
       result: 'A habit tracker that works exactly how I want it to. No fluff, no friction, just a simple system that keeps me honest every single day.',
+      images: [
+        '/projects/momentum/case-study-1.jpg',
+        '/projects/momentum/case-study-2.jpg'
+      ]
     }
   },
   {
@@ -153,12 +158,17 @@ export const PROJECTS: Project[] = [
     title: 'RouteCommand',
     year: '2026',
     summary: 'A tool dashboard I built for my job to speed up daily tasks and help the business make more money.',
+    videoUrl: '/projects/routecommand/cover.jpg',
     caseStudy: {
       problem: 'There were a ton of small slowdowns at work that added up fast. Tracking expenses, chasing refunds, and logging donations were all done manually with no real system behind any of it.',
       solution: 'I built a web dashboard with a few focused tools: a receipt and expense tracker to save money on taxes, a credit request tool to get account refunds processed faster, and a donation tracker to make sure every write-off gets captured.',
       result: 'The boss saves more money, the business runs smoother, and tasks that used to eat up time now take seconds.',
       liveLink: 'https://routecommand.netlify.app',
       ctaLabel: 'View Live App',
+      images: [
+        '/projects/routecommand/case-study-1.jpg',
+        '/projects/routecommand/case-study-2.jpg'
+      ]
     }
   },
   {
