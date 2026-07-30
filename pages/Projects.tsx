@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
                                 state={{ from: 'archive' }}
                                 className="group block"
                             >
-                                <div className="relative aspect-video overflow-hidden rounded-md mb-6 bg-white/5 border border-white/5">
+                                <div className={`relative aspect-video overflow-hidden rounded-md mb-6 border border-white/5 ${project.videoUrl ? 'shimmer' : 'bg-white/5'}`}>
                                     {project.videoUrl ? (
                                         <img
                                             src={project.videoUrl}

@@ -16,6 +16,16 @@ const CaseStudy: React.FC = () => {
   const prevProject = PROJECTS[(projectIndex - 1 + PROJECTS.length) % PROJECTS.length];
 
   useEffect(() => {
+    document.title = `${project.title} — Syreese Delos Santos`;
+    const canonical = document.getElementById('canonical') as HTMLLinkElement | null;
+    if (canonical) canonical.href = `https://syreese.com/project/${id}`;
+    return () => {
+      document.title = 'Syreese Delos Santos — Creative Builder';
+      if (canonical) canonical.href = 'https://syreese.com';
+    };
+  }, [project.title, id]);
+
+  useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight') navigate(`/project/${nextProject.id}`, { state: location.state });
       if (e.key === 'ArrowLeft') navigate(`/project/${prevProject.id}`, { state: location.state });
@@ -93,8 +103,8 @@ const CaseStudy: React.FC = () => {
 
         {/* Media 1 */}
         {project.caseStudy.images?.[0] && (
-          <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
-            <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" className="w-full h-auto" />
+          <div className="aspect-video rounded-md overflow-hidden border border-white/10 shimmer">
+            <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" loading="lazy" className="w-full h-full object-cover" />
           </div>
         )}
 
@@ -112,8 +122,8 @@ const CaseStudy: React.FC = () => {
 
         {/* Media 2 */}
         {project.caseStudy.images?.[1] && (
-          <div className="rounded-md overflow-hidden border border-white/10 bg-gray-900">
-            <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" className="w-full h-auto" />
+          <div className="aspect-video rounded-md overflow-hidden border border-white/10 shimmer">
+            <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" loading="lazy" className="w-full h-full object-cover" />
           </div>
         )}
 

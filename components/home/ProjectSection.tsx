@@ -35,13 +35,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       {/* Media / Video Side (Smaller now) */}
       <div className="w-full md:w-5/12 order-1 md:order-2">
-        <Link to={`/project/${project.id}`} className="block relative aspect-video bg-white/5 rounded-md overflow-hidden group">
+        <Link to={`/project/${project.id}`} className={`block relative aspect-video rounded-md overflow-hidden group ${project.videoUrl ? 'shimmer' : 'bg-white/5'}`}>
           {/* Simulated Laptop Frame/Container */}
           <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
             {project.videoUrl ? (
               <img
                 src={project.videoUrl}
                 alt={`${project.title} Preview`}
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 ease-out will-change-transform group-hover:scale-105"
               />
             ) : (

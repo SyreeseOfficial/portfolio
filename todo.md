@@ -47,20 +47,20 @@
 
 ## 🟡 SEO & Meta
 
-- [ ] **Page title is generic** — `<title>The Creative Builder</title>` won't rank for your name; change to `Syreese Delos Santos — Creative Builder`
-- [ ] **Missing Open Graph tags** — no `og:title`, `og:description`, `og:image`; links shared on social show blank previews
-- [ ] **Missing favicon** — no `<link rel="icon">` in `<head>`; browsers show a blank tab icon
-- [ ] **CaseStudy pages have no unique `<title>` or meta** — every project page shares the same generic head; dynamically update `document.title` with the project name in `CaseStudy.tsx`
-- [ ] **No canonical URL tag** — add `<link rel="canonical">` to avoid duplicate content issues
+- [x] **Page title is generic** — `<title>The Creative Builder</title>` won't rank for your name; change to `Syreese Delos Santos — Creative Builder`
+- [x] **Missing Open Graph tags** — no `og:title`, `og:description`, `og:image`; links shared on social show blank previews
+- [x] **Missing favicon** — no `<link rel="icon">` in `<head>`; browsers show a blank tab icon
+- [x] **CaseStudy pages have no unique `<title>` or meta** — every project page shares the same generic head; dynamically update `document.title` with the project name in `CaseStudy.tsx`
+- [x] **No canonical URL tag** — add `<link rel="canonical">` to avoid duplicate content issues
 
 ---
 
 ## 🟡 Performance
 
-- [ ] **No lazy loading on project images** — all project card images load on page load; add `loading="lazy"` to `<img>` tags below the fold
-- [ ] **No image dimensions set** — omitting `width`/`height` on `<img>` causes layout shift (CLS); add explicit dimensions or `aspect-ratio` wrappers
-- [ ] **Google Fonts blocks render** — fonts are loaded via a standard `<link>`; add `&display=swap` to the fonts URL (it may already be there, but confirm) and consider self-hosting for reliability
-- [ ] **No skeleton/placeholder for project images** — images pop in from nothing; add a `bg-white/5` shimmer placeholder that fades out when the image loads
+- [x] **No lazy loading on project images** — all project card images load on page load; add `loading="lazy"` to `<img>` tags below the fold
+- [x] **No image dimensions set** — omitting `width`/`height` on `<img>` causes layout shift (CLS); add explicit dimensions or `aspect-ratio` wrappers
+- [x] **Google Fonts blocks render** — fonts are loaded via a standard `<link>`; `&display=swap` was already present; confirmed
+- [x] **No skeleton/placeholder for project images** — images pop in from nothing; add a `bg-white/5` shimmer placeholder that fades out when the image loads
 
 ---
 
