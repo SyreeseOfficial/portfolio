@@ -1,4 +1,4 @@
-import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem, TechStackCategory, DeskSetupCategory } from './types';
+import { Project, PhilosophyItem, GearItem, Book, RoadmapItem, InspirationItem, BetItem, ChangelogItem, TechStackCategory, DeskSetupCategory, NowModule, KilledProject, BucketListItem, HealthStats } from './types';
 import { TrendingUp, Gamepad2, Heart, Landmark, Target, Activity, BookOpen, Box, Flame, Settings } from 'lucide-react';
 
 export const PROJECTS: Project[] = [
@@ -6,6 +6,7 @@ export const PROJECTS: Project[] = [
     id: 'orthostar',
     title: 'OrthoStar',
     year: '2025',
+    tag: 'SaaS',
     summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
     videoUrl: '/projects/orthostar/cover.jpg',
     caseStudy: {
@@ -23,6 +24,7 @@ export const PROJECTS: Project[] = [
     id: 'dailydash',
     title: 'DailyDash',
     year: '2026',
+    tag: 'CLI / Tools',
     summary: 'A simple tool for your computer that helps you get work done and stay healthy.',
     videoUrl: '/projects/dailydash/cover.png',
     caseStudy: {
@@ -41,6 +43,7 @@ export const PROJECTS: Project[] = [
     id: 'vibestylist',
     title: 'VibeStylist',
     year: '2026',
+    tag: 'SaaS',
     summary: 'An AI stylist that helps you plan outfits, track your wardrobe, and make fashion fun.',
     videoUrl: '/projects/vibestylist/cover.png',
     caseStudy: {
@@ -59,6 +62,7 @@ export const PROJECTS: Project[] = [
     id: 'vibestt',
     title: 'VibeSTT',
     year: '2026',
+    tag: 'CLI / Tools',
     summary: 'A minimalist, high-performance speech-to-text utility for the Omarchy Linux distribution.',
     videoUrl: '/projects/vibestt/cover.jpg',
     caseStudy: {
@@ -77,6 +81,7 @@ export const PROJECTS: Project[] = [
     id: 'focusnoisecli',
     title: 'FocusNoiseCLI',
     year: '2026',
+    tag: 'CLI / Tools',
     summary: 'A CLI tool that plays calming background noise to help you focus while you work.',
     videoUrl: '/projects/focusnoisecli/demo.png',
     caseStudy: {
@@ -95,6 +100,7 @@ export const PROJECTS: Project[] = [
     id: 'muscle-method',
     title: 'Muscle Method',
     year: '2026',
+    tag: 'Community',
     summary: 'A private Skool community tailored for natural muscle building.',
     videoUrl: '/projects/muscle-method/cover.png',
     caseStudy: {
@@ -112,6 +118,7 @@ export const PROJECTS: Project[] = [
     id: 'hypertyper',
     title: 'HyperTyper',
     year: '2026',
+    tag: 'CLI / Tools',
     summary: 'A fast typing game made with Python that runs right in your command line window.',
     videoUrl: '/projects/hypertyper/title.png',
     caseStudy: {
@@ -130,6 +137,7 @@ export const PROJECTS: Project[] = [
     id: 'konafit',
     title: 'KonaFit',
     year: '2026',
+    tag: 'Mobile',
     summary: 'A custom Android workout app built around how I actually train, with all the features I wanted from the top apps and none of the paywalls.',
     caseStudy: {
       problem: 'The best workout apps hide their best features behind a paywall. If you want everything you actually need, you\'re stuck paying for multiple subscriptions just to have a decent gym experience.',
@@ -141,6 +149,7 @@ export const PROJECTS: Project[] = [
     id: 'momentum',
     title: 'Momentum',
     year: '2026',
+    tag: 'Mobile',
     summary: 'A minimal Android habit tracker that cuts the noise and just helps you stay on track.',
     videoUrl: '/projects/momentum/cover.jpg',
     caseStudy: {
@@ -157,6 +166,7 @@ export const PROJECTS: Project[] = [
     id: 'routecommand',
     title: 'RouteCommand',
     year: '2026',
+    tag: 'SaaS',
     summary: 'A tool dashboard I built for my job to speed up daily tasks and help the business make more money.',
     videoUrl: '/projects/routecommand/cover.jpg',
     caseStudy: {
@@ -175,6 +185,7 @@ export const PROJECTS: Project[] = [
     id: 'chrome-extensions',
     title: 'Chrome Extensions',
     year: '2025',
+    tag: 'Community',
     summary: 'A collection of useful Chrome extensions I built for the Skool platform.',
     videoUrl: '/projects/chrome-extensions/cover.jpg',
     caseStudy: {
@@ -422,13 +433,33 @@ export const BETS: BetItem[] = [
 ];
 
 export const CHANGELOG: ChangelogItem[] = [
-  { date: "12-12-25", change: "Had idea to update portfolio site" },
-  { date: "12-17-25", change: "Finished v1 of new site" },
-  { date: "12-18-25", change: "Deployed using GitHub and Vercel" },
-  { date: "Future", change: 'Add a "Killed Projects" section' },
-  { date: "Future", change: 'Add "Bucket List" section' },
-  { date: "Future", change: "Add live stats section that shares my health tracking stats live: steps, cal burned, sleep, etc" }
+  { date: "12-12-2025", change: "Had idea to update portfolio site" },
+  { date: "12-17-2025", change: "Finished v1 of new site" },
+  { date: "12-18-2025", change: "Deployed using GitHub and Vercel" },
+  { date: "07-29-2026", change: 'Added "Now" module, health stats, killed projects, bucket list, scroll animations, project filters, keyboard nav, and page transitions' },
 ];
+
+export const NOW: NowModule = {
+  building: { name: 'PushRise', description: 'Mobile alarm app that only stops when you do pushups' },
+  reading: '10 Pillars of Wealth',
+  listening: 'Larry June',
+};
+
+export const KILLED_PROJECTS: KilledProject[] = [
+  { name: 'Hyperion', epitaph: 'AI mission control dashboard — died before it left the drawing board' },
+];
+
+export const BUCKET_LIST: BucketListItem[] = [
+  { text: 'Build Something To $10k MRR' },
+  { text: 'Move My Family Somewhere Warmer' },
+  { text: 'Buy A Farm' },
+];
+
+export const HEALTH_STATS: HealthStats = {
+  steps: 8240,
+  calories: 2150,
+  sleep: 7.5,
+};
 export const DESK_SETUP: DeskSetupCategory[] = [
   {
     category: "The Core Desktop",

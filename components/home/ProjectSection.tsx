@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { PROJECTS } from '../../data';
 import { Project } from '../../types';
+import ScrollReveal from '../ScrollReveal';
 
 interface ProjectCardProps {
   project: Project;
@@ -10,12 +11,12 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="flex flex-col md:flex-row gap-8 md:gap-20 items-center justify-between mb-32 last:mb-0">
+    <div className="flex flex-col md:flex-row gap-8 md:gap-20 items-center justify-between">
 
       {/* Text Details Side */}
       <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-left order-2 md:order-1">
 
-        <h3 className="font-serif text-3xl md:text-4xl text-white mb-4 leading-tight">{project.title}</h3>
+        <h3 className="font-serif italic text-3xl md:text-4xl text-white mb-4 leading-tight">{project.title}</h3>
 
 
 
@@ -34,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       {/* Media / Video Side (Smaller now) */}
       <div className="w-full md:w-5/12 order-1 md:order-2">
-        <Link to={`/project/${project.id}`} className="block relative aspect-video bg-white/5 rounded-sm overflow-hidden group">
+        <Link to={`/project/${project.id}`} className="block relative aspect-video bg-white/5 rounded-md overflow-hidden group">
           {/* Simulated Laptop Frame/Container */}
           <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
             {project.videoUrl ? (
@@ -44,7 +45,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
                 className="w-full h-full object-cover transition-transform duration-700 ease-out will-change-transform group-hover:scale-105"
               />
             ) : (
-              <span className="font-mono text-white/20 text-sm uppercase tracking-widest">Coming Soon</span>
+              <div className="flex flex-col items-center justify-center gap-2">
+                <span className="font-serif text-4xl text-white/10">{project.title.charAt(0)}</span>
+                <span className="font-mono text-white/20 text-xs uppercase tracking-widest">Coming Soon</span>
+              </div>
             )}
           </div>
         </Link>
@@ -58,10 +62,19 @@ const ProjectSection: React.FC = () => {
   return (
     <section id="work" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
       <div className="flex flex-col">
-        <h2 className="font-mono text-electricBlue text-sm uppercase tracking-wider mb-12">Projects</h2>
-        {PROJECTS.slice(0, 3).map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        <ScrollReveal>
+          <div className="flex items-baseline gap-4 mb-12">
+            <h2 className="font-mono text-electricBlue text-sm uppercase tracking-wider">Projects</h2>
+            <span className="font-mono text-xs text-grey">3 of {PROJECTS.length} shown</span>
+          </div>
+        </ScrollReveal>
+        <div className="flex flex-col space-y-32">
+          {PROJECTS.slice(0, 3).map((project, index) => (
+            <ScrollReveal key={project.id} delay={index * 150}>
+              <ProjectCard project={project} />
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
 
       <div className="mt-20 pt-8 flex justify-center">

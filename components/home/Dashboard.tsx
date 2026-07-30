@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Plus, Minus, ArrowUpRight, Instagram, Youtube, TrendingUp, Gamepad, Heart, Hammer, Zap } from 'lucide-react';
-import { PHILOSOPHY, BOOKSHELF, GEAR, TECH_STACK, ROADMAP, INSPIRATIONS, BETS, CHANGELOG, DESK_SETUP } from '../../data';
+import React, { useState, useRef, useEffect } from 'react';
+import { Plus, Minus, ArrowUpRight, Instagram, Youtube, TrendingUp, Gamepad, Heart, Hammer, Zap, Copy, Check, Music, BookOpen, Wrench, Skull, List, Activity } from 'lucide-react';
+import { PHILOSOPHY, BOOKSHELF, GEAR, TECH_STACK, ROADMAP, INSPIRATIONS, BETS, CHANGELOG, DESK_SETUP, NOW, KILLED_PROJECTS, BUCKET_LIST, HEALTH_STATS } from '../../data';
+import ScrollReveal from '../ScrollReveal';
 
 interface DashboardModuleProps {
   title: string;
@@ -10,8 +11,15 @@ interface DashboardModuleProps {
 }
 
 const DashboardModule: React.FC<DashboardModuleProps> = ({ title, children, isOpen, onToggle }) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const didMount = useRef(false);
+  useEffect(() => {
+    if (!didMount.current) { didMount.current = true; return; }
+    if (isOpen) ref.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }, [isOpen]);
+
   return (
-    <div className="border-b border-white/10 last:border-none">
+    <div ref={ref} className="border-b border-white/10">
       <button
         onClick={onToggle}
         className="w-full flex items-center justify-between py-6 group focus:outline-none hover:pl-4 transition-all duration-300 ease-out rounded-sm px-0"
@@ -33,12 +41,20 @@ const DashboardModule: React.FC<DashboardModuleProps> = ({ title, children, isOp
 
 const Dashboard: React.FC = () => {
   const [openModule, setOpenModule] = useState<string | null>("About Me");
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('syreeseofficial@gmail.com');
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 2000);
+  };
 
   const toggleModule = (title: string) => {
     setOpenModule(prev => prev === title ? null : title);
   };
 
   return (
+    <ScrollReveal>
     <section id="dashboard" className="py-24 px-6 md:px-12 max-w-2xl mx-auto">
       <div className="flex flex-col">
 
@@ -82,7 +98,39 @@ const Dashboard: React.FC = () => {
             </div>
           </DashboardModule>
 
-          {/* 2. Module: Tech Stack (Two Columns) */}
+          {/* 2. Module: Now */}
+          <DashboardModule
+            title="Now"
+            isOpen={openModule === "Now"}
+            onToggle={() => toggleModule("Now")}
+          >
+            <div className="pl-4 md:pl-0 space-y-4">
+              <div className="flex items-start gap-4">
+                <Wrench size={14} className="text-electricBlue mt-0.5 shrink-0" />
+                <div>
+                  <span className="font-mono text-xs text-electricBlue uppercase tracking-widest block mb-0.5">Building</span>
+                  <span className="font-sans text-sm text-white">{NOW.building.name}</span>
+                  <span className="font-sans text-sm text-grey"> — {NOW.building.description}</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <BookOpen size={14} className="text-electricBlue mt-0.5 shrink-0" />
+                <div>
+                  <span className="font-mono text-xs text-electricBlue uppercase tracking-widest block mb-0.5">Reading</span>
+                  <span className="font-sans text-sm text-white">{NOW.reading}</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Music size={14} className="text-electricBlue mt-0.5 shrink-0" />
+                <div>
+                  <span className="font-mono text-xs text-electricBlue uppercase tracking-widest block mb-0.5">Listening</span>
+                  <span className="font-sans text-sm text-white">{NOW.listening}</span>
+                </div>
+              </div>
+            </div>
+          </DashboardModule>
+
+          {/* 3. Module: Tech Stack (Two Columns) */}
           <DashboardModule
             title="Tech Stack"
             isOpen={openModule === "Tech Stack"}
@@ -303,7 +351,67 @@ const Dashboard: React.FC = () => {
             </div>
           </DashboardModule>
 
-          {/* 11. Module: Changelog */}
+          {/* Health Stats Module */}
+          <DashboardModule
+            title="Health Stats"
+            isOpen={openModule === "Health Stats"}
+            onToggle={() => toggleModule("Health Stats")}
+          >
+            <div className="pl-4 md:pl-0">
+              <div className="grid grid-cols-3 gap-6 mb-4">
+                <div>
+                  <div className="font-mono text-2xl text-white">{HEALTH_STATS.steps.toLocaleString()}</div>
+                  <div className="font-mono text-xs text-grey uppercase mt-1">Steps / day</div>
+                </div>
+                <div>
+                  <div className="font-mono text-2xl text-white">{HEALTH_STATS.calories}</div>
+                  <div className="font-mono text-xs text-grey uppercase mt-1">Cal burned</div>
+                </div>
+                <div>
+                  <div className="font-mono text-2xl text-white">{HEALTH_STATS.sleep}h</div>
+                  <div className="font-mono text-xs text-grey uppercase mt-1">Sleep</div>
+                </div>
+              </div>
+              <p className="font-mono text-xs text-grey/50">7-day average · updated manually</p>
+            </div>
+          </DashboardModule>
+
+          {/* Killed Projects Module */}
+          <DashboardModule
+            title="Killed Projects"
+            isOpen={openModule === "Killed Projects"}
+            onToggle={() => toggleModule("Killed Projects")}
+          >
+            <ul className="pl-4 md:pl-0 space-y-4">
+              {KILLED_PROJECTS.map((p, i) => (
+                <li key={i} className="group transform transition-transform duration-300 hover:translate-x-2">
+                  <div className="flex items-baseline gap-3">
+                    <Skull size={12} className="text-grey shrink-0 mt-0.5" />
+                    <span className="font-sans text-sm text-white">{p.name}</span>
+                    <span className="font-sans text-sm text-grey">— {p.epitaph}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </DashboardModule>
+
+          {/* Bucket List Module */}
+          <DashboardModule
+            title="Bucket List"
+            isOpen={openModule === "Bucket List"}
+            onToggle={() => toggleModule("Bucket List")}
+          >
+            <ul className="pl-4 md:pl-0 space-y-3">
+              {BUCKET_LIST.map((item, i) => (
+                <li key={i} className="flex items-center gap-3 font-sans text-sm text-grey group transform transition-transform duration-300 hover:translate-x-2 hover:text-white transition-colors">
+                  <span className="text-electricBlue text-base leading-none">◻</span>
+                  {item.text}
+                </li>
+              ))}
+            </ul>
+          </DashboardModule>
+
+          {/* Changelog Module */}
           <DashboardModule
             title="Changelog"
             isOpen={openModule === "Changelog"}
@@ -328,17 +436,27 @@ const Dashboard: React.FC = () => {
         <div className="pt-12 mt-8 border-t border-white/5">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <p className="font-serif italic text-xl text-white mb-4">Ready to build?</p>
-            <a
-              href="mailto:syreeseofficial@gmail.com"
-              className="inline-flex items-center gap-2 font-mono text-sm text-electricBlue hover:text-white transition-colors"
-            >
-              Email Me <ArrowUpRight size={14} />
-            </a>
+            <div className="flex items-center gap-4">
+              <a
+                href="mailto:syreeseofficial@gmail.com"
+                className="inline-flex items-center gap-2 font-mono text-sm text-electricBlue hover:text-white transition-colors"
+              >
+                Email Me <ArrowUpRight size={14} />
+              </a>
+              <button
+                onClick={copyEmail}
+                className="text-grey hover:text-white transition-colors"
+                aria-label="Copy email address"
+              >
+                {emailCopied ? <Check size={14} className="text-electricBlue" /> : <Copy size={14} />}
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
     </section>
+    </ScrollReveal>
   );
 };
 

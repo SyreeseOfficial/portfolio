@@ -1,17 +1,28 @@
-import React from 'react';
-import { useParams, Link, Navigate, useLocation } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useParams, Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 import { PROJECTS } from '../data';
 
 const CaseStudy: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const location = useLocation();
-  const isFromArchive = location.state?.from === 'archive';
+  const navigate = useNavigate();
+  const isFromArchive = location.state?.from === 'archive' ||
+    (!location.state && document.referrer.includes('/projects'));
   const projectIndex = PROJECTS.findIndex((p) => p.id === id);
   const project = PROJECTS[projectIndex];
 
-  // Find next project for footer nav
   const nextProject = PROJECTS[(projectIndex + 1) % PROJECTS.length];
+  const prevProject = PROJECTS[(projectIndex - 1 + PROJECTS.length) % PROJECTS.length];
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') navigate(`/project/${nextProject.id}`, { state: location.state });
+      if (e.key === 'ArrowLeft') navigate(`/project/${prevProject.id}`, { state: location.state });
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [nextProject.id, prevProject.id, navigate, location.state]);
 
   if (!project) {
     return <Navigate to="/404" />;
@@ -45,7 +56,7 @@ const CaseStudy: React.FC = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-white text-black font-sans font-medium px-6 py-2 rounded-sm hover:bg-electricBlue hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 bg-white text-black font-sans font-medium px-6 py-2 rounded-md hover:bg-electricBlueDark hover:text-white transition-colors"
               >
                 {link.label} <ExternalLink size={16} />
               </a>
@@ -55,7 +66,7 @@ const CaseStudy: React.FC = () => {
               href={project.caseStudy.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-black font-sans font-medium px-6 py-2 rounded-sm hover:bg-electricBlue hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 bg-white text-black font-sans font-medium px-6 py-2 rounded-md hover:bg-electricBlueDark hover:text-white transition-colors"
             >
               {project.caseStudy.ctaLabel || 'Visit Live Site'} <ExternalLink size={16} />
             </a>

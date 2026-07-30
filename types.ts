@@ -1,9 +1,14 @@
+import type { ElementType } from 'react';
+
+export type ProjectTag = 'SaaS' | 'CLI / Tools' | 'Mobile' | 'Community';
+
 export interface Project {
   id: string;
   title: string;
   year: string;
   summary: string;
-  videoUrl?: string; // Placeholder for video
+  tag?: ProjectTag;
+  videoUrl?: string;
   caseStudy: {
     problem: string;
     solution: string;
@@ -41,7 +46,7 @@ export interface Book {
   title: string;
   description: string;
   url: string;
-  icon?: React.ElementType;
+  icon?: ElementType;
 }
 
 export interface RoadmapItem {
@@ -54,18 +59,40 @@ export interface InspirationItem {
   name: string;
   description: string;
   url: string;
-  icon?: React.ElementType;
+  icon?: ElementType;
 }
 
 export interface BetItem {
   title: string;
   description: string;
-  icon?: React.ElementType;
+  icon?: ElementType;
 }
 
 export interface ChangelogItem {
   date: string;
   change: string;
+  title?: string;
+}
+
+export interface NowModule {
+  building: { name: string; description: string };
+  reading: string;
+  listening: string;
+}
+
+export interface KilledProject {
+  name: string;
+  epitaph: string;
+}
+
+export interface BucketListItem {
+  text: string;
+}
+
+export interface HealthStats {
+  steps: number;
+  calories: number;
+  sleep: number;
 }
 
 export interface DeskSetupItem {

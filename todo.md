@@ -35,13 +35,13 @@
 
 ## 🟡 Design Consistency
 
-- [ ] **Inconsistent border radius** — `ProjectSection` uses `rounded-sm`, `CaseStudy` uses `rounded-md`, `Projects.tsx` uses `rounded-lg`; pick one radius for project image cards and apply it everywhere
-- [ ] **"Back" link styles differ across pages** — `CaseStudy` uses `font-mono text-xs text-grey`, `Projects` uses unstyled `text-grey`; unify into one shared back-link style
-- [ ] **`ProjectSection` title font mismatch** — project titles in the home feed use `font-serif`, but the archive grid also uses `font-serif italic`; home feed cards drop the `italic`; decide and align
-- [ ] **No active/current page indicator in header** — the header has no way to tell a visitor which page they're on; add a subtle active state or breadcrumb on inner pages
-- [ ] **`hover:bg-blue-600` doesn't match `electricBlue`** — Hero and NotFound buttons use `hover:bg-blue-600` (#2563EB) but `electricBlue` is `#007BFF`; the hue visibly shifts on hover; change to `hover:brightness-90` or define a consistent darker blue in the Tailwind config
-- [ ] **Hero CTA button and CaseStudy CTA button differ** — Hero uses `rounded-md hover:bg-blue-600`, CaseStudy uses `rounded-sm hover:bg-electricBlue`; unify hover color and radius
-- [ ] **Changelog dates use 2-digit years** — `"12-12-25"` is ambiguous (year 25 or 2025?); use 4-digit years (`"12-12-2025"`) for clarity
+- [x] **Inconsistent border radius** — unified to `rounded-md` across ProjectSection, CaseStudy images, and Projects archive grid
+- [x] **"Back" link styles differ across pages** — both now use `font-mono text-xs text-grey hover:text-electricBlue`
+- [x] **`ProjectSection` title font mismatch** — home feed cards now use `font-serif italic` to match the archive grid
+- [x] **No active/current page indicator in header** — dot indicator (`● Page Name`) appears below the name on inner pages
+- [x] **`hover:bg-blue-600` doesn't match `electricBlue`** — added `electricBlueDark: '#0062CC'` to Tailwind config; Hero and CaseStudy buttons now use `hover:bg-electricBlueDark`
+- [x] **Hero CTA button and CaseStudy CTA button differ** — both now use `rounded-md hover:bg-electricBlueDark`
+- [x] **Changelog dates use 2-digit years** — fixed to `"12-12-2025"`, `"12-17-2025"`, `"12-18-2025"`
 
 ---
 
@@ -66,28 +66,28 @@
 
 ## 🟢 UX Improvements
 
-- [ ] **MusicWidget cycles too fast (2s)** — artists flash by before you can read them; increase interval to 4–5 seconds and add a CSS `opacity` fade transition between names
-- [ ] **CaseStudy back nav is fragile** — if a user lands directly on `/project/orthostar`, `location.state` is null and "BACK TO WORK" goes to `/`; this is correct behavior but could be improved by also checking `document.referrer`
-- [ ] **No visual cue that there are more than 3 projects** — the `ProjectSection` shows 3 and drops a "View All Projects" link at the bottom; add a muted project count label like `"3 of 11 shown"` near the section heading
-- [ ] **Accordion opens but doesn't scroll into view** — when a module opens, its content can be partially off-screen; smooth-scroll the opened section into view
-- [ ] **"Coming Soon" cards have no visual personality** — KonaFit shows a blank white/5 box; add a subtle pattern, initials, or icon so it doesn't look broken
-- [ ] **Contact section has no copy email option** — the `mailto:` link opens an email client; add a one-click "Copy email" button next to it
-- [ ] **No 404 page visual treatment** — `NotFound.tsx` presumably has minimal design; give it personality consistent with the rest of the site
+- [skip] **MusicWidget cycles too fast (2s)** — artists flash by before you can read them; increase interval to 4–5 seconds and add a CSS `opacity` fade transition between names
+- [x] **CaseStudy back nav is fragile** — if a user lands directly on `/project/orthostar`, `location.state` is null and "BACK TO WORK" goes to `/`; this is correct behavior but could be improved by also checking `document.referrer`
+- [x] **No visual cue that there are more than 3 projects** — the `ProjectSection` shows 3 and drops a "View All Projects" link at the bottom; add a muted project count label like `"3 of 11 shown"` near the section heading
+- [x] **Accordion opens but doesn't scroll into view** — when a module opens, its content can be partially off-screen; smooth-scroll the opened section into view
+- [x] **"Coming Soon" cards have no visual personality** — KonaFit shows a blank white/5 box; add a subtle pattern, initials, or icon so it doesn't look broken
+- [x] **Contact section has no copy email option** — the `mailto:` link opens an email client; add a one-click "Copy email" button next to it
+- [x] **No 404 page visual treatment** — `NotFound.tsx` presumably has minimal design; give it personality consistent with the rest of the site
 
 ---
 
 ## 🟢 Creative & Feature Upgrades
 
-- [ ] **Scroll-triggered entrance animations** — sections beyond the hero animate in on load, not on scroll; use `IntersectionObserver` to trigger `fade-in-up` as each section enters the viewport
-- [ ] **Add a "Now" module to the Dashboard** — a live-feeling widget showing what you're currently building, reading, or listening to; updates when `data.ts` changes
-- [ ] **Project filter tags on the archive page** — add type tags (SaaS, CLI, Mobile, Community) to each project and a filter bar on `/projects` so visitors can browse by category
-- [ ] **Keyboard navigation between case studies** — add `←` / `→` arrow key listeners in `CaseStudy.tsx` to jump between projects without reaching for the mouse
-- [ ] **"Killed Projects" section** *(already in Changelog as future TODO)* — a graveyard of ideas that didn't ship; great for personality and relatability
-- [ ] **"Bucket List" section** *(already in Changelog as future TODO)* — lightweight addition to Dashboard modules
-- [ ] **Live health stats section** *(already in Changelog as future TODO)* — steps, calories, sleep; pull from a fitness API or Google Fit export
-- [ ] **Subtle page transition** — add a `opacity 0→1` or slide transition between routes using React Router's location key instead of the hard cut that happens now
-- [ ] **Noise/grain texture overlay** — a 3–5% CSS `background-image: url(noise.png)` overlay adds tactile depth to the flat black background without clashing with the aesthetic
-- [ ] **"Open to work / building" status badge** — a small pill in the header or hero (`● Building in public`) communicates availability and energy at a glance
+- [x] **Scroll-triggered entrance animations** — `ScrollReveal` component using `IntersectionObserver`; project cards stagger at 0/150/300ms, Dashboard section fades in on scroll
+- [x] **Add a "Now" module to the Dashboard** — Building/Reading/Listening rows driven by `NOW` in `data.ts`
+- [x] **Project filter tags on the archive page** — `tag` field on each project; sidebar label filter on `/projects`
+- [x] **Keyboard navigation between case studies** — `←` / `→` key listeners in `CaseStudy.tsx` via `useNavigate`
+- [x] **"Killed Projects" section** — Dashboard module; Hyperion listed; driven by `KILLED_PROJECTS` in `data.ts`
+- [x] **"Bucket List" section** — Dashboard module driven by `BUCKET_LIST` in `data.ts`
+- [x] **Live health stats section** — Dashboard module with static placeholder in `HEALTH_STATS`; update `data.ts` when wiring to a real API
+- [x] **Subtle page transition** — `animate-fade-in` CSS keyframe defined in `index.html`; applied to Home, Projects, CaseStudy, NotFound
+- [skip] **Noise/grain texture overlay** — skipped per user preference; flat black is fine as-is
+- [x] **"Open to work / building" status badge** — `● Open to work` in Header, shown only on home page
 
 ---
 
