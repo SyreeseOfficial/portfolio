@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Plus, Minus, ArrowUpRight, Instagram, Youtube, TrendingUp, Gamepad, Heart, Hammer, Zap, Copy, Check, Music, BookOpen, Wrench, Skull, List, Activity } from 'lucide-react';
+import { Plus, Minus, ArrowUpRight, Instagram, TrendingUp, Heart, Hammer, Zap, Copy, Check, Music, BookOpen, Wrench, Skull, List, Activity } from 'lucide-react';
 import { PHILOSOPHY, BOOKSHELF, GEAR, TECH_STACK, ROADMAP, INSPIRATIONS, BETS, CHANGELOG, DESK_SETUP, NOW, KILLED_PROJECTS, BUCKET_LIST, HEALTH_STATS } from '../../data';
 import ScrollReveal from '../ScrollReveal';
 
@@ -33,7 +33,7 @@ const DashboardModule: React.FC<DashboardModuleProps> = ({ title, children, isOp
         </span>
       </button>
 
-      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[1000px] mb-8 opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[2000px] mb-8 opacity-100' : 'max-h-0 opacity-0'}`}>
         {children}
       </div>
     </div>

@@ -4,20 +4,20 @@
 
 ## 🔴 Bugs & Broken
 
-- [ ] **`index.html` is missing `</head>` closing tag** — invalid HTML, could cause browser parsing quirks
-- [ ] **Tailwind CDN in production** — `cdn.tailwindcss.com` ships the full unoptimized dev build; switch to the Vite Tailwind plugin for tree-shaking and real CSS output
-- [ ] **No `tailwind.config.js` or `postcss.config.js`** — the npm-installed `tailwindcss` package is entirely unused; the CDN does all the work, which means unused classes are never purged and custom config only lives inside `index.html`'s inline `<script>` block
-- [ ] **`framer-motion` installed but never imported** — it's in `package.json` but zero files import it; remove it to cut ~140KB from the production bundle
-- [ ] **`react-helmet-async` installed but never used** — added with an `overrides` block (effort was spent setting it up), but `<HelmetProvider>` and `<Helmet>` are never imported anywhere; wire it up to fix all the per-page SEO issues below, or remove it
-- [ ] **`vite.config.ts` bakes `GEMINI_API_KEY` into the client bundle** — the `define` block inlines the API key into the built JS; if `.env` has that key set, anyone can read it by inspecting the bundle; move API calls to a server-side function or remove the key exposure
-- [ ] **`ChangelogItem` type is missing `title?: string`** — `Dashboard.tsx` accesses `log.title` but `types.ts` only defines `date` and `change` on `ChangelogItem`; TypeScript won't catch bugs here; add `title?: string` to the interface
-- [ ] **`Dashboard.tsx` has unused imports** — `Gamepad` is imported but data uses `Gamepad2` (imported in `data.ts`); `Youtube` is imported but only used in `Footer.tsx`; both are dead imports that bloat the module
-- [ ] **`CaseStudy.tsx` redirects to `/404`** — there's no explicit `/404` route; the wildcard `*` catches it so it renders correctly, but the URL becomes `/404` instead of staying on the bad path; render `<NotFound />` directly or use `<Navigate to="/" replace />`
-- [ ] **`Projects.tsx` has a redundant `window.scrollTo(0,0)`** — `App.tsx` already handles this with `<ScrollToTop />`; remove the duplicate `useEffect` in `Projects.tsx`
-- [ ] **`TECH_STACK` has a broken/fake URL** — `https://antigravity.google/` doesn't exist; fix or remove
-- [ ] **`GEAR` has a placeholder URL** — `Vibe Coding` links to `"#"`; fill it in or remove the item
-- [ ] **Accordion `max-h-[1000px]` can clip long content** — Desk Setup and Books sections can exceed 1000px on mobile; bump to `max-h-[2000px]` or use a JS-measured height
-- [ ] **Photos module uses Picsum placeholder images** — `picsum.photos` random images aren't your photos; replace with real ones or remove the section
+- [x] **`index.html` is missing `</head>` closing tag** — fixed
+- [x] **Tailwind CDN in production** — migrated to Vite Tailwind plugin; CSS now 20 kB vs CDN's ~3 MB dev build
+- [x] **No `tailwind.config.js` or `postcss.config.js`** — created both; inline config moved to `tailwind.config.js`, styles to `index.css`
+- [x] **`framer-motion` installed but never imported** — removed
+- [x] **`react-helmet-async` installed but never used** — removed (including the overrides block)
+- [x] **`vite.config.ts` bakes `GEMINI_API_KEY` into the client bundle** — removed the define block; key was unused in code anyway
+- [x] **`ChangelogItem` type is missing `title?: string`** — was already present in types.ts
+- [x] **`Dashboard.tsx` has unused imports** — removed `Gamepad` and `Youtube`
+- [x] **`CaseStudy.tsx` redirects to `/404`** — changed to `<Navigate to="/" replace />`; also guarded useEffect against undefined project
+- [x] **`Projects.tsx` has a redundant `window.scrollTo(0,0)`** — was already absent; previously fixed
+- [x] **`TECH_STACK` has a broken/fake URL** — replaced `Antigravity` with `Claude Code` (https://claude.ai/code)
+- [x] **`GEAR` has a placeholder URL** — `Vibe Coding` now points to https://claude.ai/code
+- [x] **Accordion `max-h-[1000px]` can clip long content** — bumped to `max-h-[2000px]`
+- [skip] **Photos module uses Picsum placeholder images** — keeping placeholders until real photos are ready
 
 ---
 

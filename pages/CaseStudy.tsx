@@ -16,6 +16,7 @@ const CaseStudy: React.FC = () => {
   const prevProject = PROJECTS[(projectIndex - 1 + PROJECTS.length) % PROJECTS.length];
 
   useEffect(() => {
+    if (!project) return;
     document.title = `${project.title} — Syreese Delos Santos`;
     const canonical = document.getElementById('canonical') as HTMLLinkElement | null;
     if (canonical) canonical.href = `https://syreese.com/project/${id}`;
@@ -23,7 +24,7 @@ const CaseStudy: React.FC = () => {
       document.title = 'Syreese Delos Santos — Creative Builder';
       if (canonical) canonical.href = 'https://syreese.com';
     };
-  }, [project.title, id]);
+  }, [project?.title, id]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
@@ -35,7 +36,7 @@ const CaseStudy: React.FC = () => {
   }, [nextProject.id, prevProject.id, navigate, location.state]);
 
   if (!project) {
-    return <Navigate to="/404" />;
+    return <Navigate to="/" replace />;
   }
 
   return (

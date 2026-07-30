@@ -263,7 +263,7 @@ export const GEAR: GearItem[] = [
       { name: "Chess.com", url: "https://www.chess.com/" },
       { name: "Lichess", url: "https://lichess.org/" },
       { name: "SteamDeck", url: "https://store.steampowered.com/steamdeck" },
-      { name: "Vibe Coding", url: "#" }, // Placeholder, user to provide
+      { name: "Vibe Coding", url: "https://claude.ai/code" },
       { name: "Letterboxd", url: "https://letterboxd.com/" }
     ]
   },
@@ -305,7 +305,7 @@ export const TECH_STACK: TechStackCategory[] = [
     category: "AI & Development",
     items: [
       { name: "Gemini", url: "https://gemini.google.com/" },
-      { name: "Antigravity", url: "https://antigravity.google/" },
+      { name: "Claude Code", url: "https://claude.ai/code" },
       { name: "Linux Terminal", url: "https://linuxcommand.org/" },
       { name: "Arch Linux", url: "https://archlinux.org/" },
       { name: "AUR", url: "https://aur.archlinux.org/" },
