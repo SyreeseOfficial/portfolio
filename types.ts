@@ -8,7 +8,7 @@ export interface Project {
   year: string;
   summary: string;
   tag?: ProjectTag;
-  videoUrl?: string;
+  coverUrl?: string;
   caseStudy: {
     problem: string;
     solution: string;
@@ -17,6 +17,7 @@ export interface Project {
     links?: { label: string; url: string }[];
     ctaLabel?: string;
     images?: string[];
+    isPrivate?: boolean;
   };
 }
 

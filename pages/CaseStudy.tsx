@@ -81,6 +81,10 @@ const CaseStudy: React.FC = () => {
             >
               {project.caseStudy.ctaLabel || 'Visit Live Site'} <ExternalLink size={16} />
             </a>
+          ) : project.caseStudy.isPrivate ? (
+            <span className="inline-flex items-center font-mono text-xs text-grey border border-white/10 px-4 py-2 rounded-md">
+              Private — Personal Use
+            </span>
           ) : null}
 
 

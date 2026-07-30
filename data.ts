@@ -8,11 +8,11 @@ export const PROJECTS: Project[] = [
     year: '2025',
     tag: 'SaaS',
     summary: 'Micro SaaS that improves Google ratings for Ortho practices.',
-    videoUrl: '/projects/orthostar/cover.jpg',
+    coverUrl: '/projects/orthostar/cover.jpg',
     caseStudy: {
-      problem: 'When a orthodontist office has bad reviews online, new patients are afraid to go there. This causes the business to lose a lot of money.',
-      solution: 'I built a tool that helps offices manage their reputation. It stops bad reviews from going public. It asks happy patients to leave 5-star reviews. It turns video clips of happy patients into ads.',
-      result: 'The average orthodontist gets 32% more 5-star reviews. This brings in about 7 new patients every month. Since one patient can be worth up to $15,000, the office makes much more money.',
+      problem: 'Negative reviews follow orthodontic practices everywhere a prospective patient looks. One bad rating on Google can cost a practice tens of thousands in lost patient revenue before a single appointment is booked.',
+      solution: 'I built a reputation management platform that intercepts dissatisfied patients before they reach public review sites, routes happy patients toward five-star Google reviews, and converts patient testimonial clips into paid ad creative — all from a single dashboard.',
+      result: 'Practices on OrthoStar average a 32% increase in five-star ratings, driving roughly 7 net-new patients per month through improved search visibility. At a per-patient lifetime value up to $15,000, that\'s a material revenue shift from a tool that runs in the background.',
       liveLink: 'https://orthostar.org/',
       images: [
         '/projects/orthostar/case-study-1.jpg',
@@ -25,12 +25,12 @@ export const PROJECTS: Project[] = [
     title: 'DailyDash',
     year: '2026',
     tag: 'CLI / Tools',
-    summary: 'A simple tool for your computer that helps you get work done and stay healthy.',
-    videoUrl: '/projects/dailydash/cover.png',
+    summary: 'A terminal dashboard that keeps your tasks, hydration, and focus timer in one place while you work.',
+    coverUrl: '/projects/dailydash/cover.png',
     caseStudy: {
-      problem: 'People who work on computers often forget to drink water or take breaks. They also get distracted by the internet whenever they have to check the time or the weather.',
-      solution: 'I built a text-based dashboard that stays on your screen while you work. It tracks your water, shows your top tasks, and has a timer to help you stay focused.',
-      result: 'Users can now finish their work faster and stay healthy without needing to open extra apps or websites that might distract them.',
+      problem: 'Knowledge workers lose focus every time they leave the terminal — checking the time pulls up a browser tab, checking the weather opens a new distraction, and hydration goals get buried under deadlines.',
+      solution: 'DailyDash is a lightweight terminal overlay that keeps everything you need within arm\'s reach: water intake tracking, a live task list, and a Pomodoro timer — no browser required, no distractions introduced.',
+      result: 'Users stay in flow longer, hit their hydration targets more consistently, and finish their work without ever leaving the terminal.',
       liveLink: 'https://github.com/SyreeseOfficial/DailyDash',
       ctaLabel: 'View On Github',
       images: [
@@ -45,11 +45,11 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tag: 'SaaS',
     summary: 'An AI stylist that helps you plan outfits, track your wardrobe, and make fashion fun.',
-    videoUrl: '/projects/vibestylist/cover.png',
+    coverUrl: '/projects/vibestylist/cover.png',
     caseStudy: {
-      problem: 'Picking out clothes can be hard. Many people buy clothes they never wear, waste money, and still feel like they have nothing to wear. Fashion can be stressful and confusing.',
-      solution: 'VibeStylist is your personal AI fashion helper. It learns what you like and helps you build a wardrobe you\'ll love. You can plan outfits for the week, track what you wear, and even get your outfits rated. It turns fashion into a fun game with stats and levels.',
-      result: 'No more stress about what to wear. You\'ll save money by only buying clothes you\'ll actually use. VibeStylist makes getting dressed easy and fun every single day.',
+      problem: 'Most people own more clothes than they actually wear. Decision fatigue hits every morning, impulse purchases pile up, and the wardrobe grows without the wardrobe working — wasted money and a daily source of low-grade stress.',
+      solution: 'VibeStylist acts as a personalized AI stylist: it learns your preferences, surfaces outfits from what you already own, and gamifies the process with ratings, stats, and weekly planning tools. The goal is a wardrobe you actually use, not one you scroll past.',
+      result: 'Users report less morning decision fatigue, more intentional purchasing habits, and a closet that earns its space. Getting dressed becomes a solved problem rather than a daily negotiation.',
       liveLink: 'https://vibestylist.netlify.app/',
       ctaLabel: 'View Live App',
       images: [
@@ -64,11 +64,11 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tag: 'CLI / Tools',
     summary: 'A minimalist, high-performance speech-to-text utility for the Omarchy Linux distribution.',
-    videoUrl: '/projects/vibestt/cover.jpg',
+    coverUrl: '/projects/vibestt/cover.jpg',
     caseStudy: {
-      problem: 'Most speech-to-text tools for Linux are too slow and use too much computer power. They are hard to use and full of things you don\'t need',
-      solution: 'I made a simple tool called VibeSTT. It is very small and fast. It stays out of the way until you need it.',
-      result: 'You can talk instead of typing. This helps you get your work done much faster and saves you time.',
+      problem: 'Linux speech-to-text tools are either resource-hungry, painful to configure, or buried under features no one asked for — the overhead defeats the purpose of a utility that\'s supposed to get out of your way.',
+      solution: 'VibeSTT is a purpose-built speech-to-text utility for the Omarchy Linux distribution: minimal binary footprint, fast transcription powered by Whisper under the hood, and zero configuration required to get started.',
+      result: 'Users can dictate notes, capture ideas, and compose drafts without breaking their workflow — a faster input mode for anyone already living in the terminal.',
       liveLink: 'https://github.com/SyreeseOfficial/VibeSTT',
       ctaLabel: 'View On Github',
       images: [
@@ -83,11 +83,11 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tag: 'CLI / Tools',
     summary: 'A CLI tool that plays calming background noise to help you focus while you work.',
-    videoUrl: '/projects/focusnoisecli/demo.png',
+    coverUrl: '/projects/focusnoisecli/demo.png',
     caseStudy: {
-      problem: 'It is hard to stay focused when you have to switch windows to find music or white noise. Opening a web browser often leads to getting distracted by social media.',
-      solution: 'I built a Python app that plays high-quality sounds, like rain or a coffee shop, directly in your terminal. It uses smart coding to mix in random sound effects and includes a timer to track your work.',
-      result: 'You can now stay "in the zone" without leaving your code. It helps you work longer, tracks your progress, and runs smoothly on Windows, Mac, and Linux.',
+      problem: 'Every time you leave the terminal for background audio, you\'re one open tab away from a distraction spiral. Streaming sites require a browser, browsers invite context switching, and context switching is where deep work goes to die.',
+      solution: 'FocusNoiseCLI plays curated ambient soundscapes — rain, coffee shops, white noise — directly in your terminal. It blends base tracks with randomized audio events for natural variety, and wraps a built-in session timer around the whole thing so you can track deep work hours without installing anything else.',
+      result: 'Developers can stay in flow without context switching, track focused hours automatically, and run the tool on any platform where Python runs. It removes one more reason to open a browser.',
       liveLink: 'https://github.com/SyreeseOfficial/FocusNoiseCLI',
       ctaLabel: 'View On Github',
       images: [
@@ -102,11 +102,11 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tag: 'Community',
     summary: 'A private Skool community tailored for natural muscle building.',
-    videoUrl: '/projects/muscle-method/cover.png',
+    coverUrl: '/projects/muscle-method/cover.png',
     caseStudy: {
-      problem: 'Many "hardgainers" struggle to build muscle without drugs or excessive time in the gym. Traditional advice often fails skinny guys under 30 who only have time for 2 workouts a week.',
-      solution: 'I built a specialized Skool community with a comprehensive 4-hour video course, 100+ PDF guides, and an extensive AI prompt library (270+ prompts) to accelerate results. Members also get 1:1 coaching and weekly live training.',
-      result: 'Scaled to 130+ active members rapidly. The community is highly engaged, with members supporting each other, sharing wins, and achieving measurable physical transformation.',
+      problem: 'Conventional muscle-building advice is calibrated for enhanced athletes or people with unlimited gym time — it consistently fails the naturally skinny guy working two sessions a week. Generic programming produces generic results for this demographic.',
+      solution: 'I built a specialized Skool community anchored around a 4-hour video course, 100+ written guides, and a 270-prompt AI library tuned to natural training protocols. Members layer in 1:1 coaching access and weekly live sessions to close the gap between content and real-world application.',
+      result: 'Scaled to 130+ active members with strong retention and organic engagement. Members share progress, hold each other accountable, and report visible physical transformation within the first 8–12 weeks.',
       liveLink: 'https://www.skool.com/muscle-method-5291',
       images: [
         '/projects/muscle-method/case-study-1.png',
@@ -120,11 +120,11 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tag: 'CLI / Tools',
     summary: 'A fast typing game made with Python that runs right in your command line window.',
-    videoUrl: '/projects/hypertyper/title.png',
+    coverUrl: '/projects/hypertyper/title.png',
     caseStudy: {
-      problem: 'Coders often need a quick break. There were no simple, fun games to play inside the terminal without switching screens.',
-      solution: 'I created a game that tracks how fast you type and saves your best scores. It has different modes to keep things fun.',
-      result: 'Now you can take a short break, have fun, and see how fast you type without leaving your work.',
+      problem: 'Coders need mental resets between deep work sessions, but stepping away from the terminal to play a game means switching context entirely — the very thing a break is supposed to undo.',
+      solution: 'HyperTyper is a terminal-native typing game with multiple challenge modes and a persistent high-score system — a complete break-time activity that never requires leaving the command line.',
+      result: 'Developers can decompress, sharpen their typing speed, and return to work without switching windows or losing their mental context.',
       liveLink: 'https://github.com/SyreeseOfficial/HyperTyper',
       ctaLabel: 'View on Github',
       images: [
@@ -140,9 +140,10 @@ export const PROJECTS: Project[] = [
     tag: 'Mobile',
     summary: 'A custom Android workout app built around how I actually train, with all the features I wanted from the top apps and none of the paywalls.',
     caseStudy: {
-      problem: 'The best workout apps hide their best features behind a paywall. If you want everything you actually need, you\'re stuck paying for multiple subscriptions just to have a decent gym experience.',
-      solution: 'I built a custom Android app tailored to exactly how I train. It pulls the best features from every app I loved and puts them all in one place. Free, forever.',
-      result: 'A workout app I actually use every time I hit the gym. It has everything I need, nothing I don\'t, and it costs me zero dollars a month.',
+      problem: 'The best fitness apps lock their most useful features behind paywalls, then fragment the rest across multiple subscriptions. Getting a genuinely complete workout experience costs more per month than a gym membership.',
+      solution: 'I built a custom Android workout app around exactly how I train — pulling the strongest features from every app I\'d paid for, stripping out everything I didn\'t use, and consolidating it into one tool I actually want to open at the gym. Free, permanently.',
+      result: 'An app I open every single session — not because I have to, but because it fits how I actually train. Everything I need, nothing I don\'t, and zero monthly cost.',
+      isPrivate: true,
     }
   },
   {
@@ -151,11 +152,12 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tag: 'Mobile',
     summary: 'A minimal Android habit tracker that cuts the noise and just helps you stay on track.',
-    videoUrl: '/projects/momentum/cover.jpg',
+    coverUrl: '/projects/momentum/cover.jpg',
     caseStudy: {
-      problem: 'Most habit apps are packed with stuff nobody asked for. Fancy dashboards, streaks, badges, levels... it starts to feel like a chore just to open the thing.',
-      solution: 'I built a lightweight Android habit tracker that strips it all back to the basics. Fast, clean, and focused on doing exactly one thing well.',
-      result: 'A habit tracker that works exactly how I want it to. No fluff, no friction, just a simple system that keeps me honest every single day.',
+      problem: 'Modern habit apps mistake gamification for motivation. By the time you\'ve navigated the dashboard, acknowledged the streak, and dismissed the badge notification, you\'ve spent more energy on the app than on the habit itself.',
+      solution: 'Momentum is a stripped-back Android habit tracker: no streaks, no badges, no gamification layer. Just a clean list of habits and a way to check them off. It opens fast, does its job, and gets out of the way.',
+      result: 'A tracker I actually check in with daily — not because it guilt-trips me with streaks, but because it\'s frictionless enough to not become a chore in itself.',
+      isPrivate: true,
       images: [
         '/projects/momentum/case-study-1.jpg',
         '/projects/momentum/case-study-2.jpg'
@@ -168,11 +170,11 @@ export const PROJECTS: Project[] = [
     year: '2026',
     tag: 'SaaS',
     summary: 'A tool dashboard I built for my job to speed up daily tasks and help the business make more money.',
-    videoUrl: '/projects/routecommand/cover.jpg',
+    coverUrl: '/projects/routecommand/cover.jpg',
     caseStudy: {
-      problem: 'There were a ton of small slowdowns at work that added up fast. Tracking expenses, chasing refunds, and logging donations were all done manually with no real system behind any of it.',
-      solution: 'I built a web dashboard with a few focused tools: a receipt and expense tracker to save money on taxes, a credit request tool to get account refunds processed faster, and a donation tracker to make sure every write-off gets captured.',
-      result: 'The boss saves more money, the business runs smoother, and tasks that used to eat up time now take seconds.',
+      problem: 'Manual workflows at scale leak time and money. Expense tracking done ad hoc meant missed deductions; refund requests handled by memory meant delayed cash recovery; donation logging done piecemeal meant write-offs captured at year-end instead of at the time of giving.',
+      solution: 'I built a purpose-built internal dashboard with three focused tools: a receipt and expense tracker to maximize tax deductions, a credit request workflow to accelerate refund processing, and a donation logger to ensure every write-off gets captured when it happens.',
+      result: 'The business captures more deductions, recovers credits faster, and replaced a handful of manual processes with a single tool. Tasks that used to take minutes now take seconds.',
       liveLink: 'https://routecommand.netlify.app',
       ctaLabel: 'View Live App',
       images: [
@@ -187,11 +189,11 @@ export const PROJECTS: Project[] = [
     year: '2025',
     tag: 'Community',
     summary: 'A collection of useful Chrome extensions I built for the Skool platform.',
-    videoUrl: '/projects/chrome-extensions/cover.jpg',
+    coverUrl: '/projects/chrome-extensions/cover.jpg',
     caseStudy: {
-      problem: 'Skool is a new platform. It is missing some helpful tools that could help its users earn more money.',
-      solution: 'I built four Chrome extensions to add these missing features: Skool Utilities, Skool Todo List, Skool Templates, and Skooler AI.',
-      result: 'People who use these tools are making more money in their Skool groups because they are more organized and faster.',
+      problem: 'Skool launched fast and the community embraced it, but the platform\'s native toolset was thin — operators running paid communities had no way to organize, automate, or communicate at the level the platform\'s pricing implied.',
+      solution: 'I built four Chrome extensions that fill the gaps: Skool Utilities adds missing workflow features, Skool Todo List gives members a structured task system, Skool Templates removes repetitive copy-paste work, and Skooler AI layers in AI-assisted content generation directly inside the platform.',
+      result: 'Community operators using the extensions run faster, communicate more consistently, and convert members more effectively — less time on platform busywork, more on the content and relationships that drive revenue.',
       liveLink: 'https://chromewebstore.google.com/detail/skool-utilities/pgoiddblmhofnagiignbokiehfepijco?hl=en',
       links: [
         { label: 'Skool Utilities', url: 'https://chromewebstore.google.com/detail/skool-utilities/pgoiddblmhofnagiignbokiehfepijco?hl=en' },
@@ -203,7 +205,19 @@ export const PROJECTS: Project[] = [
         '/projects/chrome-extensions/case-study-2.jpg'
       ]
     }
-  }
+  },
+  {
+    id: 'pushrise',
+    title: 'PushRise',
+    year: '2026',
+    tag: 'Mobile',
+    summary: 'A mobile alarm app that doesn\'t turn off until you do pushups. The only alarm that guarantees you actually get up.',
+    caseStudy: {
+      problem: 'Most people snooze their alarms because snoozing is easy. Motivation isn\'t enough when you\'re half-asleep — willpower fails before the alarm clock does.',
+      solution: 'PushRise pairs your morning alarm with a camera-verified pushup requirement. The alarm doesn\'t stop until the reps are counted. No pushups, no silence.',
+      result: 'Still in development. The concept is straightforward: convert an involuntary behavior (waking up) into an enforced physical action (moving your body) before conscious resistance kicks in.',
+    }
+  },
 ];
 
 export const PHILOSOPHY: PhilosophyItem[] = [

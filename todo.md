@@ -93,10 +93,10 @@
 
 ## 🔵 Content
 
-- [ ] **PushRise doesn't appear in the `PROJECTS` array** — there's a full privacy policy page at `/pushrise/privacy-policy`, which means it's a real shipped product, but it's invisible in the portfolio; add it as a project card
-- [ ] **`metadata.json` description is stale** — reads "bridging physical construction and web technology" which has nothing to do with the actual site; update to match the real tagline or purpose
-- [ ] **Case study writing is too simplified** — problem/solution/result copy reads at a very low reading level (short sentences, basic vocabulary); elevate it slightly to match the sophisticated design
-- [ ] **Orthostar `videoUrl` is a `.jpg`** — the field is named `videoUrl` but it points to a static image everywhere in the codebase; rename to `coverUrl` in `types.ts` and `data.ts` for clarity
-- [ ] **KonaFit is missing a `videoUrl`/cover image** — only project with no visual in the archive grid; add a cover screenshot
-- [ ] **Momentum `caseStudy` has no `liveLink`** — same for KonaFit; either add links or mark them clearly as "Private / Personal Use"
-- [ ] **Instagram link in Photos module points to `syreesepic`; Footer points to `syreesefit`** — pick the right handle or confirm both are intentional
+- [x] **PushRise doesn't appear in the `PROJECTS` array** — added as a Coming Soon card (in progress, no live link yet)
+- [x] **`metadata.json` description is stale** — updated to "Personal portfolio of Syreese Delos Santos — software builder, optimizer, and creative developer."
+- [x] **Case study writing is too simplified** — elevated all 11 case studies to a more professional reading level
+- [x] **Orthostar `videoUrl` is a `.jpg`** — renamed to `coverUrl` in `types.ts`, `data.ts`, `ProjectSection.tsx`, and `Projects.tsx`
+- [x] **KonaFit is missing a `videoUrl`/cover image** — kept blank; Coming Soon fallback handles it
+- [x] **Momentum `caseStudy` has no `liveLink`** — same for KonaFit; marked both as `isPrivate: true`; CaseStudy shows "Private — Personal Use" label
+- [x] **Instagram link in Photos module points to `syreesepic`; Footer points to `syreesefit`** — confirmed intentional split; no change
