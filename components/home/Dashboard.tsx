@@ -22,7 +22,8 @@ const DashboardModule: React.FC<DashboardModuleProps> = ({ title, children, isOp
     <div ref={ref} className="border-b border-white/10">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between py-6 group focus:outline-none hover:pl-4 transition-all duration-300 ease-out rounded-sm px-0"
+        aria-expanded={isOpen}
+        className="w-full flex items-center justify-between py-6 group focus-visible:ring-2 focus-visible:ring-electricBlue hover:pl-4 transition-all duration-300 ease-out rounded-sm px-0"
       >
         <h3 className="font-mono text-base text-white group-hover:text-electricBlue transition-colors">
           {title}
@@ -286,7 +287,8 @@ const Dashboard: React.FC = () => {
                     <img
                       src={`https://picsum.photos/400/400?grayscale&random=${i}`}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 opacity-80 hover:opacity-100"
-                      alt={`Gallery image ${i}`}
+                      alt=""
+                      role="presentation"
                     />
                   </div>
                 ))}

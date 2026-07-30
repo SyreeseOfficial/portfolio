@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
         className="absolute bottom-8 animate-fade-in-up opacity-0"
         style={{ animationDelay: "2000ms" }}
       >
-        <div className="animate-bounce text-grey">
+        <div className="animate-bounce text-grey" aria-hidden="true">
           <ChevronDown size={24} />
         </div>
       </div>

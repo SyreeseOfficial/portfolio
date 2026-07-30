@@ -104,7 +104,7 @@ const CaseStudy: React.FC = () => {
         {/* Media 1 */}
         {project.caseStudy.images?.[0] && (
           <div className="aspect-video rounded-md overflow-hidden border border-white/10 shimmer">
-            <img src={project.caseStudy.images[0]} alt="Project Screenshot 1" loading="lazy" className="w-full h-full object-cover" />
+            <img src={project.caseStudy.images[0]} alt={`${project.title} — problem context screenshot`} loading="lazy" className="w-full h-full object-cover" />
           </div>
         )}
 
@@ -123,7 +123,7 @@ const CaseStudy: React.FC = () => {
         {/* Media 2 */}
         {project.caseStudy.images?.[1] && (
           <div className="aspect-video rounded-md overflow-hidden border border-white/10 shimmer">
-            <img src={project.caseStudy.images[1]} alt="Project Screenshot 2" loading="lazy" className="w-full h-full object-cover" />
+            <img src={project.caseStudy.images[1]} alt={`${project.title} — solution screenshot`} loading="lazy" className="w-full h-full object-cover" />
           </div>
         )}
 

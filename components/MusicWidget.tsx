@@ -17,7 +17,7 @@ const MusicWidget: React.FC = () => {
     <div className="flex items-center gap-2 font-mono text-xs text-grey">
       <Music size={14} className="text-electricBlue animate-pulse" />
       <span>Listening to:</span>
-      <span className="text-white ml-1 transition-opacity duration-500">
+      <span className="text-white ml-1 transition-opacity duration-500" aria-live="polite" aria-atomic="true">
         {MUSIC_PLAYLIST[currentSongIndex]}
       </span>
     </div>

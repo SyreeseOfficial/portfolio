@@ -23,13 +23,13 @@
 
 ## 🟠 Accessibility
 
-- [ ] **Accordion toggle button missing `aria-expanded`** — screen readers can't tell if a `DashboardModule` is open or closed; add `aria-expanded={isOpen}` to the button
-- [ ] **`focus:outline-none` with no visible replacement** — the accordion button removes the focus ring entirely; add `focus-visible:ring-2 focus-visible:ring-electricBlue` instead
-- [ ] **Vague image alt text** — CaseStudy uses `"Project Screenshot 1/2"` and Dashboard uses `"Gallery image 1"` — make these descriptive (e.g., `"OrthoStar dashboard showing review management"`)
-- [ ] **`ChevronDown` scroll indicator lacks `aria-hidden`** — it's decorative; add `aria-hidden="true"` to its container
-- [ ] **MusicWidget auto-rotates content without `aria-live`** — add `aria-live="polite"` and `aria-atomic="true"` on the artist name span so screen readers announce updates
-- [ ] **No skip-to-content link** — add a visually-hidden `<a href="#work">Skip to content</a>` as the first focusable element in the DOM
-- [ ] **Small text contrast** — `font-mono text-xs text-grey` (#888 on #000) at 10–12px is borderline for WCAG AA; nudge grey to `#999` or `#aaa` for small labels
+- [x] **Accordion toggle button missing `aria-expanded`** — screen readers can't tell if a `DashboardModule` is open or closed; add `aria-expanded={isOpen}` to the button
+- [x] **`focus:outline-none` with no visible replacement** — the accordion button removes the focus ring entirely; add `focus-visible:ring-2 focus-visible:ring-electricBlue` instead
+- [x] **Vague image alt text** — CaseStudy uses `"Project Screenshot 1/2"` and Dashboard uses `"Gallery image 1"` — make these descriptive (e.g., `"OrthoStar dashboard showing review management"`)
+- [x] **`ChevronDown` scroll indicator lacks `aria-hidden`** — it's decorative; add `aria-hidden="true"` to its container
+- [x] **MusicWidget auto-rotates content without `aria-live`** — add `aria-live="polite"` and `aria-atomic="true"` on the artist name span so screen readers announce updates
+- [x] **No skip-to-content link** — add a visually-hidden `<a href="#work">Skip to content</a>` as the first focusable element in the DOM
+- [x] **Small text contrast** — `font-mono text-xs text-grey` (#888 on #000) at 10–12px is borderline for WCAG AA; nudge grey to `#999` or `#aaa` for small labels
 
 ---
 
