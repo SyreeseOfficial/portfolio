@@ -218,6 +218,36 @@ export const PROJECTS: Project[] = [
       result: 'Still in development. The concept is straightforward: convert an involuntary behavior (waking up) into an enforced physical action (moving your body) before conscious resistance kicks in.',
     }
   },
+  {
+    id: 'spordle',
+    title: 'Spordle',
+    year: '2026',
+    tag: 'CLI / Tools',
+    summary: 'A multi-game Spanish language practice tool for the terminal — 12 game modes, spaced repetition, daily quests, and persistent stats.',
+    caseStudy: {
+      problem: 'Spanish practice apps live in the browser or on your phone — both places you go to get distracted. Intermediate learners who want focused daily drilling have no native terminal option.',
+      solution: 'Spordle is a pure Python CLI with 12 game modes covering translation, verb conjugation, Wordle, Hangman, Anagram, Number Drill, and more. Spaced repetition revisits missed words, daily quests keep sessions purposeful, and persistent all-time stats track long-term progress — all without leaving the command line.',
+      result: 'A complete Spanish drilling environment that runs anywhere Python does, requires zero third-party packages, and fits seamlessly into a terminal-first workflow.',
+      liveLink: 'https://github.com/SyreeseOfficial/Spordle',
+      ctaLabel: 'View On Github',
+      isPrivate: true,
+    }
+  },
+  {
+    id: 'lockedin',
+    title: 'LockedIn',
+    year: '2026',
+    tag: 'Mobile',
+    summary: 'A minimal Android productivity app that caps you at 3 active tasks and pairs them with a daily habit tracker — no noise, just focus.',
+    caseStudy: {
+      problem: 'Productivity apps compete for your attention with dashboards, streaks, gamification, and endless features — all of which become distractions from the actual work. The tool meant to help you focus becomes another thing demanding focus.',
+      solution: 'LockedIn enforces a hard cap of 3 active tasks at a time, stripping away every feature that doesn\'t serve that constraint. Pair that with a lightweight habit tracker on the second tab and you get a complete daily productivity loop in a single, fast-loading app.',
+      result: 'A productivity tool that gets out of its own way — built for people who want to lock in and execute, not manage a system.',
+      liveLink: 'https://github.com/SyreeseOfficial/Locked-In',
+      ctaLabel: 'View On Github',
+      isPrivate: true,
+    }
+  },
 ];
 
 export const PHILOSOPHY: PhilosophyItem[] = [
