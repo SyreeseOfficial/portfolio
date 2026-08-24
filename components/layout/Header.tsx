@@ -5,6 +5,8 @@ const getPageName = (pathname: string): string | null => {
   if (pathname === '/') return null;
   if (pathname === '/projects') return 'Projects';
   if (pathname.startsWith('/project/')) return 'Case Study';
+  if (pathname === '/blog') return 'Blog';
+  if (pathname.startsWith('/blog/')) return 'Blog';
   return null;
 };
 

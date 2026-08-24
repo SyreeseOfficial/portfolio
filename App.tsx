@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import CaseStudy from './pages/CaseStudy';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 import NotFound from './pages/NotFound';
 import PushRisePrivacyPolicy from './pages/PushRisePrivacyPolicy';
 import Header from './components/layout/Header';
@@ -36,6 +38,8 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/project/:id" element={<CaseStudy />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/pushrise/privacy-policy" element={<PushRisePrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
