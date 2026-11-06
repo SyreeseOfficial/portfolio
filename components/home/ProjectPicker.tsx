@@ -13,7 +13,7 @@ export default function ProjectPicker({ projects }: { projects: Project[] }) {
     <div className="picker">
       <div className="picker-rows">
         {projects.map((p, i) => (
-          <button key={p.slug} type="button" className={`pick${i === active ? ' active' : ''}`} onClick={() => setActive(i)} onMouseEnter={() => setActive(i)} onFocus={() => setActive(i)}>
+          <Link key={p.slug} href={`/project/${p.slug}`} className={`pick${i === active ? ' active' : ''}`} onMouseEnter={() => setActive(i)} onFocus={() => setActive(i)}>
             <span className="pick-text">
               <span className="pick-name">{p.title}</span>
               <span className="pick-blurb">{p.blurb}</span>
@@ -21,7 +21,7 @@ export default function ProjectPicker({ projects }: { projects: Project[] }) {
             <span className="pick-arrow">
               <Icon size={12} d={ARROW_RIGHT} />
             </span>
-          </button>
+          </Link>
         ))}
         <Link href="/archive" className="more-link all-projects">
           ALL PROJECTS <Icon d={ARROW_RIGHT} />

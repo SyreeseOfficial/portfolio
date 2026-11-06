@@ -212,12 +212,11 @@ html[data-intro] .intro-mark { animation: intro-mark-rise .7s var(--expo) backwa
 .picker { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(24px, 4vw, 60px); align-items: start; }
 .picker-rows { display: flex; flex-direction: column; }
 .pick {
-  appearance: none; background: none; border: 0; border-top: 1px solid var(--line);
+  border-top: 1px solid var(--line);
   padding: 15px 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: clamp(12px, 2vw, 20px);
-  cursor: pointer; text-align: left;
   transition: padding .3s var(--expo), border-color .25s ease;
 }
-.pick:last-of-type { border-bottom: 1px solid var(--line); }
+.pick:nth-last-child(2) { border-bottom: 1px solid var(--line); }
 .pick.active { border-color: var(--accent); padding-left: 12px; }
 .pick-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 .pick-name { font-size: clamp(18px, 2vw, 20px); font-weight: 600; letter-spacing: -.028em; color: var(--ink); transition: color .25s ease; }
@@ -296,9 +295,19 @@ html[data-intro] .intro-mark { animation: intro-mark-rise .7s var(--expo) backwa
 .photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 1.8vw, 22px); }
 @media (min-width: 1100px) { .photo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .photo { display: flex; flex-direction: column; gap: 10px; }
-.photo span { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); }
-.photo-frame { position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; background: var(--card); }
-.photo-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo { transition: opacity .35s ease; }
+.photo span { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); transition: color .25s ease, transform .35s var(--expo); }
+.photo-frame { position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; background: var(--card); transition: transform .35s var(--expo); }
+.photo-frame::after { content: ''; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px var(--accent); opacity: 0; transition: opacity .3s ease; }
+/* Parallax owns the img's transform, so the zoom uses the separate scale property. */
+.photo-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: scale .9s var(--expo); }
+@media (hover: hover) {
+  .photo-grid:has(.photo:hover) .photo:not(:hover) { opacity: .55; }
+  .photo:hover .photo-frame { transform: translateY(-4px); }
+  .photo:hover .photo-frame::after { opacity: 1; }
+  .photo:hover .photo-frame img { scale: 1.05; }
+  .photo:hover span { color: var(--accent-text); transform: translateX(4px); }
+}
 .photo-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; margin-top: clamp(28px, 4vw, 44px); padding-top: 22px; border-top: 1px solid var(--line); }
 .photo-foot > span { font-family: var(--mono); font-size: 12px; letter-spacing: .1em; color: var(--muted); }
 .photo-foot a { display: inline-flex; align-items: center; gap: 10px; font-size: clamp(18px, 2vw, 20px); font-weight: 600; letter-spacing: -.025em; color: var(--ink); }
@@ -308,13 +317,18 @@ html[data-intro] .intro-mark { animation: intro-mark-rise .7s var(--expo) backwa
 .skills-grid { display: grid; grid-template-columns: minmax(220px, 340px) minmax(0, 1fr); gap: clamp(20px, 3vw, 32px); align-items: stretch; }
 .skills-video { position: relative; border-radius: 20px; overflow: hidden; background: var(--card); min-height: 280px; }
 .skills-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(14px, 2vw, 20px); }
-.skill-group { display: flex; flex-direction: column; gap: 12px; padding: clamp(16px, 2vw, 22px); border-radius: 20px; background: var(--card); }
+.skill-group { display: flex; flex-direction: column; gap: 12px; padding: clamp(16px, 2vw, 22px); border-radius: 20px; background: var(--card); transition: box-shadow .3s ease, transform .3s var(--expo); }
 .skill-head { display: flex; align-items: center; gap: 10px; }
-.skill-head span { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); }
+.skill-head span { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 30px; height: 30px; border-radius: 9px; background: var(--accent); color: var(--accent-ink); transition: transform .35s var(--expo); }
 .skill-head h3 { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
 .skill-links { display: flex; flex-direction: column; gap: 9px; }
-.skill-links a { display: block; font-size: 16px; color: var(--muted); letter-spacing: -.01em; transition: color .2s ease, transform .2s ease, background-size .3s var(--expo); }
+.skill-links a { display: block; font-size: 16px; color: var(--muted); letter-spacing: -.01em; transition: color .2s ease, opacity .25s ease, transform .2s ease, background-size .3s var(--expo); }
 .skill-links a:hover { color: var(--accent-text); transform: translateX(3px); }
+@media (hover: hover) {
+  .skill-group:hover { box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 45%, transparent); transform: translateY(-2px); }
+  .skill-group:hover .skill-head span { transform: scale(1.08) rotate(-6deg); }
+  .skill-links:has(a:hover) a:not(:hover) { opacity: .55; }
+}
 @media (max-width: 720px) {
   .skills-grid { grid-template-columns: minmax(0, 1fr); }
 }
