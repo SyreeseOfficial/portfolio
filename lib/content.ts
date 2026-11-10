@@ -9,7 +9,6 @@ export type Entry = {
   summary: string;
   time: number;
   date: string;
-  shortDate: string;
   read: string;
   body: string;
 };
@@ -43,7 +42,6 @@ function load(dir: string): Entry[] {
         summary: data.summary ? String(data.summary) : firstParagraph(content),
         time: d.getTime(),
         date: `${day} ${month} ${year}`,
-        shortDate: `${month} ${d.getUTCDate()}, ${year}`,
         read: `${Math.max(1, Math.round(words / 220))} MIN READ`,
         body: content,
       };

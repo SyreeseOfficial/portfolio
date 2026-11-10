@@ -33,7 +33,7 @@ export default function Home() {
   const posts = getPosts().slice(0, 3);
   const log = getChangelog()
     .slice(0, 4)
-    .map((e) => ({ title: e.title, summary: clip(e.summary), date: e.shortDate }));
+    .map((e) => ({ title: e.title, summary: clip(e.summary), date: e.date }));
 
   return (
     <div className="page home">
