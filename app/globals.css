@@ -347,7 +347,9 @@ html[data-intro] .intro-mark { animation: intro-mark-rise .7s var(--expo) backwa
 .shelf-icon { display: inline-flex; color: var(--muted); transition: transform .35s var(--expo), color .25s ease; }
 .shelf-head:hover .shelf-icon, .shelf.open .shelf-icon { color: var(--accent); }
 .shelf.open .shelf-icon { transform: rotate(45deg); }
-.shelf-body { overflow: hidden; max-height: 0; transition: max-height .45s var(--expo); }
+.shelf-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s var(--expo); }
+.shelf.open .shelf-body { grid-template-rows: 1fr; }
+.shelf-body > div { overflow: hidden; min-height: 0; }
 .shelf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 0 clamp(20px, 3vw, 44px); padding-bottom: 18px; }
 .tool { display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); transition: padding .25s var(--expo), border-color .25s ease; }
 .tool:hover { padding-left: 10px; border-color: var(--accent); }

@@ -24,13 +24,10 @@ function scramble(e: MouseEvent<HTMLElement>) {
 }
 
 export default function ScrambleRow({ href, className, children }: { href?: string; className: string; children: ReactNode }) {
-  return href ? (
-    <Link href={href} data-row className={className} onMouseEnter={scramble}>
+  const Tag = href ? Link : 'div';
+  return (
+    <Tag href={href!} data-row className={className} onMouseEnter={scramble}>
       {children}
-    </Link>
-  ) : (
-    <div data-row className={className} onMouseEnter={scramble}>
-      {children}
-    </div>
+    </Tag>
   );
 }

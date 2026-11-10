@@ -1,12 +1,11 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Icon, PLUS } from '@/components/Icons';
 import { SHELVES } from '@/data/home';
 
 export default function Shelves() {
   const [open, setOpen] = useState<number | null>(null);
-  const bodies = useRef<(HTMLDivElement | null)[]>([]);
 
   return (
     <div className="shelves">
@@ -24,22 +23,16 @@ export default function Shelves() {
                 </span>
               </span>
             </button>
-            <div
-              id={`shelf-${i}`}
-              ref={(el) => {
-                bodies.current[i] = el;
-              }}
-              className="shelf-body"
-              inert={!isOpen}
-              style={{ maxHeight: isOpen ? bodies.current[i]?.scrollHeight : 0 }}
-            >
-              <div className="shelf-grid">
+            <div id={`shelf-${i}`} className="shelf-body" inert={!isOpen}>
+              <div>
+                <div className="shelf-grid">
                 {s.items.map(([name, desc, href]) => (
                   <a key={name} className="tool" href={href} target="_blank" rel="noopener noreferrer">
                     <span className="tool-name">{name}</span>
                     <span className="tool-desc">{desc}</span>
                   </a>
                 ))}
+                </div>
               </div>
             </div>
           </div>

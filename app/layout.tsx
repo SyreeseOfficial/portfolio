@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Space_Grotesk, IBM_Plex_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
 import Cursor from '@/components/Cursor';
-import ScrollMemory from '@/components/ScrollMemory';
 import { SITE_URL } from '@/lib/meta';
 import './globals.css';
 
@@ -31,7 +30,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body>
         <Cursor />
-        <ScrollMemory />
         {children}
       </body>
     </html>

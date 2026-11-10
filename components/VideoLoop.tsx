@@ -15,7 +15,6 @@ export default function VideoLoop({ src, label, drift }: { src: string; label?: 
   return (
     <video ref={ref} className="video" loop muted playsInline preload="metadata" aria-label={label} aria-hidden={label ? undefined : true} data-drift={drift ? '' : undefined}>
       <source src={`${src}.webm`} type="video/webm" />
-      <source src={`${src}.mp4`} type="video/mp4" />
     </video>
   );
 }
