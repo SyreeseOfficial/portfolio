@@ -1,6 +1,6 @@
 ---
 title: How My Sister Tricked Me Into Running 13 Miles (And I'm Doing It in 3 Days)
-date: 2026-09-16
+date: 2026-09-26
 ---
 
 I hate running.

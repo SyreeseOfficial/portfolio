@@ -1,6 +1,6 @@
 ---
 title: Why I Only Train 2 Days a Week (And Why It Actually Works)
-date: 2026-09-02
+date: 2026-09-12
 ---
 
 I've trained two days a week for 15 years. That's it.

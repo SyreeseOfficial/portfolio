@@ -1,6 +1,6 @@
 ---
 title: How I Actually Battle Doom Scrolling (And Win Most Days)
-date: 2026-09-09
+date: 2026-09-19
 ---
 
 I doom scroll. You probably do too.
