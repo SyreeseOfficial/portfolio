@@ -11,9 +11,9 @@ export const BURIED = [
 ];
 
 export const RULES = [
-  { title: "I'm In Charge", line: 'I choose my attitude and control my own path.', body: "I take total ownership of my results. If I fall short, I don't make excuses. I just work harder and prepare better next time.", video: 'im-in-charge', via: 'Alex Becker', href: 'https://www.youtube.com/@alexbeckerbusiness' },
-  { title: 'Work Wins', line: 'I can learn anything if I practice long enough.', body: 'Talent only gives you a head start, but hard work always gets you to the finish line.', video: 'work-wins', via: 'Alex Hormozi', href: 'https://www.youtube.com/@AlexHormozi' },
-  { title: 'Keep It Simple', line: 'Less is better. Extra stuff just slows you down.', body: "When you remove what you don't need, nothing can break or confuse you.", video: 'keep-it-simple', via: 'Charlie Morgan', href: 'https://www.youtube.com/@charliemofficial' },
+  { title: "I'm in charge", line: 'I choose my attitude and my own path.', body: "I own my results. When I fall short, I skip the excuses and prepare better next time.", video: 'im-in-charge', via: 'Alex Becker', href: 'https://www.youtube.com/@alexbeckerbusiness' },
+  { title: 'Work wins', line: 'I can learn anything if I practice long enough.', body: 'Talent gives you a head start, but hard work gets you to the finish.', video: 'work-wins', via: 'Alex Hormozi', href: 'https://www.youtube.com/@AlexHormozi' },
+  { title: 'Keep it simple', line: 'Less is better. Extra stuff slows you down.', body: "Cut what you don't need and nothing can break or confuse you.", video: 'keep-it-simple', via: 'Charlie Morgan', href: 'https://www.youtube.com/@charliemofficial' },
 ];
 
 export const PHOTOS = [

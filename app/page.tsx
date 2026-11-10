@@ -81,7 +81,7 @@ export default function Home() {
             <div className="about-copy">
               <h2>Who am i</h2>
               <p className="lede lede-ink">
-                I spent four years on jobsites. Drywall, logistics, cleaning, retail. Real deadlines, real sweat. The work taught me to show up, adapt, and finish. But blue collar pays the bills without ever compounding: every dollar is an hour traded away, and the ceiling is close enough to touch. So I started building after the shift ended.
+                I spent four years on jobsites doing drywall, logistics, cleaning, and retail. The deadlines were real. The work taught me to show up, adapt, and finish. But it only pays the bills. Every dollar costs an hour, and there's a limit to how many hours I have. So I started building after my shifts.
               </p>
               <div className="chips">
                 <span className="chip">SELF TAUGHT</span>
@@ -102,7 +102,7 @@ export default function Home() {
         <section id="buried" data-section className="sec-buried">
           <div className="buried-head">
             <h2>Projects that got buried</h2>
-            <p>Killing a project you already know isn&apos;t worth finishing is the cheapest decision on the board. Pick one for the reason.</p>
+            <p>If you already know a project isn&apos;t worth finishing, kill it. It&apos;s the cheapest decision you&apos;ll make.</p>
           </div>
           <BuriedShelf />
         </section>

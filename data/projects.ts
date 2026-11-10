@@ -116,7 +116,7 @@ export const projects: Project[] = [
     "status": "Live",
     "stack": "next.js / supabase / stripe",
     "problem": "Negative reviews follow orthodontic practices everywhere a prospective patient looks. One bad rating on Google can cost a practice tens of thousands in lost patient revenue before a single appointment is booked.",
-    "solution": "I built a reputation management platform that intercepts dissatisfied patients before they reach public review sites, routes happy patients toward five-star Google reviews, and converts patient testimonial clips into paid ad creative, all from a single dashboard.",
+    "solution": "I built OrthoStar to manage patient reviews. It catches unhappy patients before they post publicly and sends happy ones to Google for a five-star review. It also turns patient testimonial clips into paid ads. All of it runs from one dashboard.",
     "result": "More five-star Google reviews and fewer unhappy patients posting publicly, handled from a single dashboard that runs in the background.",
     "links": [],
     "img": "/uploads/projects/orthostar.webp",
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     "status": "",
     "stack": "terminal game",
     "problem": "Coders need mental resets between deep work sessions, but stepping away from the terminal to play a game means switching context entirely, the very thing a break is supposed to undo.",
-    "solution": "HyperTyper is a terminal-native typing game with multiple challenge modes and a persistent high-score system, a complete break-time activity that never requires leaving the command line.",
+    "solution": "HyperTyper is a typing game that runs in your terminal. It has several challenge modes and saves your high scores between sessions, so you can take a break without leaving the command line.",
     "result": "Developers can decompress, sharpen their typing speed, and return to work without switching windows or losing their mental context.",
     "links": [
       {
@@ -307,7 +307,7 @@ export const projects: Project[] = [
     "status": "",
     "stack": "ai stylist",
     "problem": "Most people own more clothes than they actually wear. Decision fatigue hits every morning, impulse purchases pile up, and the wardrobe grows without the wardrobe working, wasted money and a daily source of low-grade stress.",
-    "solution": "VibeStylist acts as a personalized AI stylist: it learns your preferences, surfaces outfits from what you already own, and gamifies the process with ratings, stats, and weekly planning tools. The goal is a wardrobe you actually use, not one you scroll past.",
+    "solution": "VibeStylist is an AI stylist that learns your taste and builds outfits from clothes you already own. You rate the outfits, check stats on what you wear, and plan your week. The goal is a wardrobe you use instead of scroll past.",
     "result": "A fun side project that turns a closet into ready-to-wear outfit suggestions, so getting dressed takes less thought.",
     "links": [
       {
@@ -351,7 +351,7 @@ export const projects: Project[] = [
     "status": "",
     "stack": "whisper / omarchy linux",
     "problem": "Linux speech-to-text tools are either resource-hungry, painful to configure, or buried under features no one asked for. The overhead defeats the purpose of a utility that's supposed to get out of your way.",
-    "solution": "VibeSTT is a purpose-built speech-to-text utility for the Omarchy Linux distribution: minimal binary footprint, fast transcription powered by Whisper under the hood, and zero configuration required to get started.",
+    "solution": "VibeSTT is a speech-to-text tool for Omarchy. It's a small binary that transcribes fast using Whisper, and it works with no setup.",
     "result": "Users can dictate notes, capture ideas, and compose drafts without breaking their workflow, a faster input mode for anyone already living in the terminal.",
     "links": [
       {
