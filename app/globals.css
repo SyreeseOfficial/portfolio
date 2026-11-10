@@ -266,10 +266,11 @@ html[data-intro] .intro-mark { animation: intro-mark-rise .7s var(--expo) backwa
 .bur-copy .verdict { font-size: 16px; line-height: 1.55; color: #fff; letter-spacing: -.012em; }
 .bur-side { display: flex; flex-direction: column; gap: 14px; }
 .bur-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; align-content: start; }
-.bur-card { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; padding: 12px 14px 13px; border: 1px solid var(--line); border-radius: 14px; background: transparent; text-align: left; cursor: pointer; transition: border-color .25s ease, transform .3s var(--expo), background .25s ease; }
+.bur-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 5px; padding: 12px 14px 13px; border: 1px solid var(--line); border-radius: 14px; background: transparent; text-align: left; cursor: pointer; transition: border-color .25s ease, transform .3s var(--expo), background .25s ease; }
+.bur-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .bur-card:not(.active):hover { transform: translateY(-3px); }
 .bur-card.active { border-color: var(--accent); background: var(--card); }
-.bur-dot-row { display: flex; align-items: center; justify-content: flex-end; width: 100%; gap: 8px; }
+.bur-dot-row { position: absolute; top: 12px; right: 14px; display: flex; }
 .bur-dot { width: 5px; height: 5px; border-radius: 99px; background: var(--line); }
 .bur-dot.on { background: var(--accent); }
 .bur-name { font-size: 16px; font-weight: 600; letter-spacing: -.025em; color: var(--ink); transition: color .25s ease; }
@@ -338,7 +339,7 @@ html[data-intro] .intro-mark { animation: intro-mark-rise .7s var(--expo) backwa
 .daily-head { gap: clamp(16px, 3vw, 48px); margin-bottom: clamp(26px, 3.5vw, 42px); }
 .shelves { display: flex; flex-direction: column; border-bottom: 1px solid var(--line); }
 .shelf { border-top: 1px solid var(--line); }
-.shelf-head { width: 100%; appearance: none; background: none; border: 0; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: clamp(14px, 2.4vw, 28px); padding: 17px 0; text-align: left; cursor: pointer; transition: padding .25s var(--expo); }
+.shelf-head { width: 100%; appearance: none; background: none; border: 0; display: grid; grid-template-columns: 112px minmax(0, 1fr) auto; align-items: center; gap: clamp(14px, 2.4vw, 28px); padding: 17px 0; text-align: left; cursor: pointer; transition: padding .25s var(--expo); }
 .shelf-head:hover { padding-left: 10px; }
 .shelf-label { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; color: var(--accent-text); white-space: nowrap; }
 .shelf-teaser { font-size: 14px; color: var(--muted); letter-spacing: -.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .3s ease; }
@@ -352,8 +353,8 @@ html[data-intro] .intro-mark { animation: intro-mark-rise .7s var(--expo) backwa
 .shelf.open .shelf-body { grid-template-rows: 1fr; }
 .shelf-body > div { overflow: hidden; min-height: 0; }
 .shelf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 0 clamp(20px, 3vw, 44px); padding-bottom: 18px; }
-.tool { display: flex; align-items: baseline; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); transition: padding .25s var(--expo), border-color .25s ease; }
-.tool:hover { padding-left: 10px; border-color: var(--accent); }
+.tool { background-image: none; display: flex; align-items: baseline; gap: 12px; padding: 11px 0; transition: padding .25s var(--expo); }
+.tool:hover { padding-left: 10px; }
 .tool-name { font-size: 16px; font-weight: 600; letter-spacing: -.02em; color: var(--ink); white-space: nowrap; transition: color .2s ease; }
 .tool:hover .tool-name { color: var(--accent); }
 .tool-desc { font-size: 14px; color: var(--muted); letter-spacing: -.01em; }
@@ -398,6 +399,7 @@ html[data-intro] .intro-mark { animation: intro-mark-rise .7s var(--expo) backwa
 .sec-log { padding: clamp(20px, 3vw, 40px) 0 clamp(80px, 12vw, 150px); }
 .log-title { margin-bottom: clamp(36px, 6vw, 64px); }
 .log-grid { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: clamp(24px, 3vw, 40px); }
+@media (min-width: 521px) and (max-width: 1100px) { .log-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .log-mover { position: absolute; left: 0; top: 0; z-index: 1; pointer-events: none; width: 11px; height: 11px; border-radius: 99px; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
 .log { display: flex; flex-direction: column; gap: 18px; }
 .log-track { display: flex; align-items: center; }
