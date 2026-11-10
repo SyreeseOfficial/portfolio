@@ -1,7 +1,7 @@
 ---
 title: Custom 404 page
 date: 2026-07-24
-summary: Broken links now land on a page with links back home and to the archive.
+summary: A dead link now lands on a 404 page with a way back home or to the archive.
 ---
 
-Broken links now land on a custom 404 page with links back home and to the archive.
+A dead link now lands on a 404 page with a way back home or to the project archive.

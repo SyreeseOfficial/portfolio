@@ -7,7 +7,7 @@ import SubHeader from '@/components/SubHeader';
 import { getChangelog } from '@/lib/content';
 import { pageMeta } from '@/lib/meta';
 
-export const metadata: Metadata = pageMeta('Changelog — Syreese', 'Changelog for the Syreese site.', '/changelog');
+export const metadata: Metadata = pageMeta('Changelog — Syreese', 'Everything shipped on the Syreese site, newest first.', '/changelog');
 
 export default function Changelog() {
   return (
@@ -20,7 +20,7 @@ export default function Changelog() {
             HOME
           </Link>
           <h1>Changelog</h1>
-          <p>Every update, fix and small improvement that shipped. Newest first.</p>
+          <p>Everything I&apos;ve shipped on this site, newest first.</p>
         </div>
         <div className="list">
           {getChangelog().map((e) => (

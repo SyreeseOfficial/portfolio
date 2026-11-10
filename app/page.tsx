@@ -228,7 +228,7 @@ export default function Home() {
           <div className="contact">
             <div className="status-pill">
               <span />
-              AVAILABLE FOR WORK
+              TAKING ON NEW PROJECTS
             </div>
             <h2>My inbox is wide open.</h2>
             <p>Shoot me a message. I&apos;d love to hear from you whether it be for work, a project, a question or anything at all. It all ends up in the same inbox.</p>

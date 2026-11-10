@@ -1,9 +1,9 @@
 ---
 title: Mobile menu and section dots
 date: 2026-08-02
-summary: Added a slide-out menu on mobile and a dot navigation that tracks the section you are on.
+summary: Phones get a slide-out menu, and a column of dots shows which section you're in.
 ---
 
-Added a slide-out menu on mobile.
+Phones now get a slide-out menu.
 
-Added a dot navigation that tracks the section you are on.
+I also added a column of dots down the side that shows which section you're on and jumps to any of them.

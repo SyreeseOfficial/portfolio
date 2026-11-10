@@ -1,9 +1,9 @@
 ---
 title: Light and dark theme toggle
 date: 2026-09-10
-summary: A toggle in the header switches between light and dark. Your choice is saved for your next visit.
+summary: The header has a light/dark switch, and the site remembers which one you picked.
 ---
 
-The header now has a toggle that switches the site between light and dark.
+There's a toggle in the header that switches the site between light and dark.
 
-Your choice is saved, so the site opens in the same theme on your next visit.
+It remembers your pick, so the site opens in the same theme next time.

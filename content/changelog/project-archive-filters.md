@@ -1,9 +1,9 @@
 ---
 title: Project archive filters
 date: 2026-09-03
-summary: Filter every project by SaaS, Mobile, Internal Tools, CLI Tools or Skool.
+summary: Narrow the archive to SaaS, Mobile, Internal Tools, CLI Tools or Skool.
 ---
 
-The project archive can now be filtered by category: SaaS, Mobile, Internal Tools, CLI Tools or Skool.
+You can now filter the project archive by category: SaaS, Mobile, Internal Tools, CLI Tools or Skool.
 
-Pick a filter to show only the projects in that category.
+Pick one and only the projects in that category stay on screen.

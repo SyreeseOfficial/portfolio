@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ARROW_UP, Icon } from '@/components/Icons';
 import ThemeToggle from '@/components/ThemeToggle';
 
@@ -17,7 +17,6 @@ export default function HomeChrome() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState('hero');
   const [showTop, setShowTop] = useState(false);
-  const progress = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const key = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
@@ -26,7 +25,6 @@ export default function HomeChrome() {
   }, []);
 
   useEffect(() => {
-    const bar = progress.current!;
     const sections = Array.from(document.querySelectorAll<HTMLElement>('[data-section]'));
     let raf = 0;
     const update = () => {
@@ -37,8 +35,6 @@ export default function HomeChrome() {
       });
       setActive(current === 'intro' ? 'hero' : current);
       setShowTop(scrollY > 900);
-      const max = document.documentElement.scrollHeight - innerHeight;
-      bar.style.transform = `scaleX(${max > 0 ? Math.min(1, scrollY / max).toFixed(4) : 0})`;
     };
     const onScroll = () => {
       raf ||= requestAnimationFrame(update);
@@ -55,8 +51,6 @@ export default function HomeChrome() {
 
   return (
     <>
-      <div ref={progress} className="progress" />
-
       <header className="site-header">
         <a href="#hero" aria-label="Home" className="logo">
           <span>SD</span>
