@@ -17,6 +17,7 @@ The site runs at http://localhost:3000. `npm run build` makes the production bui
 |---|---|
 | `app/` | Routes, global CSS, sitemap, robots |
 | `components/` | UI, with home page sections in `components/home/` |
+| `lib/` | Markdown loading (`content.ts`) and page metadata (`meta.ts`) |
 | `data/projects.ts` | All projects. Array order sets the archive and "next project" order |
 | `data/home.ts` | Home page content |
 | `content/posts/` | Blog posts |
